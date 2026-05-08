@@ -25,7 +25,6 @@ func generate_question():
 		3:
 			var answer = randi_range(1, 10)
 			var divisor = randi_range(1, 10)
-			
 			return{
 				"question": str(answer * divisor) + " / " + str(divisor), "answer": answer
 			}

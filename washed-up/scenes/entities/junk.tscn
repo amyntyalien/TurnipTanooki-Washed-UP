@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://dog4hlimox1de"]
 
 [node name="Junk" type="Node2D" unique_id=107557628]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2058539083]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=759696767]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2136951702]

@@ -3,13 +3,19 @@
 [ext_resource type="Texture2D" uid="uid://dqmryxt8e6j46" path="res://assets/art/characters/player/turnip_sprite_basic.png" id="1_8afob"]
 [ext_resource type="Script" uid="uid://bujaditgsfru5" path="res://scripts/player/player.gd" id="1_dovo2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
+size = Vector2(30, 22.75)
+
 [node name="Player" type="Node2D" unique_id=156217139]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1003994714]
 script = ExtResource("1_dovo2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=120045429]
-
 [node name="TurnipSpriteBasic" type="Sprite2D" parent="CharacterBody2D" unique_id=1913910207]
-position = Vector2(130, 128)
+position = Vector2(17.499998, 16.500002)
+scale = Vector2(0.13671875, 0.12890625)
 texture = ExtResource("1_8afob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=120045429]
+position = Vector2(19, 21.375)
+shape = SubResource("RectangleShape2D_dovo2")

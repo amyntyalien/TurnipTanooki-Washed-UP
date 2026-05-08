@@ -3,14 +3,26 @@
 [ext_resource type="Texture2D" uid="uid://dqmryxt8e6j46" path="res://assets/art/characters/player/turnip_sprite_basic.png" id="1_8afob"]
 [ext_resource type="Script" uid="uid://bujaditgsfru5" path="res://scripts/player/player.gd" id="1_dovo2"]
 
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
 size = Vector2(30, 22.75)
+=======
+[sub_resource type="CircleShape2D" id="CircleShape2D_dovo2"]
+radius = 109.01835
+>>>>>>> 8175b76452657e88e88cb12d821c9c53be2f0387
 
 [node name="Player" type="Node2D" unique_id=156217139]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1003994714]
 script = ExtResource("1_dovo2")
 
+<<<<<<< HEAD
+=======
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=120045429]
+position = Vector2(123, 175)
+shape = SubResource("CircleShape2D_dovo2")
+
+>>>>>>> 8175b76452657e88e88cb12d821c9c53be2f0387
 [node name="TurnipSpriteBasic" type="Sprite2D" parent="CharacterBody2D" unique_id=1913910207]
 position = Vector2(17.499998, 16.500002)
 scale = Vector2(0.13671875, 0.12890625)

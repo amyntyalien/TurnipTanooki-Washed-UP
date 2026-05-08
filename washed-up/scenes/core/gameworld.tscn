@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://2vppcria7tke" path="res://scenes/player/player.tscn" id="2_0uvnq"]
 
 [node name="Gameworld" type="Node2D" unique_id=681680736]
-position = Vector2(65, -183)
+position = Vector2(509, 313)
 
 [node name="Island" parent="." unique_id=396867642 instance=ExtResource("1_3wwbw")]
-position = Vector2(512, 247)
+position = Vector2(452, 143)
 
 [node name="Player" parent="." unique_id=156217139 instance=ExtResource("2_0uvnq")]
-position = Vector2(451, 231)
+position = Vector2(410, 153)

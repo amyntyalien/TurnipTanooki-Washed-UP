@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://c5ifjten116yf"]
 
+[ext_resource type="Texture2D" uid="uid://dryddrvx3pgqk" path="res://assets/art/screens/turniptitlescreenCONCEPT.jpg" id="1_dq1fl"]
+
 [node name="Titlescreen" type="Node2D" unique_id=289519404]
+
+[node name="TurniptitlescreenConcept" type="Sprite2D" parent="." unique_id=1976465987]
+position = Vector2(960, 541)
+texture = ExtResource("1_dq1fl")

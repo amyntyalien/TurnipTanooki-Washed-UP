@@ -1,3 +1,43 @@
 [gd_scene format=3 uid="uid://c38t7orbgb2"]
 
+[ext_resource type="Texture2D" uid="uid://eqrq37gdsi6q" path="res://assets/art/Items/fish/pinkfish.png" id="1_tqb5q"]
+[ext_resource type="Texture2D" uid="uid://cydjoompcg1d5" path="res://assets/art/Items/fish/cyanfish.png" id="2_qtufe"]
+[ext_resource type="Texture2D" uid="uid://co7x1i67naku" path="res://assets/art/Items/fish/purplefish.png" id="3_1wrlf"]
+[ext_resource type="Texture2D" uid="uid://dypton53yav77" path="res://assets/art/Items/fish/redfish.png" id="4_wixex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqb5q"]
+size = Vector2(178.72725, 109.42108)
+
 [node name="Fish" type="Node2D" unique_id=1791143632]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1128562905]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Pinkfish" type="Sprite2D" parent="Area2D" unique_id=830458602]
+position = Vector2(22, 18.999998)
+scale = Vector2(0.171875, 0.14843749)
+texture = ExtResource("1_tqb5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=839202415]
+position = Vector2(24.000004, 17.878904)
+scale = Vector2(0.171875, 0.14843749)
+shape = SubResource("RectangleShape2D_tqb5q")
+
+[node name="Cyanfish" type="Sprite2D" parent="." unique_id=1422955778]
+visible = false
+position = Vector2(22.5, 18.5)
+scale = Vector2(0.17578125, 0.14453125)
+texture = ExtResource("2_qtufe")
+
+[node name="Redfish" type="Sprite2D" parent="." unique_id=192667133]
+visible = false
+position = Vector2(17.125002, 22.531252)
+scale = Vector2(0.17871095, 0.18334962)
+texture = ExtResource("4_wixex")
+
+[node name="Purplefish" type="Sprite2D" parent="." unique_id=261135449]
+visible = false
+position = Vector2(23, 18)
+scale = Vector2(0.17968751, 0.140625)
+texture = ExtResource("3_1wrlf")

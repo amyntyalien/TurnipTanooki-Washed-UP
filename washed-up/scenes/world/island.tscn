@@ -107,14 +107,21 @@ sources/1 = SubResource("TileSetAtlasSource_c77fi")
 texture = ExtResource("1_aqeiv")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 6.308899, -32, 22.353165, -24.83685, 32, -2.2782097, 32, 32, -32, 32)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, -32, -12.1361885, -32, -22.353165, -24.83685, -32, -2.2782097, -32, 32, 32, 32)
 3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, 32, -12.1361885, 32, -22.353165, 24.83685, -32, 17.498688, -32, 2.2782097, -32, -32, 32, -32)
 4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 32, 12.1361885, 32, 22.353165, 24.83685, 32, 9.31382, 32, 2.2782097, 32, -32, -32, -32)
 5:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_7t6ee"]
 tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 2
 sources/1 = SubResource("TileSetAtlasSource_aqeiv")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_82sn7"]

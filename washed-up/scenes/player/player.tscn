@@ -215,7 +215,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afob"]
-size = Vector2(76, 63)
+size = Vector2(76, 46)
 
 [node name="player" type="Node2D" unique_id=396867642]
 
@@ -226,13 +226,13 @@ script = ExtResource("1_dovo2")
 position = Vector2(38, 40.5)
 scale = Vector2(0.3046875, 0.30859375)
 sprite_frames = SubResource("SpriteFrames_28m0y")
-animation = &"idle"
+animation = &"walk up"
 autoplay = "idle"
-frame_progress = 0.67080677
+frame_progress = 0.17516594
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1740212883]
 zoom = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1146049333]
-position = Vector2(38, 49.5)
+position = Vector2(38, 58)
 shape = SubResource("RectangleShape2D_8afob")

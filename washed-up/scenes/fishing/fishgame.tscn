@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bluvqi0g3vsh1"]
+
+[ext_resource type="Script" uid="uid://jn2ra81un2d7" path="res://scenes/fishing/fishgame.gd" id="1_w5nbe"]
+[ext_resource type="PackedScene" uid="uid://cn1fdtwtej5sw" path="res://scenes/fishing/mathquestions.tscn" id="2_xyrmk"]
+
+[node name="Fishgame" type="Node2D" unique_id=50498463]
+script = ExtResource("1_w5nbe")
+
+[node name="Mathquestions" parent="." unique_id=1898192396 instance=ExtResource("2_xyrmk")]

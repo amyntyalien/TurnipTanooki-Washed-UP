@@ -6,7 +6,7 @@ var junk_scene = preload("res://scenes/entities/junk.tscn")
 
 func _ready() -> void:
 	# Set up the timer to loop every 60 seconds
-	timer.wait_time = 60.0
+	timer.wait_time = 10.0
 	timer.one_shot = false # Makes it looooop
 	timer.timeout.connect(_on_junk_timer_timeout)
 	timer.start()

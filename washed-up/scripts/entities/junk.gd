@@ -22,3 +22,15 @@ func _ready():
 			random_choice = all_visuals.pick_random()
 			
 		random_choice.visible = true
+		set_process_input(true)
+		
+# when junk is clicked on with the left mouse key, it goes to Inventory.add_trash().
+func _input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed():
+			_on_junk_clicked()
+			
+func _on_junk_clicked():
+	print("Junk clicked!")
+	Inventory.add_trash()
+	queue_free()

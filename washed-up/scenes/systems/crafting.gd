@@ -22,21 +22,25 @@ func _rod1():
 	var dict = {"wood":3, "string":3}
 	_craftable(dict)
 	current = dict
+	$Control/Rods.play("1")
 
 func _rod2():
 	var dict = {"wood":10, "string":10}
 	_craftable(dict)
 	current = dict
+	$Control/Rods.play("2")
 
 func _rod3():
 	var dict = {"wood":30, "string":30}
 	_craftable(dict)
 	current = dict
+	$Control/Rods.play("3")
 
 func _rod4():
 	var dict = {"wood":100, "string":100}
 	_craftable(dict)
 	current = dict
+	$Control/Rods.play("4")
 
 func _craftable(dict):
 	for i in dict:

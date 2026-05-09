@@ -14,6 +14,41 @@
 font_size = 64
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_37r4x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_xvm05")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5ce7d")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fgy45")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_4sqea")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4m4tt"]
 load_path = "res://.godot/imported/Menu Selection Buttons BACK.png-c60b23c7ef98c4c912d867b88fece62b.ctex"
 
@@ -97,20 +132,12 @@ offset_right = -91.0
 offset_bottom = 98.089874
 icon = ExtResource("7_4sqea")
 
-[node name="Product" type="Sprite2D" parent="Crafting/Control" unique_id=1257290482]
-visible = false
-position = Vector2(375.99994, -312.35956)
-scale = Vector2(0.99999994, 1.1235955)
-texture = ExtResource("4_xvm05")
-
 [node name="Input1" type="Sprite2D" parent="Crafting/Control" unique_id=854574428]
-visible = false
 position = Vector2(236.99994, -4.494385)
 scale = Vector2(0.99999994, 1.1235955)
 texture = ExtResource("6_37r4x")
 
 [node name="Input2" type="Sprite2D" parent="Crafting/Control" unique_id=2143684201]
-visible = false
 position = Vector2(517.99994, -35.95508)
 scale = Vector2(0.7070312, 0.78563905)
 texture = ExtResource("7_fgy45")
@@ -121,6 +148,7 @@ offset_left = 180.99994
 offset_top = 25.842651
 offset_right = 278.99994
 offset_bottom = 113.84265
+text = "3/3"
 label_settings = SubResource("LabelSettings_4sqea")
 
 [node name="Cost2" type="Label" parent="Crafting/Control" unique_id=276371950]
@@ -129,7 +157,13 @@ offset_left = 460.99994
 offset_top = 38.20221
 offset_right = 558.99994
 offset_bottom = 126.20221
+text = "3/3"
 label_settings = SubResource("LabelSettings_4sqea")
+
+[node name="Rods" type="AnimatedSprite2D" parent="Crafting/Control" unique_id=356102413]
+position = Vector2(369.99997, -312.35953)
+sprite_frames = SubResource("SpriteFrames_37r4x")
+animation = &"1"
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
 offset_left = 1474.0

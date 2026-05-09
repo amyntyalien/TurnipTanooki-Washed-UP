@@ -3,6 +3,7 @@ extends Node2D
 var combo = 0
 var timer = 0
 var start = false
+var correct = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,11 +19,18 @@ func _process(delta: float) -> void:
 		combo = 0
 		timer = 0
 	$Answer.text = ans
+	if correct:
+		combo+=1
+		_level1()
+		correct = false
+		ans = ""
 	pass
+
+var q_and_a
 
 func _level1():
 	var x = $Mathquestions
-	var q_and_a = x.generate_question_level_1()
+	q_and_a = x.generate_question_level_2()
 	$Question.text = q_and_a["question"]
 	start = true
 	pass
@@ -53,5 +61,8 @@ func _input(event):
 			ans += "0"
 		if event.keycode == KEY_BACKSPACE || ans.length() > 5:
 			ans = ans.left(ans.length()-1)
+		if event.keycode == KEY_ENTER:
+			if int(ans) == q_and_a["answer"]:
+				correct = true
 		
 	

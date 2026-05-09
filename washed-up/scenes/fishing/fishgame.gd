@@ -28,6 +28,9 @@ func _process(delta: float) -> void:
 		$Combo.text = "Combo X "+ str(combo)
 		get_fish()
 		$Inventory.text = JSON.stringify(Inventory.feesh)
+		for key in Inventory.feesh:
+			if(key == "red"):
+				pass
 		
 		_level1()
 		correct = false

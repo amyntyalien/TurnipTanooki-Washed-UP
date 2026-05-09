@@ -9,6 +9,8 @@ func _ready() -> void:
 func _process(_delta) -> void:
 	pass
 
+var fish_colours = ["red", "pink", "cyan", "purple"]
+
 var feesh = {
 	"pink":0
 }
@@ -22,10 +24,13 @@ var rod = 0
 var raft = 0;
 
 func add_fish(item, amount):
-	if feesh.has(item):
-		feesh[item] += amount
+	if item in fish_colours:
+		if feesh.has(item):
+			feesh[item] += amount
+		else:
+			feesh.assign({item: amount})
 	else:
-		feesh.assign({item: amount})
+		print("invalid fish")
 
 func add_trash(item, amount):
 	if trash.has(item):

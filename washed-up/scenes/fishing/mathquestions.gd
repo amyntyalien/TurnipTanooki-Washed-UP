@@ -125,23 +125,10 @@ func generate_question_level_3():
 
 func generate_question_level_4():
 	var start = randi_range(-100, 100)
-	var power = randi_range(1,2)
 	var q = ""
-	match power:
-		1:
-			var move = randi_range(-30,30)
-			for i in range (5):
-				q += (str(start) + ", ")
-				start += move
-			q += ("?")
-			return {"question": q, "answer": start}
-		2:
-			var move1 = randi_range(-10,10)
-			var move2 = randi_range(-5,5)
-			for i in range (5):
-				q += (str(start) + ", ")
-				start += move1
-				move1 += move2
-			q += ("?")
-			return {"question": q, "answer": start}
-	return{}
+	var move = randi_range(-30,30)
+	for i in range (5):
+		q += (str(start) + ", ")
+		start += move
+	q += ("?")
+	return {"question": q, "answer": start}

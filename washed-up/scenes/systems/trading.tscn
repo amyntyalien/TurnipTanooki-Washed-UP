@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cny4opyfug0tq" path="res://scenes/systems/crafting.gd" id="2_4jaab"]
 [ext_resource type="Texture2D" uid="uid://dwmaupi7qfobq" path="res://assets/art/Items/Untitled27_20260509182138.png" id="3_7nmkm"]
 [ext_resource type="Texture2D" uid="uid://bwxtpi8k6t4d8" path="res://assets/art/Items/Untitled27_20260509182146.png" id="4_qv1ts"]
+[ext_resource type="Texture2D" uid="uid://b30ki13ljir2" path="res://assets/art/Items/junk/plastic.png" id="5_4jaab"]
 [ext_resource type="Texture2D" uid="uid://dg2cnymwoh167" path="res://assets/art/Items/Untitled27_20260509182316.png" id="5_vwo35"]
 [ext_resource type="Texture2D" uid="uid://dddxa6xixif5h" path="res://assets/art/Items/Untitled27_20260509182447.png" id="6_d8wiy"]
 [ext_resource type="Texture2D" uid="uid://ctd0aw50r3fkc" path="res://assets/art/Items/Untitled27_20260509182128.png" id="7_4e6sw"]
@@ -117,6 +118,7 @@ offset_left = -653.0
 offset_top = -171.91013
 offset_right = -389.0
 offset_bottom = 92.089874
+icon = ExtResource("5_4jaab")
 
 [node name="Rod4" type="Button" parent="Crafting/Control" unique_id=1229055459]
 layout_mode = 0

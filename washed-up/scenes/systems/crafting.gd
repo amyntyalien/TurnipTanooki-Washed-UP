@@ -20,18 +20,26 @@ func _process(delta: float) -> void:
 
 var current = {}
 var level = 0
+var is_raft = false
 
 func _raft():
-	var dict = {"plastic":3, "wood":3}
+	var dict = {"plastic":500, "wood":500}
+	is_raft = true
 	_craftable(dict)
+	level = 0
+	if Inventory.raft == 1:
+		$Control/Warning.text = "Already owned"
+		$Control/Craft_Button.disabled = true
+		pass
 	current = dict
-	$Control/Rods.play("5")
+	$Control/Rods.play("Raft")
 	$Control/Input1.play("2")
-	$Control/Cost1.text = str(Inventory.trash["string"])+"/3"
-	$Control/Cost2.text = str(Inventory.trash["plastic"])+"/3"
+	$Control/Cost1.text = str(Inventory.trash["string"])+"/500"
+	$Control/Cost2.text = str(Inventory.trash["plastic"])+"/500"
 
 func _rod1():
 	var dict = {"wood":3, "string":3}
+	is_raft = false
 	_craftable(dict)
 	if Inventory.rod >= 1:
 		$Control/Warning.text = "Already levelled"
@@ -39,12 +47,14 @@ func _rod1():
 		pass
 	current = dict
 	$Control/Rods.play("1")
+	$Control/Input1.play("1")
 	$Control/Cost1.text = str(Inventory.trash["string"])+"/3"
 	$Control/Cost2.text = str(Inventory.trash["wood"])+"/3"
 	level = 1
 
 func _rod2():
 	var dict = {"wood":10, "string":10}
+	is_raft = false
 	_craftable(dict)
 	if Inventory.rod >= 2:
 		$Control/Warning.text = "Already levelled"
@@ -52,12 +62,14 @@ func _rod2():
 		pass
 	current = dict
 	$Control/Rods.play("2")
+	$Control/Input1.play("1")
 	$Control/Cost1.text = str(Inventory.trash["string"])+"/10"
 	$Control/Cost2.text = str(Inventory.trash["wood"])+"/10"
 	level = 2
 
 func _rod3():
 	var dict = {"wood":30, "string":30}
+	is_raft = false
 	_craftable(dict)
 	if Inventory.rod >= 3:
 		$Control/Warning.text = "Already levelled"
@@ -65,12 +77,14 @@ func _rod3():
 		pass
 	current = dict
 	$Control/Rods.play("3")
+	$Control/Input1.play("1")
 	$Control/Cost1.text = str(Inventory.trash["string"])+"/30"
 	$Control/Cost2.text = str(Inventory.trash["wood"])+"/30"
 	level = 3
 
 func _rod4():
 	var dict = {"wood":100, "string":100}
+	is_raft = false
 	_craftable(dict)
 	if Inventory.rod >= 4:
 		$Control/Warning.text = "Already levelled"
@@ -78,6 +92,7 @@ func _rod4():
 		pass
 	current = dict
 	$Control/Rods.play("4")
+	$Control/Input1.play("1")
 	$Control/Cost1.text = str(Inventory.trash["string"])+"/100"
 	$Control/Cost2.text = str(Inventory.trash["wood"])+"/100"
 	level = 4
@@ -96,8 +111,13 @@ func _craftable(dict):
 func _craft():
 	for i in current:
 		Inventory.trash[i] -= current[i]
-	Inventory.rod = level
+	if is_raft:
+		Inventory.raft=1
+	else:
+		Inventory.rod = level
 	match level:
+		0:
+			_raft()
 		1:
 			_rod1()
 		2:

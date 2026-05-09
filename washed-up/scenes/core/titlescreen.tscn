@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c5ifjten116yf"]
 
-[ext_resource type="Texture2D" uid="uid://dryddrvx3pgqk" path="res://assets/art/screens/turniptitlescreenCONCEPT.jpg" id="1_dq1fl"]
 [ext_resource type="Script" uid="uid://dsi5ag4guagss" path="res://scripts/ui/main_menu.gd" id="1_ewanl"]
+[ext_resource type="Texture2D" uid="uid://dwnhraxbvinvi" path="res://assets/art/screens/title_art_v001.png" id="2_lwxq5"]
 [ext_resource type="AudioStream" uid="uid://b2lfjj83c1phv" path="res://assets/music/Acapella.wav" id="3_q35n2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4e10h"]
@@ -21,10 +21,9 @@ load_path = "res://.godot/imported/Menu Selection Buttons QUIT.png-a78af874829c1
 
 [node name="Titlescreen" type="Node2D" unique_id=289519404]
 
-[node name="TurniptitlescreenConcept" type="Sprite2D" parent="." unique_id=1976465987]
-position = Vector2(960.00006, 540.00006)
-scale = Vector2(1, 1.0000001)
-texture = ExtResource("1_dq1fl")
+[node name="TitleArtV001" type="Sprite2D" parent="." unique_id=737055470]
+position = Vector2(960, 540)
+texture = ExtResource("2_lwxq5")
 
 [node name="Control (MainMenu)" type="Control" parent="." unique_id=1499246455]
 layout_mode = 3

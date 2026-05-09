@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bhag1gpve645j"]
+[gd_scene format=3 uid="uid://1s4lb2yh0hiq"]
 
 [ext_resource type="Script" uid="uid://cg8nnsjepfkxe" path="res://scripts/systems/inventory.gd" id="1_4m4tt"]
 [ext_resource type="Texture2D" uid="uid://cb2xd07x2co1w" path="res://assets/art/Items/book_tab_left.png" id="1_p0jaf"]

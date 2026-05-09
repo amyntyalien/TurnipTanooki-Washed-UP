@@ -44,6 +44,8 @@ var ans = ""
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_MINUS && ans.length() == 0:
+			ans += "-"
 		if event.keycode == KEY_1:
 			ans += "1"
 		if event.keycode == KEY_2:
@@ -70,4 +72,9 @@ func _input(event):
 			if int(ans) == q_and_a["answer"]:
 				correct = true
 		
+	
+
+
+
+func get_fish():
 	

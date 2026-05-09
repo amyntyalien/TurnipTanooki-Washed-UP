@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://jn2ra81un2d7" path="res://scenes/fishing/fishgame.gd" id="1_w5nbe"]
 [ext_resource type="PackedScene" uid="uid://cn1fdtwtej5sw" path="res://scenes/fishing/mathquestions.tscn" id="2_xyrmk"]
+[ext_resource type="Script" uid="uid://cbhrpvs20v1kc" path="res://scenes/fishing/getfish.gd" id="3_nut0q"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xyrmk"]
 font_size = 128
@@ -46,3 +47,6 @@ offset_right = 1013.0
 offset_bottom = 49.0
 fill_mode = 1
 show_percentage = false
+
+[node name="Getfish" type="Node2D" parent="." unique_id=973924892]
+script = ExtResource("3_nut0q")

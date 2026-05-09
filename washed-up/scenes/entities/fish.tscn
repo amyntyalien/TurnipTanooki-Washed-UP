@@ -8,36 +8,69 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqb5q"]
 size = Vector2(178.72725, 109.42108)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtufe"]
+size = Vector2(31, 16.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tqb5q"]
+radius = 12.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wrlf"]
+size = Vector2(33, 28)
+
 [node name="Fish" type="Node2D" unique_id=1791143632]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1128562905]
+[node name="pink" type="Area2D" parent="." unique_id=1128562905]
+visible = false
 collision_layer = 2
 collision_mask = 2
 
-[node name="Pinkfish" type="Sprite2D" parent="Area2D" unique_id=830458602]
+[node name="Pinkfish" type="Sprite2D" parent="pink" unique_id=830458602]
 position = Vector2(22, 18.999998)
 scale = Vector2(0.171875, 0.14843749)
 texture = ExtResource("1_tqb5q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=839202415]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pink" unique_id=839202415]
 position = Vector2(24.000004, 17.878904)
 scale = Vector2(0.171875, 0.14843749)
 shape = SubResource("RectangleShape2D_tqb5q")
 
-[node name="Cyanfish" type="Sprite2D" parent="." unique_id=1422955778]
+[node name="cyan" type="Area2D" parent="." unique_id=1130204184]
 visible = false
+collision_layer = 2
+collision_mask = 2
+
+[node name="Cyanfish" type="Sprite2D" parent="cyan" unique_id=1422955778]
 position = Vector2(22.5, 18.5)
 scale = Vector2(0.17578125, 0.14453125)
 texture = ExtResource("2_qtufe")
 
-[node name="Redfish" type="Sprite2D" parent="." unique_id=192667133]
-visible = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cyan" unique_id=805236067]
+position = Vector2(24, 18)
+shape = SubResource("RectangleShape2D_qtufe")
+
+[node name="red" type="Area2D" parent="." unique_id=879353858]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Redfish" type="Sprite2D" parent="red" unique_id=192667133]
 position = Vector2(17.125002, 22.531252)
 scale = Vector2(0.17871095, 0.18334962)
 texture = ExtResource("4_wixex")
 
-[node name="Purplefish" type="Sprite2D" parent="." unique_id=261135449]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="red" unique_id=853590169]
+position = Vector2(21, 18)
+shape = SubResource("CircleShape2D_tqb5q")
+
+[node name="purple" type="Area2D" parent="." unique_id=989404788]
 visible = false
+collision_layer = 2
+collision_mask = 2
+
+[node name="Purplefish" type="Sprite2D" parent="purple" unique_id=261135449]
 position = Vector2(23, 18)
 scale = Vector2(0.17968751, 0.140625)
 texture = ExtResource("3_1wrlf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="purple" unique_id=899655767]
+position = Vector2(21.5, 19)
+shape = SubResource("RectangleShape2D_1wrlf")

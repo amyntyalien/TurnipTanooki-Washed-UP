@@ -16,7 +16,7 @@ func _ready():
 		set_process_input(true)
 		
 # when junk is clicked on with the left mouse key, it goes to Inventory.add_trash().
-<<<<<<< HEAD
+#
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed():
@@ -25,7 +25,7 @@ func _input_event(viewport, event, shape_idx):
 func _on_junk_clicked():
 	print("Junk clicked!")
 	queue_free()
-=======
+#
 
 func _process(_delta):
 	print(JSON.stringify(Inventory.trash))
@@ -37,4 +37,4 @@ func _input(event):
 			for i in range(randi_range(1, 10)):
 				Inventory.add_trash(["wood", "bottle", "plastic", "pizza"].pick_random(), randi_range(1,3))
 			set_process_input(false)
->>>>>>> dbfcfca13c6e2b89d0b41282a3b0ad4297fe7c7b
+#

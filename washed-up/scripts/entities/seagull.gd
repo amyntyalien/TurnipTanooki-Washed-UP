@@ -1,6 +1,6 @@
 extends Area2D
 
-var target_pos = Vector2(512, 300) # change this to go to whereever the junk is
+var target_pos = Vector2(-50, 100) # change this to go to whereever the junk is
 var speed = 300
 var junk_scene = "res://scenes/entities/junk.tscn"
 
@@ -16,6 +16,6 @@ func _ready() -> void:
 func _process(delta):
 	position = position.move_toward(target_pos, speed * delta) # constantly moving towards junk
 	
-func _on_body_entered(body): # check body
-	if body.is_in_group("junk"):
+func on_body_entered(body): # check body
+	if body.is_in_group("wood", "bottle", "plastic", "pizza"):
 		queue_free() # exit

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cn1fdtwtej5sw"]
+
+[ext_resource type="Script" uid="uid://bvknqr2q8brm1" path="res://scenes/fishing/mathquestions.gd" id="1_k0q5p"]
+
+[node name="Mathquestions" type="Node2D" unique_id=1898192396]
+script = ExtResource("1_k0q5p")

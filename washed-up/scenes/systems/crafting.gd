@@ -10,8 +10,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func rod_1():
-	if Inventory.trash["wood"] <= 3 || Inventory.trash["string"] <= 3:
-		Inventory.trash["wood"]-= 3
-		Inventory.trash["string"] <= 3
-	pass
+func _craftable(dict):
+	for i in dict:
+		if !(Inventory.feesh.has(i) and Inventory.feesh[i] > dict[i]):
+			return false
+	return true
+
+func _craft(dict):
+	for i in dict:
+		Inventory.feesh[i] -= dict[i]

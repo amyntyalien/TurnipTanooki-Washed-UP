@@ -2,6 +2,7 @@ extends Node
 
 # Reference to the junk scene
 var junk_scene = preload("res://scenes/entities/junk.tscn")
+var junk = preload("res://scripts/entities/junk.gd").new()
 @onready var timer = $JunkTimer # Assumes a Timer node exists as a child
 
 func _ready() -> void:

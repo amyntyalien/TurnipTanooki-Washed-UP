@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dryddrvx3pgqk" path="res://assets/art/screens/turniptitlescreenCONCEPT.jpg" id="1_dq1fl"]
 [ext_resource type="Script" uid="uid://dsi5ag4guagss" path="res://scripts/ui/main_menu.gd" id="1_ewanl"]
+[ext_resource type="AudioStream" uid="uid://b2lfjj83c1phv" path="res://assets/music/Acapella.wav" id="3_q35n2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4e10h"]
 load_path = "res://.godot/imported/Turnip Tanooki Washed UP! Title.png-eef3dec3e298257897bc78b6efb03f6a.ctex"
@@ -103,6 +104,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=105432980]
+stream = ExtResource("3_q35n2")
+autoplay = true
 
 [connection signal="pressed" from="Control (MainMenu)/Continue - TextureRect2/continue" to="Control (MainMenu)" method="_on_continue_pressed"]
 [connection signal="pressed" from="Control (MainMenu)/New Game - TextureRect4/new game" to="Control (MainMenu)" method="_on_new_game_pressed"]

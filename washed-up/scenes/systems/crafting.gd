@@ -1,3 +1,4 @@
+#res://scenes/systems/crafting.gd:
 extends Sprite2D
 
 
@@ -7,7 +8,7 @@ func _ready() -> void:
 	$Control/Rod2.pressed.connect(_rod2)
 	$Control/Rod3.pressed.connect(_rod3)
 	$Control/Rod4.pressed.connect(_rod4)
-	$Control/Raft.pressed.connect(_raft)
+	$Control/Raft.pressed.connect(_raft) # connect this to gameworld.gd?
 	$Control/Craft_Button.pressed.connect(_craft)
 	$Control/Warning.text = ""
 	_rod1()

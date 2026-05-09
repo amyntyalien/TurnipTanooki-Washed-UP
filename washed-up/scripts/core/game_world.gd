@@ -1,3 +1,4 @@
+#res://scripts/core/game_world.gd:
 extends Node2D
 
 var junk_scene = preload("res://scenes/entities/junk.tscn")
@@ -16,6 +17,12 @@ func _ready():
 	
 	# Connect the signal to detect when the player enters
 	fishing_area.body_entered.connect(_on_fishing_Transition_body_entered)
+
+	# change raft visibility here? If Inventory.raft = 0, then there is no raft. If Inventory.raft = 1, there is a raft.
+	var raft_node = get_node_or_null("Raft")
+	if raft_node:
+		raft_node.visible = Inventory.raft == 1
+		$raftTransition/Sprite2D.visible = true
 
 # runs when timer ends
 func _on_junk_timer_timeout():
@@ -47,7 +54,14 @@ func _process(_delta):
 		get_tree().change_scene_to_file("res://scenes/systems/inventory.tscn")
 
 
-
+# change raft visibility here? If Inventory.raft = 0, then there is no raft. If Inventory.raft = 1, there is a raft.
+# or use the is_raft variable?
 func _on_raft_transition_body_entered(body: Node2D) -> void:
+	if Inventory.raft != 1:
+		$raftTransition/Sprite2D.visible = false
+		return
+	else :
+		$raftTransition/Sprite2D.visible = true
+	
 	if $Player/CharacterBody2D/AnimatedSprite2D.animation != "fall":
 		get_tree().change_scene_to_file("res://scenes/boss_fights/boss.tscn")

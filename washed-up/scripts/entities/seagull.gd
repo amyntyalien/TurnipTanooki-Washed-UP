@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 50
+var speed = 100
 var direction = Vector2.ZERO
 var is_moving = false
 var velocity = Vector2.ZERO
@@ -15,12 +15,26 @@ func _ready():
 func _process(delta):
 	if is_moving:
 		position += direction * speed * delta
+	
+	# Get camera-aware bounds instead of static screen size
+	var camera = get_viewport().get_camera_2d()
+	if camera:
+		var half_screen = get_viewport_rect().size * 0.5 / camera.zoom
+		var cam_pos = camera.global_position
 		
-		# Add screen wrapping so they don't fly away forever
-		if position.x < 0: position.x = screen_size.x
-		if position.x > screen_size.x: position.x = 0
-		if position.y < 0: position.y = screen_size.y
-		if position.y > screen_size.y: position.y = 0
+		var min_x = cam_pos.x - half_screen.x
+		var max_x = cam_pos.x + half_screen.x
+		var min_y = cam_pos.y - half_screen.y
+		var max_y = cam_pos.y + half_screen.y
+		
+		# Clamp position instead of wrapping (removes jank + offscreen jumps)
+		position.x = clamp(position.x, min_x, max_x)
+		position.y = clamp(position.y, min_y, max_y)
+	else:
+		# Fallback clamp if no camera exists
+		var half_screen = get_viewport_rect().size * 0.5
+		position.x = clamp(position.x, 0, screen_size.x)
+		position.y = clamp(position.y, 0, screen_size.y)
 
 func set_new_random_target():
 	# Randomly decide to move or stop

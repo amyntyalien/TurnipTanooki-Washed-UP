@@ -50,5 +50,6 @@ func _collect_junk():
 func _on_area_entered(area):
 	if area.name == "seagull":
 		print("Seagull collected junk")
+		Inventory.add_trash(["wood", "string", "plastic"].pick_random(), randi_range(1, 3))
 		emit_signal("collected")
 		queue_free()

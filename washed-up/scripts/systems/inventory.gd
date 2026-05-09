@@ -39,11 +39,13 @@ func add_fish(item, amount):
 	else:
 		print("invalid fish")
 
+var multiplier = 1
+
 func add_trash(item, amount):
 	if trash.has(item):
-		trash[item] += amount
+		trash[item] += amount*multiplier
 	else:
-		trash[item] = amount
+		trash[item] = amount*multiplier
 
 func _on_backtogame_pressed():
 	get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")

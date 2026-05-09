@@ -45,7 +45,7 @@ func _plastic():
 	$Control/Cost.text = str(Inventory.feesh["cyan"])+"/1"
 
 func _bird():
-	var dict = {"purple":"birst"}
+	var dict = {"purple":"bird"}
 	_tradable(dict)
 	current = dict
 	$Control/Goods.play("4")
@@ -64,4 +64,8 @@ func _tradable(dict):
 func _trade():
 	for i in current:
 		Inventory.feesh[i] -= 1
+		if current[i] == "bird":
+			Inventory.multiplier += 1
+			print(Inventory.multiplier)
+		Inventory.trash[current[i]] += 1
 		

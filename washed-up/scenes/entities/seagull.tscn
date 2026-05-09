@@ -35,12 +35,10 @@ collision_mask = 2
 script = ExtResource("1_hebkx")
 
 [node name="seagull" type="AnimatedSprite2D" parent="seagull" unique_id=117565714]
-position = Vector2(52.5, 53)
 scale = Vector2(0.41015628, 0.4140625)
 sprite_frames = SubResource("SpriteFrames_800nu")
 autoplay = "default"
 frame_progress = 0.12835243
 
 [node name="seagull2" type="CollisionShape2D" parent="seagull" unique_id=1735506920]
-position = Vector2(49, 56)
 shape = SubResource("CircleShape2D_titro")

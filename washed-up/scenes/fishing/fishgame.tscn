@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dypton53yav77" path="res://assets/art/Items/fish/redfish.png" id="9_vilim"]
 [ext_resource type="Texture2D" uid="uid://eqrq37gdsi6q" path="res://assets/art/Items/fish/pinkfish.png" id="10_1lkd0"]
 [ext_resource type="Texture2D" uid="uid://co7x1i67naku" path="res://assets/art/Items/fish/purplefish.png" id="12_rt4sh"]
+[ext_resource type="AudioStream" uid="uid://cxoahklrxhiwy" path="res://assets/music/Guitar.wav" id="14_mj3x6"]
 
 [sub_resource type="Curve2D" id="Curve2D_vy06d"]
 _data = {
@@ -379,3 +380,8 @@ script = ExtResource("3_nut0q")
 position = Vector2(1627, 732)
 sprite_frames = SubResource("SpriteFrames_jjlx3")
 autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=722339672]
+stream = ExtResource("14_mj3x6")
+volume_db = -2.476
+autoplay = true

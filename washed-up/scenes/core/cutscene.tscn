@@ -60,7 +60,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"6",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [node name="Cutscene" type="Node2D" unique_id=1373542161]

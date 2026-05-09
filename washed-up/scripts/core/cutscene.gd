@@ -9,7 +9,7 @@ var timer = 0
 func _ready():
 	label.visible = false
 	
-	await get_tree().create_timer(3.0).timeout # waiting 3 seconds
+	await get_tree().create_timer(2.0).timeout # waiting 2 seconds
 	
 	label.visible = true # label now visible
 	label.text = "Press F to skip the cutscene."
@@ -19,7 +19,7 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("skip_cutscene"):
 		get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")
-	if(timer == 200):
+	if(timer == 150):
 		timer = 0
 		frame += 1
 		if frame <= 6:

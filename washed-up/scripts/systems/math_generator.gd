@@ -30,23 +30,36 @@ func generate_question_level_1():
 			}
 	return{}
 
+
+func _add(x, y):
+	return x+y
+func _minus(x, y):
+	return x+y
+func _multi(x, y):
+	return x+y
+func _div(x, y):
+	return x+y
+
+
 func generate_question_level_2():
-	var order = randi_range(0, 2)
-	var operations = ['+', '-', '*', '/']
-	operations.get(1).work = function(){print("a")}
-	var operation_a = operations.get(randi_range(0, 3))
-	var operation_b = operations.get(randi_range(0, 3))
 	var a = randi_range(1, 10)
 	var b = randi_range(1, 10)
 	var c = randi_range(1, 10)
+	var order = randi_range(0, 2)
+	var operations = [_add, _minus, _multi, _div]
+	var operation_symbols = ['+', '-', '*', '/']
+	print(operations.get(0).call(a,b))
+	var operation_a = operations.get(randi_range(0, 3))
+	var operation_b = operations.get(randi_range(0, 3))
 	
 	match order:
 		0:
 			var ans = 0
-			
+			ans = operation_a.call(a, b)
+			ans = operation_a.call(ans, c)
 			return{
-				"question": str(a) + " " + operation_a + " " 
-				+ str(b) + operation_b + " " + str(c), "answer": a + b
+				"question": str(a) + ") " + operation_a + " " 
+				+ str(b) + operation_b + " " + str(c), "answer": ans
 			}
 		1:
 			if b > a:

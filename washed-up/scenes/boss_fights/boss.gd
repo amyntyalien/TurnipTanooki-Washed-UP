@@ -22,13 +22,16 @@ func _process(delta: float) -> void:
 		combo = 0
 		timer = 0
 		unanswered_count += 1
+		question_count += 1
+		$Qnum.text = question_count
 		$Combo.text = $Combo.text + "X"
 		_level()
 	$Answer.text = ans
 	if correct:
 		combo += 1
 		timer = 0
-		
+		question_count +=1
+		$Qnum.text = question_count
 		_level()
 		correct = false
 		ans = ""

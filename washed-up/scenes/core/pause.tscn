@@ -6,11 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://dqmryxt8e6j46" path="res://assets/art/characters/player/turnip_sprite_basic.png" id="4_u60py"]
 [ext_resource type="Texture2D" uid="uid://ex80ylw55vpk" path="res://assets/art/Items/buttons/Menu Selection Buttons TITLE.png" id="5_bn0f5"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86gv1"]
-load_path = "res://.godot/imported/Menu Selection Buttons CONTINUE.png-aa35bd051af471651219605f751c9dca.ctex"
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bn0f5"]
-load_path = "res://.godot/imported/Menu Selection Buttons OPTIONS.png-d7d068f42951ebd5516eb0ca3389b873.ctex"
+load_path = "res://.godot/imported/Menu Selection Buttons CONTINUE.png-dabf02ae9179d0efbe56d9371671298f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uxw54"]
+load_path = "res://.godot/imported/Menu Selection Buttons OPTIONS.png-4748ceeb922d71a6c6ee8a1451eec4b0.ctex"
 
 [node name="Pause" type="Node2D" unique_id=1082272616]
 script = ExtResource("1_uxw54")
@@ -24,7 +24,7 @@ offset_left = 60.0
 offset_top = 704.0
 offset_right = 985.0
 offset_bottom = 869.0
-texture = SubResource("CompressedTexture2D_86gv1")
+texture = SubResource("CompressedTexture2D_bn0f5")
 
 [node name="continuepause" type="TextureButton" parent="continuepause - TextureRect" unique_id=12439322]
 layout_mode = 1
@@ -39,7 +39,7 @@ offset_left = 915.0
 offset_top = 597.0
 offset_right = 1840.0
 offset_bottom = 762.0
-texture = SubResource("CompressedTexture2D_bn0f5")
+texture = SubResource("CompressedTexture2D_uxw54")
 
 [node name="optionspause" type="TextureButton" parent="optionspause - TextureRect2" unique_id=1871281350]
 layout_mode = 1

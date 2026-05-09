@@ -15,12 +15,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if start:
 		timer+=1
-	if timer == 10:
+		$Timer.value = timer / 5
+	if timer == 500:
 		combo = 0
 		timer = 0
+		$Combo.text = "Combo X "+ str(combo)
+		_level1()
 	$Answer.text = ans
 	if correct:
-		combo+=1
+		combo += 1
+		timer = 0
+		$Combo.text = "Combo X "+ str(combo)
 		_level1()
 		correct = false
 		ans = ""
@@ -30,7 +35,7 @@ var q_and_a
 
 func _level1():
 	var x = $Mathquestions
-	q_and_a = x.generate_question_level_2()
+	q_and_a = x.generate_question_level_1()
 	$Question.text = q_and_a["question"]
 	start = true
 	pass

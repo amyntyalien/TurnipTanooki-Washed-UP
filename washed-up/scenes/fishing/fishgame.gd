@@ -52,6 +52,6 @@ func _input(event):
 		if event.keycode == KEY_0:
 			ans += "0"
 		if event.keycode == KEY_BACKSPACE || ans.length() > 5:
-			ans.remove_char(ans.length()-2)
+			ans = ans.left(ans.length()-1)
 		
 	

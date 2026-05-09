@@ -5,6 +5,7 @@ var timer = 0
 var start = false
 var correct = false
 
+@onready var Question = $Background/Path2D/PathFollow2D/Cloud/Question
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_level1()
@@ -20,6 +21,7 @@ func _process(delta: float) -> void:
 		combo = 0
 		timer = 0
 		$Combo.text = "Combo X "+ str(combo)
+		$Item.play("default")
 		_level1()
 	$Answer.text = ans
 	if correct:
@@ -27,10 +29,7 @@ func _process(delta: float) -> void:
 		timer = 0
 		$Combo.text = "Combo X "+ str(combo)
 		get_fish()
-		$Inventory.text = JSON.stringify(Inventory.feesh)
-		for key in Inventory.feesh:
-			if(key == "red"):
-				pass
+		$Background/Path2D/PathFollow2D.progress_ratio = 0
 		
 		_level1()
 		correct = false
@@ -42,7 +41,7 @@ var q_and_a
 func _level1():
 	var x = $Mathquestions
 	q_and_a = x.generate_question_level_1()
-	$Question.text = q_and_a["question"]
+	Question.text = q_and_a["question"]
 	start = true
 	pass
 
@@ -86,10 +85,14 @@ func get_fish():
 	var x = randi_range(1,100)
 	if x < 50:
 		Inventory.add_fish("red", combo)
+		$Item.play("red_fish")
 	elif x < 85:
 		Inventory.add_fish("pink", combo)
+		$Item.play("pink_fish")
 	elif x < 99:
 		Inventory.add_fish("cyan", combo)
+		$Item.play("cyan_fish")
 	else:
 		Inventory.add_fish("purple", combo)
+		$Item.play("purple_fish")
 	

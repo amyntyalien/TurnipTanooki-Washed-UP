@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d3kcfjnt3bbvy" path="res://scenes/world/island.tscn" id="1_3wwbw"]
 [ext_resource type="PackedScene" uid="uid://2vppcria7tke" path="res://scenes/player/player.tscn" id="2_0uvnq"]
 [ext_resource type="PackedScene" uid="uid://dog4hlimox1de" path="res://scenes/entities/junk.tscn" id="4_m4q5l"]
+[ext_resource type="PackedScene" uid="uid://b5ixei1vput1m" path="res://scenes/entities/seagull.tscn" id="5_kb8sw"]
 
 [node name="Gameworld" type="Node2D" unique_id=681680736]
 script = ExtResource("1_0uvnq")
@@ -18,3 +19,6 @@ position = Vector2(410, 153)
 position = Vector2(210.99998, 163)
 
 [node name="JunkTimer" type="Timer" parent="." unique_id=1394598799]
+
+[node name="Seagull" parent="." unique_id=1945660520 instance=ExtResource("5_kb8sw")]
+position = Vector2(211, -7)

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="washed-up"
-run/main_scene="uid://b5ikkw3tt1sfg"
+run/main_scene="uid://c5ifjten116yf"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -10,25 +10,20 @@
 
 [node name="Titlescreen" type="Node2D" unique_id=289519404]
 
-[node name="TurniptitlescreenConcept" type="Sprite2D" parent="." unique_id=1976465987]
+[node name="Control (MainMenu)" type="Control" parent="." unique_id=1499246455]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ewanl")
+
+[node name="TurniptitlescreenConcept" type="Sprite2D" parent="Control (MainMenu)" unique_id=1976465987]
 position = Vector2(960.00006, 540.00006)
 scale = Vector2(1, 1.0000001)
 texture = ExtResource("1_dq1fl")
 
-[node name="Control (MainMenu)" type="Control" parent="." unique_id=1499246455]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-script = ExtResource("1_ewanl")
-metadata/_edit_use_anchors_ = true
-
 [node name="Title - TextureRect" type="TextureRect" parent="Control (MainMenu)" unique_id=103603612]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 3.0
-offset_right = 924.0
-offset_bottom = 245.0
+offset_right = 801.0
+offset_bottom = 242.0
 texture = ExtResource("2_v8l2n")
 
 [node name="Continue - TextureRect2" type="TextureRect" parent="Control (MainMenu)" unique_id=637682944]
@@ -39,13 +34,6 @@ offset_bottom = 434.0
 texture = ExtResource("3_ewanl")
 expand_mode = 1
 
-[node name="continue" type="TextureButton" parent="Control (MainMenu)/Continue - TextureRect2" unique_id=717980090]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-
 [node name="New Game - TextureRect4" type="TextureRect" parent="Control (MainMenu)" unique_id=661479198]
 layout_mode = 0
 offset_top = 476.0
@@ -53,14 +41,6 @@ offset_right = 663.0
 offset_bottom = 594.0
 texture = ExtResource("4_desid")
 expand_mode = 1
-
-[node name="new game" type="TextureButton" parent="Control (MainMenu)/New Game - TextureRect4" unique_id=267492247]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Options - TextureRect5" type="TextureRect" parent="Control (MainMenu)" unique_id=556560438]
 layout_mode = 0
@@ -70,14 +50,6 @@ offset_bottom = 759.0
 texture = ExtResource("5_3l7qq")
 expand_mode = 1
 
-[node name="options" type="TextureButton" parent="Control (MainMenu)/Options - TextureRect5" unique_id=62256917]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="Quit - TextureRect6" type="TextureRect" parent="Control (MainMenu)" unique_id=56943456]
 layout_mode = 0
 offset_top = 798.0
@@ -85,16 +57,3 @@ offset_right = 663.0
 offset_bottom = 916.0
 texture = ExtResource("6_prcl2")
 expand_mode = 1
-
-[node name="quit" type="TextureButton" parent="Control (MainMenu)/Quit - TextureRect6" unique_id=1010818484]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[connection signal="pressed" from="Control (MainMenu)/Continue - TextureRect2/continue" to="Control (MainMenu)" method="_on_continue_pressed"]
-[connection signal="pressed" from="Control (MainMenu)/New Game - TextureRect4/new game" to="Control (MainMenu)" method="_on_new_game_pressed"]
-[connection signal="pressed" from="Control (MainMenu)/Options - TextureRect5/options" to="Control (MainMenu)" method="_on_options_pressed"]
-[connection signal="pressed" from="Control (MainMenu)/Quit - TextureRect6/quit" to="Control (MainMenu)" method="_on_quit_pressed"]

@@ -17,9 +17,9 @@ var trash = {
 	"wood":0
 }
 
-var item = {
-	"Rod0":1
-}
+var rod = 0
+
+var raft = 0;
 
 func add_fish(item, amount):
 	if feesh.has(item):

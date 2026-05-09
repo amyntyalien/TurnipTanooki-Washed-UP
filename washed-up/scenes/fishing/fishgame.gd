@@ -48,7 +48,7 @@ var q_and_a
 
 func _level1():
 	var x = $Mathquestions
-	q_and_a = x.generate_question_level_3()
+	q_and_a = x.generate_question_level_4()
 	Question.text = q_and_a["question"]
 	start = true
 	pass

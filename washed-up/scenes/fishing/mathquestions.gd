@@ -124,14 +124,24 @@ func generate_question_level_3():
 
 
 func generate_question_level_4():
-	var root1 = randi_range(1, 5)
-	var root2 = randi_range(1, 5)
-	var b = -(root1 + root2)
-	var c = root1 * root2
-	return{
-		"question": "Solve: x^2 " + (
-				"+ " + str(b) if b >= 0 else "- " + str(abs(b))
-			) + "x + " + " = -" + str(c),
-			"answer": [root1, root2]
-	}
+	var start = randi_range(-100, 100)
+	var power = randi_range(1,2)
+	var q = ""
+	match power:
+		1:
+			var move = randi_range(-30,30)
+			for i in range (5):
+				q += (str(start) + ", ")
+				start += move
+			q += ("?")
+			return {"question": q, "answer": start}
+		2:
+			var move1 = randi_range(-10,10)
+			var move2 = randi_range(-5,5)
+			for i in range (5):
+				q += (str(start) + ", ")
+				start += move1
+				move1 += move2
+			q += ("?")
+			return {"question": q, "answer": start}
 	return{}

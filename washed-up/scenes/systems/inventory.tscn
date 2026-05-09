@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c8afwmwt61ttr"]
+
+[ext_resource type="Texture2D" uid="uid://cb2xd07x2co1w" path="res://assets/art/Items/book_tab_left.png" id="1_p0jaf"]
+
+[node name="Inventory" type="Node2D" unique_id=1893544705]
+
+[node name="Inventory" type="Sprite2D" parent="." unique_id=2132208641]
+position = Vector2(844.99994, 477.00006)
+scale = Vector2(0.7792969, 0.6933594)
+texture = ExtResource("1_p0jaf")
+
+[node name="Control" type="Control" parent="Inventory" unique_id=1747738523]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Inventory/Control" unique_id=1025619916]
+layout_mode = 0
+offset_left = -551.77936
+offset_top = -563.9212
+offset_right = -477.35327
+offset_bottom = -500.4621
+
+[node name="Crafting" type="Sprite2D" parent="." unique_id=1075563902]
+visible = false
+position = Vector2(844.99994, 477.00006)
+scale = Vector2(0.7792969, 0.6933594)
+texture = ExtResource("1_p0jaf")
+
+[node name="Control" type="Control" parent="Crafting" unique_id=1729227778]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Crafting/Control" unique_id=1649896964]
+layout_mode = 0
+offset_left = -645.45355
+offset_top = -565.36346
+offset_right = -571.02747
+offset_bottom = -501.90436

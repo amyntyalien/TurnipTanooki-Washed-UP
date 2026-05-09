@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bon8wv21na82n"]
+
+[sub_resource type="GDScript" id="GDScript_med48"]
+script/source = "class_name Item
+
+@export var name: String
+@export var description: String
+@export var special_description: String
+
+\"\"\"
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+\"\"\""
+
+[node name="Item" type="Node2D" unique_id=487238973]
+
+[node name="Item" type="Node" parent="." unique_id=1420759549]
+script = SubResource("GDScript_med48")
+
+[node name="Sprite2D" type="Sprite2D" parent="Item" unique_id=1475628220]

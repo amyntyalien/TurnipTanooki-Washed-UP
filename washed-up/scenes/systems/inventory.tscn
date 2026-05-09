@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://c8afwmwt61ttr"]
 
 [ext_resource type="Texture2D" uid="uid://cb2xd07x2co1w" path="res://assets/art/Items/book_tab_left.png" id="1_p0jaf"]
+[ext_resource type="Script" uid="uid://db4cd4ei82iyo" path="res://scenes/systems/craft_button.gd" id="2_fqss7"]
+[ext_resource type="Texture2D" uid="uid://bektnl43qxd0t" path="res://assets/art/Items/book_tab_right.png" id="2_mqhhn"]
+[ext_resource type="Script" uid="uid://c1b3ja0fy5plb" path="res://scenes/systems/inv_button.gd" id="4_4m4tt"]
 
 [node name="Inventory" type="Node2D" unique_id=1893544705]
 
 [node name="Inventory" type="Sprite2D" parent="." unique_id=2132208641]
+visible = false
 position = Vector2(844.99994, 477.00006)
 scale = Vector2(0.7792969, 0.6933594)
 texture = ExtResource("1_p0jaf")
@@ -15,18 +19,21 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="Inventory/Control" unique_id=1025619916]
+[node name="Craft Button" type="Button" parent="Inventory/Control" unique_id=1025619916]
 layout_mode = 0
 offset_left = -551.77936
 offset_top = -563.9212
 offset_right = -477.35327
-offset_bottom = -500.4621
+offset_bottom = -519.21136
+text = "Craft"
+flat = true
+script = ExtResource("2_fqss7")
 
 [node name="Crafting" type="Sprite2D" parent="." unique_id=1075563902]
 visible = false
 position = Vector2(844.99994, 477.00006)
 scale = Vector2(0.7792969, 0.6933594)
-texture = ExtResource("1_p0jaf")
+texture = ExtResource("2_mqhhn")
 
 [node name="Control" type="Control" parent="Crafting" unique_id=1729227778]
 layout_mode = 3
@@ -34,9 +41,15 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="Crafting/Control" unique_id=1649896964]
+[node name="Inv Button" type="Button" parent="Crafting/Control" unique_id=1649896964]
 layout_mode = 0
 offset_left = -645.45355
 offset_top = -565.36346
-offset_right = -571.02747
-offset_bottom = -501.90436
+offset_right = -576.16034
+offset_bottom = -523.5381
+action_mode = 0
+text = "Inv"
+script = ExtResource("4_4m4tt")
+
+[connection signal="pressed" from="Inventory/Control/Craft Button" to="Inventory/Control/Craft Button" method="_on_craft_button_pressed"]
+[connection signal="pressed" from="Crafting/Control/Inv Button" to="Crafting/Control/Inv Button" method="_on_inv_button_pressed"]

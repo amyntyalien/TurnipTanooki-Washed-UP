@@ -13,7 +13,7 @@ load_path = "res://.godot/imported/Menu Selection Buttons BACK.png-c60b23c7ef98c
 script = ExtResource("1_4m4tt")
 
 [node name="Inventory" type="Sprite2D" parent="." unique_id=2132208641]
-position = Vector2(844.99994, 477.00006)
+position = Vector2(1006.5, 483.25)
 scale = Vector2(0.7792969, 0.6933594)
 texture = ExtResource("1_p0jaf")
 
@@ -22,6 +22,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Craft Button" type="Button" parent="Inventory/Control" unique_id=1025619916]
 layout_mode = 0
@@ -32,11 +33,11 @@ offset_bottom = -519.21136
 text = "Craft"
 flat = true
 script = ExtResource("2_fqss7")
+metadata/_edit_use_anchors_ = true
 
 [node name="Crafting" type="Sprite2D" parent="." unique_id=1075563902]
-visible = false
-position = Vector2(844.99994, 477.00006)
-scale = Vector2(0.7792969, 0.6933594)
+position = Vector2(1006.4999, 483.25006)
+scale = Vector2(0.93701166, 0.7014974)
 texture = ExtResource("2_mqhhn")
 
 [node name="Control" type="Control" parent="Crafting" unique_id=1729227778]
@@ -44,6 +45,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Inv Button" type="Button" parent="Crafting/Control" unique_id=1649896964]
 layout_mode = 0
@@ -54,6 +56,7 @@ offset_bottom = -523.5381
 action_mode = 0
 text = "Inv"
 script = ExtResource("4_4m4tt")
+metadata/_edit_use_anchors_ = true
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
 offset_left = 1163.0
@@ -62,6 +65,7 @@ offset_right = 1396.0
 offset_bottom = 825.0
 texture = SubResource("CompressedTexture2D_4m4tt")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="backtogame" type="TextureButton" parent="back" unique_id=519880256]
 layout_mode = 1
@@ -70,6 +74,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Inventory/Control/Craft Button" to="Inventory/Control/Craft Button" method="_on_craft_button_pressed"]
 [connection signal="pressed" from="Crafting/Control/Inv Button" to="Crafting/Control/Inv Button" method="_on_inv_button_pressed"]

@@ -35,6 +35,7 @@ func _process(delta: float) -> void:
 	
 	if (unanswered_count >= 3):
 		$Popup.show()
+		get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")
 	elif (question_count >= 15):
 		print("success")
 		get_tree().change_scene_to_file("res://scenes/core/titlescreen.tscn")

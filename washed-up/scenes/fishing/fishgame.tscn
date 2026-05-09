@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://dnmxeq7pb21np"]
+[gd_scene format=3 uid="uid://bluvqi0g3vsh1"]
 
 [ext_resource type="Script" uid="uid://jn2ra81un2d7" path="res://scenes/fishing/fishgame.gd" id="1_w5nbe"]
 [ext_resource type="Texture2D" uid="uid://bgdjtue0o1veo" path="res://assets/art/environment/tiles/fishing_bg_v001.png" id="2_2wp7l"]
 [ext_resource type="PackedScene" uid="uid://cn1fdtwtej5sw" path="res://scenes/fishing/mathquestions.tscn" id="2_xyrmk"]
-[ext_resource type="Script" path="res://scenes/fishing/getfish.gd" id="3_nut0q"]
+[ext_resource type="Script" uid="uid://cbhrpvs20v1kc" path="res://scenes/fishing/getfish.gd" id="3_nut0q"]
 [ext_resource type="Texture2D" uid="uid://b3twjkjk3dbyg" path="res://assets/art/environment/tiles/fishing_bg_water_v001.png" id="4_c2g5v"]
 [ext_resource type="Texture2D" uid="uid://cw4es5x8qg242" path="res://assets/art/characters/player/turnip_fishing_casting_8fps_v002.png" id="4_vgdys"]
 [ext_resource type="Script" uid="uid://d1ou5ei5hqqte" path="res://scenes/fishing/path_follow_2d.gd" id="5_nqdh8"]
@@ -298,10 +298,10 @@ sprite_frames = SubResource("SpriteFrames_jdcul")
 [node name="Mathquestions" parent="." unique_id=1898192396 instance=ExtResource("2_xyrmk")]
 
 [node name="Answer" type="Label" parent="." unique_id=1452182889]
-offset_left = 839.0
-offset_top = 615.0
-offset_right = 1301.0
-offset_bottom = 790.0
+offset_left = 592.0
+offset_top = 588.0
+offset_right = 1054.0
+offset_bottom = 763.0
 text = "Answer"
 label_settings = SubResource("LabelSettings_nut0q")
 

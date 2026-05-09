@@ -4,6 +4,7 @@ var combo = 0
 var timer = 0
 var start = false
 var correct = false
+var unanswered_count = 0
 
 @onready var Question = $Background/Path2D/PathFollow2D/Cloud/Question
 # Called when the node enters the scene tree for the first time.
@@ -20,13 +21,16 @@ func _process(delta: float) -> void:
 	if timer == 500:
 		combo = 0
 		timer = 0
+		unanswered_count += 1
 		$Combo.text = "Combo X "+ str(combo)
 		$Item.play("default")
 		_level1()
+		_check_game_over()
 	$Answer.text = ans
 	if correct:
 		combo += 1
 		timer = 0
+		unanswered_count = 0
 		$Combo.text = "Combo X "+ str(combo)
 		get_fish()
 		$Background/Path2D/PathFollow2D.progress_ratio = 0
@@ -34,6 +38,7 @@ func _process(delta: float) -> void:
 		_level1()
 		correct = false
 		ans = ""
+		_check_game_over()
 	pass
 
 var q_and_a
@@ -74,11 +79,26 @@ func _input(event):
 		if event.keycode == KEY_BACKSPACE || ans.length() > 5:
 			ans = ans.left(ans.length()-1)
 		if event.keycode == KEY_ENTER:
-			if int(ans) == q_and_a["answer"]:
-				correct = true
+			if ans == "":
+				unanswered_count += 1
+				combo = 0
+			else:
+				if int(ans) == q_and_a["answer"]:
+					correct = true
+					unanswered_count = 0
+				else:
+					unanswered_count += 1
+					combo = 0
+			
+			ans = ""
+			_check_game_over()
 		
 	
 
+
+func _check_game_over():
+	if unanswered_count >= 3 or combo >= 10:
+		get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")
 
 
 func get_fish():
@@ -95,4 +115,3 @@ func get_fish():
 	else:
 		Inventory.add_fish("purple", combo)
 		$Item.play("purple_fish")
-	

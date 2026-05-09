@@ -85,73 +85,53 @@ func generate_question_level_3():
 	
 	match question_type:
 		0:
-			var x = randi_range(1, 20)
-			var a = randi_range(1, 20)
-			var result = a + x
+			var x = randi_range(1, 10)
+			var a = randi_range(1, 10)
+			var random = randi_range(0, 3)
+			var operations = [_add, _minus, _multi, _div]
+			if random == 3:
+				a = a * x
+			var result = operations.get(random).call(a, x)
+			var operation_symbols = ['+', '-', '*', '/']
 			
 			return{
-				"question": str(a) + " + x = " + str(result),
+				"question": str(a) + " "+operation_symbols.get(random)+" x = " + str(result),
 				"answer": x
 			}
 		
 		1:
-			var base = randi_range(2, 5)
-			var exponent = randi_range(2, 4)
-			var answer = pow(base, exponent)
-			
-			return{
-				"question": str(base) + "^" + str(exponent),
-				"answer": answer
-			}
+			var size = randi_range(0, 1)
+			match size:
+				0:
+					var base = randi_range(6, 10)
+					var answer = pow(base, 2)
+					
+					return{
+						"question": str(base) + "^" + str(2),
+						"answer": answer
+					}
+				1:
+					var base = randi_range(2, 5)
+					var power = randi_range(2, 4)
+					var answer = pow(base, power)
+					
+					return{
+						"question": str(base) + "^" + str(power),
+						"answer": answer
+					}
 	
 	return{}
 
 
 func generate_question_level_4():
-	var question_type = randi_range(0, 3)
-	
-	match question_type:
-		0:
-			var a = randi_range(1, 10)
-			var b = randi_range(1, 10)
-			
-			return{
-				"question": "Expand: (x + " + str(a) + ")(x + " + str(b) + ")",
-				"answer": "x^2 + " + str(a + b) + "x + " + str(a * b)
-			}
-		
-		1:
-			var trig_questions = [
-				{"question": "sin(0°)", "answer": 0},
-				{"question": "sin(30°)", "answer": 0.5},
-				{"question": "cos(0°)", "answer": 1},
-				{"question": "cos(60°)", "answer": 0.5},
-				{"question": "cos(90°)", "answer": 0}
-			]
-			
-			return trig_questions[randi_range(0, trig_questions.size() - 1)]
-		
-		2:
-			var root1 = randi_range(1, 5)
-			var root2 = randi_range(1, 5)
-			
-			var b = -(root1 + root2)
-			var c = root1 * root2
-			
-			return{
-				"question": "Solve: x^2 " + (
-					"+ " + str(b) if b >= 0 else "- " + str(abs(b))
-				) + "x + " + str(c) + " = 0",
-				"answer": [root1, root2]
-			}
-		
-		3:
-			var factor_a = randi_range(1, 10)
-			var factor_b = randi_range(1, 10)
-			
-			return{
-				"question": "Factorize: x^2 + " + str(factor_a + factor_b) + "x + " + str(factor_a * factor_b),
-				"answer": "(x + " + str(factor_a) + ")(x + " + str(factor_b) + ")"
-			}
-	
+	var root1 = randi_range(1, 5)
+	var root2 = randi_range(1, 5)
+	var b = -(root1 + root2)
+	var c = root1 * root2
+	return{
+		"question": "Solve: x^2 " + (
+				"+ " + str(b) if b >= 0 else "- " + str(abs(b))
+			) + "x + " + " = -" + str(c),
+			"answer": [root1, root2]
+	}
 	return{}

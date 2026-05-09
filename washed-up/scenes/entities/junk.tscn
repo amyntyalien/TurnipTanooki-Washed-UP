@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dog4hlimox1de"]
 
-[ext_resource type="Script" uid="uid://cnob6k6g3mwex" path="res://scenes/entities/wood.gd" id="1_4bvor"]
+[ext_resource type="Script" path="res://scenes/entities/wood.gd" id="1_4bvor"]
 [ext_resource type="Texture2D" uid="uid://ccntre6l3lejg" path="res://assets/art/Items/junk/wood.png" id="1_h6mmr"]
 [ext_resource type="Script" uid="uid://ctojalo4b6b1d" path="res://scripts/entities/junk.gd" id="1_sa6mt"]
 [ext_resource type="Texture2D" uid="uid://cu8ydb1df6sue" path="res://assets/art/Items/junk/bottle.png" id="2_bdbv5"]
 [ext_resource type="Texture2D" uid="uid://b30ki13ljir2" path="res://assets/art/Items/junk/plastic.png" id="3_4bvor"]
-[ext_resource type="Script" uid="uid://b7esh6sqq62bb" path="res://scenes/entities/bottle.gd" id="4_gwr74"]
+[ext_resource type="Script" path="res://scenes/entities/bottle.gd" id="4_gwr74"]
 [ext_resource type="Texture2D" uid="uid://f4rx8gxq5tmq" path="res://assets/art/Items/junk/pizza.png" id="4_sa6mt"]
-[ext_resource type="Script" uid="uid://bsh8tu0b6sj6a" path="res://scenes/entities/plastic.gd" id="6_y4qg4"]
-[ext_resource type="Script" uid="uid://dowoqthx6umus" path="res://scenes/entities/pizza.gd" id="8_xfphd"]
+[ext_resource type="Script" path="res://scenes/entities/plastic.gd" id="6_y4qg4"]
+[ext_resource type="Script" path="res://scenes/entities/pizza.gd" id="8_xfphd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exvou"]
 size = Vector2(210, 163)

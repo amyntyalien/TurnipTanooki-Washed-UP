@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://cmc7qnhu6amov"]
+[gd_scene format=3 uid="uid://dqshqg4rvdjv8"]
 
 [ext_resource type="Script" uid="uid://s8u6arfsufuu" path="res://scripts/systems/crafting.gd" id="1_awcff"]
+[ext_resource type="Script" uid="uid://cny4opyfug0tq" path="res://scenes/systems/crafting.gd" id="3_3glj5"]
 [ext_resource type="Texture2D" uid="uid://bektnl43qxd0t" path="res://assets/art/Items/book_tab_right.png" id="3_wmtw3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4m4tt"]
@@ -13,6 +14,7 @@ script = ExtResource("1_awcff")
 position = Vector2(989, 549)
 scale = Vector2(1, 0.89)
 texture = ExtResource("3_wmtw3")
+script = ExtResource("3_3glj5")
 
 [node name="Control" type="Control" parent="Crafting" unique_id=1729227778]
 layout_mode = 3

@@ -245,7 +245,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nut0q"]
@@ -346,6 +346,7 @@ autoplay = "idle"
 [node name="Water" type="AnimatedSprite2D" parent="Background" unique_id=1797544135]
 position = Vector2(962, 543)
 sprite_frames = SubResource("SpriteFrames_jdcul")
+autoplay = "default"
 
 [node name="Mathquestions" parent="." unique_id=1898192396 instance=ExtResource("2_xyrmk")]
 

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dpnah08uc85fi" path="res://scripts/core/game_world.gd" id="1_0uvnq"]
 [ext_resource type="PackedScene" uid="uid://d3kcfjnt3bbvy" path="res://scenes/world/island.tscn" id="1_3wwbw"]
 [ext_resource type="PackedScene" uid="uid://2vppcria7tke" path="res://scenes/player/player.tscn" id="2_0uvnq"]
+[ext_resource type="PackedScene" uid="uid://dog4hlimox1de" path="res://scenes/entities/junk.tscn" id="4_m4q5l"]
 
 [node name="Gameworld" type="Node2D" unique_id=681680736]
 script = ExtResource("1_0uvnq")
@@ -12,3 +13,6 @@ position = Vector2(452, 143)
 
 [node name="Player" parent="." unique_id=156217139 instance=ExtResource("2_0uvnq")]
 position = Vector2(410, 153)
+
+[node name="Junk" parent="." unique_id=107557628 instance=ExtResource("4_m4q5l")]
+position = Vector2(133, 95)

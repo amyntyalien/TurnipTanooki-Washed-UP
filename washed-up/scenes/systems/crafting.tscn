@@ -138,7 +138,7 @@ scale = Vector2(0.99999994, 1.1235955)
 texture = ExtResource("6_37r4x")
 
 [node name="Input2" type="Sprite2D" parent="Crafting/Control" unique_id=2143684201]
-position = Vector2(517.99994, -35.95508)
+position = Vector2(525.99994, -48.31463)
 scale = Vector2(0.7070312, 0.78563905)
 texture = ExtResource("7_fgy45")
 
@@ -153,10 +153,10 @@ label_settings = SubResource("LabelSettings_4sqea")
 
 [node name="Cost2" type="Label" parent="Crafting/Control" unique_id=276371950]
 layout_mode = 0
-offset_left = 460.99994
-offset_top = 38.20221
-offset_right = 558.99994
-offset_bottom = 126.20221
+offset_left = 458.99994
+offset_top = 25.842728
+offset_right = 556.99994
+offset_bottom = 113.84273
 text = "3/3"
 label_settings = SubResource("LabelSettings_4sqea")
 
@@ -164,6 +164,16 @@ label_settings = SubResource("LabelSettings_4sqea")
 position = Vector2(369.99997, -312.35953)
 sprite_frames = SubResource("SpriteFrames_37r4x")
 animation = &"1"
+
+[node name="Warning" type="Label" parent="Crafting/Control" unique_id=1550552976]
+layout_mode = 0
+offset_left = 91.999954
+offset_top = -495.5056
+offset_right = 351.99994
+offset_bottom = -407.5056
+text = "Warning"
+label_settings = SubResource("LabelSettings_4sqea")
+horizontal_alignment = 1
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
 offset_left = 1474.0

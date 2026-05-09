@@ -8,8 +8,8 @@ func _ready() -> void:
 	$Control/Rod3.pressed.connect(_rod3)
 	$Control/Rod4.pressed.connect(_rod4)
 	$Control/Craft_Button.pressed.connect(_craft)
-	Inventory.add_trash("wood", 50)
-	Inventory.add_trash("string", 50)
+	$Control/Warning.text = ""
+	_rod1()
 	pass # Replace with function body.
 
 
@@ -21,6 +21,9 @@ var current = {}
 var level = 0
 
 func _rod1():
+	if level <= 1:
+		$Control/Warning.text = "Already levelled"
+		pass
 	var dict = {"wood":3, "string":3}
 	_craftable(dict)
 	current = dict
@@ -30,6 +33,9 @@ func _rod1():
 	level = 1
 
 func _rod2():
+	if level <= 2:
+		$Control/Warning.text = "Already levelled"
+		pass
 	var dict = {"wood":10, "string":10}
 	_craftable(dict)
 	current = dict
@@ -39,6 +45,9 @@ func _rod2():
 	level = 2
 
 func _rod3():
+	if level <= 3:
+		$Control/Warning.text = "Already levelled"
+		pass
 	var dict = {"wood":30, "string":30}
 	_craftable(dict)
 	current = dict
@@ -48,6 +57,9 @@ func _rod3():
 	level = 3
 
 func _rod4():
+	if level <= 4:
+		$Control/Warning.text = "Already levelled"
+		pass
 	var dict = {"wood":100, "string":100}
 	_craftable(dict)
 	current = dict
@@ -60,6 +72,7 @@ func _craftable(dict):
 	for i in dict:
 		if !(Inventory.trash.has(i) and Inventory.trash[i] >= dict[i]):
 			$Control/Craft_Button.disabled = true
+			$Control/Warning.text = "Not enough matrial"
 			return []
 	$Control/Craft_Button.disabled = false
 

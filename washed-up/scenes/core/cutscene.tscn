@@ -3,9 +3,20 @@
 [ext_resource type="Script" uid="uid://d2lgjsymo0nlt" path="res://scripts/core/cutscene.gd" id="1_de4jl"]
 [ext_resource type="Texture2D" uid="uid://cpbl0217ceby7" path="res://assets/art/screens/turnipcutsceneCONCEPT.png" id="1_v7w4u"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_de4jl"]
+font_size = 72
+font_color = Color(0, 0, 0, 1)
+
 [node name="Cutscene" type="Node2D" unique_id=1373542161]
 script = ExtResource("1_de4jl")
 
 [node name="TurnipcutsceneConcept" type="Sprite2D" parent="." unique_id=723448441]
 position = Vector2(960, 540)
 texture = ExtResource("1_v7w4u")
+
+[node name="Label" type="Label" parent="." unique_id=1562525164]
+offset_left = 472.0
+offset_top = 466.0
+offset_right = 1086.0
+offset_bottom = 545.0
+label_settings = SubResource("LabelSettings_de4jl")

@@ -9,6 +9,25 @@ func _ready() -> void:
 func _process(_delta) -> void:
 	pass
 
+var feesh = {
+	"pink":0
+}
+
+var trash = {
+	"wood":0
+}
+
+func add_fish(item, amount):
+	if feesh.has(item):
+		feesh[item] += amount
+	else:
+		feesh.assign({item: amount})
+
+func add_trash(item, amount):
+	if trash.has(item):
+		trash[item] += amount
+	else:
+		trash.assign({item: amount})
 
 func _on_backtogame_pressed():
 	get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")

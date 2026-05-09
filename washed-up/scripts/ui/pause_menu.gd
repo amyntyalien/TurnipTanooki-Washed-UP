@@ -15,8 +15,8 @@ func _on_savepause_pressed() -> void:
 	pass # Replace with function body.
 
 
-func _on_optionspause_pressed() -> void:
-	pass # Replace with function body.
+func _on_optionspause_pressed():
+	get_tree().change_scene_to_file("res://scenes/core/pauseoptions.tscn")
 
 
 func _on_continuepause_pressed():

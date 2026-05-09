@@ -1,10 +1,31 @@
 [gd_scene format=3 uid="uid://0ameymua01sw"]
 
+[ext_resource type="Script" uid="uid://68ibvx8wlc43" path="res://scripts/ui/pausemenuoptions.gd" id="1_bo2j7"]
+[ext_resource type="Texture2D" uid="uid://dr4k1w7wa781n" path="res://assets/art/Items/buttons/Menu Selection Buttons BACK.png" id="1_cu6p2"]
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_csys6"]
 load_path = "res://.godot/imported/pausemenuCONCEPT.png-5abd2606d32f7f7479feb3806beff523.ctex"
 
 [node name="Pauseoptions" type="Node2D" unique_id=1169577646]
+script = ExtResource("1_bo2j7")
 
 [node name="PausemenuConcept" type="Sprite2D" parent="." unique_id=2000824460]
 position = Vector2(962, 543)
 texture = SubResource("CompressedTexture2D_csys6")
+
+[node name="back - TextureRect" type="TextureRect" parent="." unique_id=1313844750]
+offset_left = 518.0
+offset_top = 480.0
+offset_right = 1443.0
+offset_bottom = 645.0
+texture = ExtResource("1_cu6p2")
+
+[node name="back" type="TextureButton" parent="back - TextureRect" unique_id=30867734]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="back - TextureRect/back" to="." method="_on_back_pressed"]

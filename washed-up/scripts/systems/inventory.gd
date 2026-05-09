@@ -17,6 +17,10 @@ var trash = {
 	"wood":0
 }
 
+var rod = 0
+
+var raft = 0;
+
 func add_fish(item, amount):
 	if feesh.has(item):
 		feesh[item] += amount

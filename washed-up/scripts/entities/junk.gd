@@ -53,6 +53,7 @@ func _on_input_event(_viewport, event, _shape_idx):
 # runs when junk clicked
 func _on_junk_clicked():
 	print("Junk clicked!")
+<<<<<<< HEAD
 
 	# add random trash
 	Inventory.add_trash(
@@ -68,3 +69,15 @@ func _on_area_entered(area):
 		print("Seagull collected junk")
 		emit_signal("collected")
 		queue_free()
+=======
+	queue_free()
+#
+	
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_C:
+			for i in range(randi_range(1, 10)):
+				Inventory.add_trash(["wood", "bottle", "plastic", "pizza"].pick_random(), randi_range(1,3))
+			set_process_input(false)
+#
+>>>>>>> 34fd714a131a69ceb9dc33855344a8d2a70bc7e2

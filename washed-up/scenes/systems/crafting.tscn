@@ -3,6 +3,16 @@
 [ext_resource type="Script" uid="uid://s8u6arfsufuu" path="res://scripts/systems/crafting.gd" id="1_awcff"]
 [ext_resource type="Script" uid="uid://cny4opyfug0tq" path="res://scenes/systems/crafting.gd" id="3_3glj5"]
 [ext_resource type="Texture2D" uid="uid://bektnl43qxd0t" path="res://assets/art/Items/book_tab_right.png" id="3_wmtw3"]
+[ext_resource type="Texture2D" uid="uid://dwmaupi7qfobq" path="res://assets/art/Items/Untitled27_20260509182138.png" id="4_xvm05"]
+[ext_resource type="Texture2D" uid="uid://bwxtpi8k6t4d8" path="res://assets/art/Items/Untitled27_20260509182146.png" id="5_5ce7d"]
+[ext_resource type="Texture2D" uid="uid://ctd0aw50r3fkc" path="res://assets/art/Items/Untitled27_20260509182128.png" id="6_37r4x"]
+[ext_resource type="Texture2D" uid="uid://dg2cnymwoh167" path="res://assets/art/Items/Untitled27_20260509182316.png" id="6_fgy45"]
+[ext_resource type="Texture2D" uid="uid://dddxa6xixif5h" path="res://assets/art/Items/Untitled27_20260509182447.png" id="7_4sqea"]
+[ext_resource type="Texture2D" uid="uid://ccntre6l3lejg" path="res://assets/art/Items/junk/wood.png" id="7_fgy45"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4sqea"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4m4tt"]
 load_path = "res://.godot/imported/Menu Selection Buttons BACK.png-c60b23c7ef98c4c912d867b88fece62b.ctex"
@@ -32,6 +42,94 @@ offset_bottom = -523.5381
 action_mode = 0
 text = "Inv"
 metadata/_edit_use_anchors_ = true
+
+[node name="Craft_Button" type="Button" parent="Crafting/Control" unique_id=94984853]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 39.697674
+anchor_top = 33.520977
+anchor_right = 42.522667
+anchor_bottom = 34.981647
+offset_left = -1290.907
+offset_top = -1130.7268
+offset_right = -1221.6138
+offset_bottom = -1088.9014
+action_mode = 0
+text = "Craft"
+metadata/_edit_use_anchors_ = true
+
+[node name="Rod1" type="Button" parent="Crafting/Control" unique_id=310062598]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -127.70689
+anchor_top = -31.052414
+anchor_right = -122.83921
+anchor_bottom = -25.49805
+offset_left = 4454.2754
+offset_top = 772.4336
+offset_right = 4523.5684
+offset_bottom = 814.25903
+action_mode = 0
+icon = ExtResource("4_xvm05")
+metadata/_edit_use_anchors_ = true
+
+[node name="Rod2" type="Button" parent="Crafting/Control" unique_id=1673798359]
+layout_mode = 0
+offset_left = -354.0
+offset_top = -469.6629
+offset_right = -90.0
+offset_bottom = -205.6629
+icon = ExtResource("5_5ce7d")
+
+[node name="Rod3" type="Button" parent="Crafting/Control" unique_id=139607990]
+layout_mode = 0
+offset_left = -653.0
+offset_top = -171.91013
+offset_right = -389.0
+offset_bottom = 92.089874
+icon = ExtResource("6_fgy45")
+
+[node name="Rod4" type="Button" parent="Crafting/Control" unique_id=648507987]
+layout_mode = 0
+offset_left = -355.0
+offset_top = -165.91013
+offset_right = -91.0
+offset_bottom = 98.089874
+icon = ExtResource("7_4sqea")
+
+[node name="Product" type="Sprite2D" parent="Crafting/Control" unique_id=1257290482]
+visible = false
+position = Vector2(375.99994, -312.35956)
+scale = Vector2(0.99999994, 1.1235955)
+texture = ExtResource("4_xvm05")
+
+[node name="Input1" type="Sprite2D" parent="Crafting/Control" unique_id=854574428]
+visible = false
+position = Vector2(236.99994, -4.494385)
+scale = Vector2(0.99999994, 1.1235955)
+texture = ExtResource("6_37r4x")
+
+[node name="Input2" type="Sprite2D" parent="Crafting/Control" unique_id=2143684201]
+visible = false
+position = Vector2(517.99994, -35.95508)
+scale = Vector2(0.7070312, 0.78563905)
+texture = ExtResource("7_fgy45")
+
+[node name="Cost1" type="Label" parent="Crafting/Control" unique_id=1813416222]
+layout_mode = 0
+offset_left = 180.99994
+offset_top = 25.842651
+offset_right = 278.99994
+offset_bottom = 113.84265
+label_settings = SubResource("LabelSettings_4sqea")
+
+[node name="Cost2" type="Label" parent="Crafting/Control" unique_id=276371950]
+layout_mode = 0
+offset_left = 460.99994
+offset_top = 38.20221
+offset_right = 558.99994
+offset_bottom = 126.20221
+label_settings = SubResource("LabelSettings_4sqea")
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
 offset_left = 1474.0

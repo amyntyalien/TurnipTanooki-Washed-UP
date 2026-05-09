@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cefhqdiaf3dps"
-path="res://.godot/imported/turnip_walk_sprites_8fps_v002.png-82b9762afdd0556b3f62123bd41f4005.ctex"
+uid="uid://m4t4ij8tk2f5"
+path="res://.godot/imported/cloud_assets_v001.png-066d22f5ddfc875222705a1250f92dd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/characters/player/turnip_walk_sprites_8fps_v002.png"
-dest_files=["res://.godot/imported/turnip_walk_sprites_8fps_v002.png-82b9762afdd0556b3f62123bd41f4005.ctex"]
+source_file="res://assets/art/environment/tiles/cloud_assets_v001.png"
+dest_files=["res://.godot/imported/cloud_assets_v001.png-066d22f5ddfc875222705a1250f92dd9.ctex"]
 
 [params]
 

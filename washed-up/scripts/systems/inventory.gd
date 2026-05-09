@@ -28,7 +28,7 @@ func add_fish(item, amount):
 		if feesh.has(item):
 			feesh[item] += amount
 		else:
-			feesh.assign({item: amount})
+			feesh[item] = amount
 	else:
 		print("invalid fish")
 
@@ -36,7 +36,7 @@ func add_trash(item, amount):
 	if trash.has(item):
 		trash[item] += amount
 	else:
-		trash.assign({item: amount})
+		trash[item] = amount
 
 func _on_backtogame_pressed():
 	get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")

@@ -9,7 +9,7 @@ var unanswered_count = 0
 @onready var Question = $Background/Path2D/PathFollow2D/Cloud/Question
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	_level1()
+	_level()
 	pass # Replace with function body.
 
 
@@ -26,8 +26,7 @@ func _process(delta: float) -> void:
 		unanswered_count += 1
 		$Combo.text = "Combo X "+ str(combo)
 		$Item.play("default")
-		_level1()
-		_check_game_over()
+		_level()
 	$Answer.text = ans
 	if correct:
 		combo += 1
@@ -38,17 +37,27 @@ func _process(delta: float) -> void:
 		$Background/Path2D/PathFollow2D.progress_ratio = 0
 		$Background/Character.play("fish")
 		
-		_level1()
+		_level()
 		correct = false
 		ans = ""
-		_check_game_over()
 		
 
 var q_and_a
 
-func _level1():
+func _level():
 	var x = $Mathquestions
-	q_and_a = x.generate_question_level_4()
+	match Inventory.rod:
+		0:
+			q_and_a = x.generate_question_level_1()
+		1:
+			q_and_a = x.generate_question_level_2()
+		2:
+			q_and_a = x.generate_question_level_3()
+		3:
+			q_and_a = x.generate_question_level_4()
+		4:
+			q_and_a = x.generate_question_level_4()
+		
 	Question.text = q_and_a["question"]
 	start = true
 	pass
@@ -57,6 +66,8 @@ var ans = ""
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_ESCAPE:
+			get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")
 		if event.keycode == KEY_MINUS && ans.length() == 0:
 			ans += "-"
 		if event.keycode == KEY_1:
@@ -94,14 +105,8 @@ func _input(event):
 					combo = 0
 			
 			ans = ""
-			_check_game_over()
 		
 	
-
-
-func _check_game_over():
-	if unanswered_count >= 3 or combo >= 10:
-		get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")
 
 
 func get_fish():

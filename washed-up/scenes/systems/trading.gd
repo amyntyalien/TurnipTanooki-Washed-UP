@@ -1,0 +1,67 @@
+extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$Control/String.pressed.connect(_string)
+	$Control/Wood.pressed.connect(_wood)
+	$Control/Plastic.pressed.connect(_plastic)
+	$Control/Bird.pressed.connect(_bird)
+	$Control/Trade.pressed.connect(_trade)
+	$Control/Warning.text = ""
+	_string()
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+var current = {}
+
+
+func _string():
+	var dict = {"red":"string"}
+	_tradable(dict)
+	current = dict
+	$Control/Goods.play("1")
+	$Control/Selling.play("1")
+	$Control/Cost.text = str(Inventory.feesh["red"])+"/1"
+
+func _wood():
+	var dict = {"pink":"wood"}
+	_tradable(dict)
+	current = dict
+	$Control/Goods.play("2")
+	$Control/Selling.play("2")
+	$Control/Cost.text = str(Inventory.feesh["pink"])+"/1"
+
+func _plastic():
+	var dict = {"cyan":"plastic"}
+	_tradable(dict)
+	current = dict
+	$Control/Goods.play("3")
+	$Control/Selling.play("3")
+	$Control/Cost.text = str(Inventory.feesh["cyan"])+"/1"
+
+func _bird():
+	var dict = {"purple":"birst"}
+	_tradable(dict)
+	current = dict
+	$Control/Goods.play("4")
+	$Control/Selling.play("4")
+	$Control/Cost.text = str(Inventory.feesh["purple"])+"/1"
+
+func _tradable(dict):
+	$Control/Warning.text = ""
+	for i in dict:
+		if !(Inventory.feesh.has(i) and Inventory.feesh[i] > 0):
+			$Control/Trade.disabled = true
+			$Control/Warning.text = "Not enough matrial"
+			return []
+	$Control/Trade.disabled = false
+
+func _trade():
+	for i in current:
+		Inventory.feesh[i] -= 1
+		

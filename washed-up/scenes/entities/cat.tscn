@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bydndmn6empl8"]
+
+[ext_resource type="Texture2D" uid="uid://ba74xlqo7u024" path="res://assets/art/characters/cat/cat_sprites_2fps_v001.png" id="1_3jpsh"]
+[ext_resource type="Script" uid="uid://bgt3jie5oxy3s" path="res://scenes/entities/cat.gd" id="1_oqat7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqat7"]
+atlas = ExtResource("1_3jpsh")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owwv0"]
+atlas = ExtResource("1_3jpsh")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g454m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqat7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owwv0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Cat" type="Node2D" unique_id=1000931412]
+script = ExtResource("1_oqat7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=262469779]
+position = Vector2(40.500004, 40.5)
+scale = Vector2(0.31640622, 0.31640625)
+sprite_frames = SubResource("SpriteFrames_g454m")
+autoplay = "default"
+frame_progress = 0.6537988
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=425103242]
+remote_path = NodePath("..")

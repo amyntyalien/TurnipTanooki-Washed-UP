@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b5ixei1vput1m" path="res://scenes/entities/seagull.tscn" id="5_kb8sw"]
 [ext_resource type="AudioStream" uid="uid://cxoahklrxhiwy" path="res://assets/music/Guitar.wav" id="6_ry26v"]
 [ext_resource type="Texture2D" uid="uid://d3qq4746pflhc" path="res://assets/art/Items/junk/Untitled27_20260509180711.png" id="7_706o7"]
+[ext_resource type="PackedScene" uid="uid://bydndmn6empl8" path="res://scenes/entities/cat.tscn" id="8_4krka"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4krka"]
 radius = 64.0447
@@ -56,3 +57,6 @@ position = Vector2(211, -7)
 stream = ExtResource("6_ry26v")
 volume_db = -2.476
 autoplay = true
+
+[node name="Cat" parent="." unique_id=1000931412 instance=ExtResource("8_4krka")]
+position = Vector2(1723, -616)

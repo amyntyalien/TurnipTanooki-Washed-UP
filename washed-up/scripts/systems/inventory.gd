@@ -12,7 +12,10 @@ func _process(_delta) -> void:
 var fish_colours = ["red", "pink", "cyan", "purple"]
 
 var feesh = {
-	"pink":0
+	"red":0,
+	"pink":0,
+	"cyan":0,
+	"purple":0
 }
 
 var trash = {

@@ -18,7 +18,10 @@ func get_input():
 		elif input_direction.y < 0:
 			_animated_sprite.play("walk up")
 	else:
-		_animated_sprite.play("idle")
+		if (_animated_sprite.animation == "fall"):
+			_animated_sprite.play("fall")
+		else:
+			_animated_sprite.play("idle")
 
 func _physics_process(delta):
 	get_input()

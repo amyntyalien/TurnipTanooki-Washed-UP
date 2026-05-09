@@ -42,7 +42,7 @@ func _collect_junk():
 	# Add items to inventory based on what was visible
 	for trash in trashes:
 		# Assuming name matches Inventory requirement
-		Inventory.add_trash(trash.name, randi_range(1, 3))
+		Inventory.add_trash(["wood", "string"].pick_random(), randi_range(1, 3))
 		
 	queue_free() # Remove the container
 

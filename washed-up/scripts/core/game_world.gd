@@ -9,7 +9,7 @@ var seagull_scene = preload("res://scenes/entities/seagull.tscn")
 
 # runs when scene starts
 func _ready():
-	timer.wait_time = 10.0 # timer delay
+	timer.wait_time = 1.0 # timer delay
 	timer.one_shot = false # loop forever
 	timer.timeout.connect(_on_junk_timer_timeout) # connect timer
 	timer.start() # start timer

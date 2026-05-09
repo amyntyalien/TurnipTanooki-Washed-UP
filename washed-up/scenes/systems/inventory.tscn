@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://eqrq37gdsi6q" path="res://assets/art/Items/fish/pinkfish.png" id="4_cl6h3"]
 [ext_resource type="Texture2D" uid="uid://cydjoompcg1d5" path="res://assets/art/Items/fish/cyanfish.png" id="5_d3h3i"]
 [ext_resource type="Texture2D" uid="uid://co7x1i67naku" path="res://assets/art/Items/fish/purplefish.png" id="6_qptds"]
+[ext_resource type="Texture2D" uid="uid://ccntre6l3lejg" path="res://assets/art/Items/junk/wood.png" id="8_qptds"]
+[ext_resource type="Texture2D" uid="uid://ctd0aw50r3fkc" path="res://assets/art/Items/Untitled27_20260509182128.png" id="9_ppt17"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ppt17"]
 font_size = 64
@@ -41,6 +43,24 @@ text = "Craft"
 flat = true
 metadata/_edit_use_anchors_ = true
 
+[node name="Stringnum" type="Label" parent="Inventory_book/Control" unique_id=402392974]
+layout_mode = 0
+offset_left = 150.99994
+offset_top = -212.35956
+offset_right = 302.99994
+offset_bottom = -124.35956
+text = "Num"
+label_settings = SubResource("LabelSettings_ppt17")
+
+[node name="Woodnum" type="Label" parent="Inventory_book/Control" unique_id=448584506]
+layout_mode = 0
+offset_left = 445.99994
+offset_top = -205.61801
+offset_right = 597.99994
+offset_bottom = -117.61801
+text = "Num"
+label_settings = SubResource("LabelSettings_ppt17")
+
 [node name="Rednum" type="Label" parent="Inventory_book/Control" unique_id=447822303]
 layout_mode = 0
 offset_left = -564.0
@@ -52,10 +72,10 @@ label_settings = SubResource("LabelSettings_ppt17")
 
 [node name="Pinknum" type="Label" parent="Inventory_book/Control" unique_id=1156266310]
 layout_mode = 0
-offset_left = -256.00012
-offset_top = -205.6181
-offset_right = -104.00012
-offset_bottom = -117.6181
+offset_left = -271.0
+offset_top = -216.85393
+offset_right = -119.0
+offset_bottom = -128.85393
 text = "Num"
 label_settings = SubResource("LabelSettings_ppt17")
 
@@ -93,6 +113,15 @@ texture = ExtResource("5_d3h3i")
 [node name="Purple" type="Sprite2D" parent="Inventory_book" unique_id=1490925461]
 position = Vector2(-180, 41.57306)
 texture = ExtResource("6_qptds")
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_book" unique_id=301724935]
+position = Vector2(518.99994, -338.20224)
+texture = ExtResource("8_qptds")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Inventory_book" unique_id=558195519]
+position = Vector2(216.99994, -286.51685)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("9_ppt17")
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
 offset_left = 1474.0

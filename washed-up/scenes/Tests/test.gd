@@ -1,35 +1,16 @@
-extends Node
+extends Node2D
 
-func generate_question_level_1():
-	var a = randi_range(1, 10)
-	var b = randi_range(1, 10)
-	var operation = randi_range(0, 3)
-	
-	match operation:
-		0:
-			return{
-				"question": str(a) + " + " + str(b), "answer": a + b
-			}
-		1:
-			if b > a:
-				var temp = a
-				a = b
-				b = temp
-			return{
-				"question": str(a) + " - " + str(b), "answer": a - b
-			}
-		2:
-			return{
-				"question": str(a) + " x " + str(b), "answer": a * b
-			}
-		3:
-			var answer = randi_range(1, 10)
-			var divisor = randi_range(1, 10)
-			return{
-				"question": str(answer * divisor) + " / " + str(divisor), "answer": answer
-			}
-	return{}
 
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	for i in range (0, 50):
+		print(generate_question_level_2())
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
 
 func _add(x, y):
 	return x+y

@@ -22,7 +22,8 @@ var fish_colours = ["red", "pink", "cyan", "purple"]
 
 var trash = {
 	"wood":0,
-	"string":0
+	"string":0,
+	"plastic":0
 }
 
 var rod = 0

@@ -7,6 +7,7 @@ func _ready() -> void:
 	$Control/Rod2.pressed.connect(_rod2)
 	$Control/Rod3.pressed.connect(_rod3)
 	$Control/Rod4.pressed.connect(_rod4)
+	$Control/Raft.pressed.connect(_raft)
 	$Control/Craft_Button.pressed.connect(_craft)
 	$Control/Warning.text = ""
 	_rod1()
@@ -19,6 +20,15 @@ func _process(delta: float) -> void:
 
 var current = {}
 var level = 0
+
+func _raft():
+	var dict = {"plastic":3, "wood":3}
+	_craftable(dict)
+	current = dict
+	$Control/Rods.play("5")
+	$Control/Input1.play("2")
+	$Control/Cost1.text = str(Inventory.trash["string"])+"/3"
+	$Control/Cost2.text = str(Inventory.trash["plastic"])+"/3"
 
 func _rod1():
 	var dict = {"wood":3, "string":3}
@@ -84,8 +94,6 @@ func _craftable(dict):
 	$Control/Craft_Button.disabled = false
 
 func _craft():
-	if $Control/Warning.text == "Already levelled":
-		pass
 	for i in current:
 		Inventory.trash[i] -= current[i]
 	Inventory.rod = level

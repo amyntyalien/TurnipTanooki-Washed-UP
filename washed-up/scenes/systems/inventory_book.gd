@@ -10,6 +10,7 @@ func _ready() -> void:
 	$Control/Purplenum.text = str(feesh["purple"])
 	$Control/Stringnum.text = str(trash["string"])
 	$Control/Woodnum.text = str(trash["wood"])
+	$Control/Plasticnum.text = str(trash["plastic"])
 	pass # Replace with function body.
 
 

@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://co7x1i67naku" path="res://assets/art/Items/fish/purplefish.png" id="6_qptds"]
 [ext_resource type="Texture2D" uid="uid://ccntre6l3lejg" path="res://assets/art/Items/junk/wood.png" id="8_qptds"]
 [ext_resource type="Texture2D" uid="uid://ctd0aw50r3fkc" path="res://assets/art/Items/Untitled27_20260509182128.png" id="9_ppt17"]
+[ext_resource type="Texture2D" uid="uid://b30ki13ljir2" path="res://assets/art/Items/junk/plastic.png" id="10_ppt17"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ppt17"]
 font_size = 64
@@ -44,84 +45,139 @@ flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Stringnum" type="Label" parent="Inventory_book/Control" unique_id=402392974]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = -1.4348313
+anchor_right = 0.15
+anchor_bottom = -1.4348313
 offset_left = 150.99994
 offset_top = -212.35956
 offset_right = 302.99994
 offset_bottom = -124.35956
 text = "Num"
 label_settings = SubResource("LabelSettings_ppt17")
+metadata/_edit_use_anchors_ = true
 
 [node name="Woodnum" type="Label" parent="Inventory_book/Control" unique_id=448584506]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = -1.4348313
+anchor_right = 0.15
+anchor_bottom = -1.4348313
 offset_left = 445.99994
 offset_top = -205.61801
 offset_right = 597.99994
 offset_bottom = -117.61801
 text = "Num"
 label_settings = SubResource("LabelSettings_ppt17")
+metadata/_edit_use_anchors_ = true
 
 [node name="Rednum" type="Label" parent="Inventory_book/Control" unique_id=447822303]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05
+anchor_top = -2.05281
+anchor_right = -0.05
+anchor_bottom = -2.05281
 offset_left = -564.0
 offset_top = -223.59552
 offset_right = -412.0
 offset_bottom = -135.59552
 text = "Num"
 label_settings = SubResource("LabelSettings_ppt17")
+metadata/_edit_use_anchors_ = true
 
 [node name="Pinknum" type="Label" parent="Inventory_book/Control" unique_id=1156266310]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05
+anchor_top = -2.0528095
+anchor_right = -0.05
+anchor_bottom = -2.0528095
 offset_left = -271.0
 offset_top = -216.85393
 offset_right = -119.0
 offset_bottom = -128.85393
 text = "Num"
 label_settings = SubResource("LabelSettings_ppt17")
+metadata/_edit_use_anchors_ = true
 
 [node name="Cyannum" type="Label" parent="Inventory_book/Control" unique_id=635234337]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05
+anchor_top = -2.05281
+anchor_right = -0.05
+anchor_bottom = -2.05281
 offset_left = -558.99994
 offset_top = 210.11218
 offset_right = -406.99994
 offset_bottom = 298.11218
 text = "Num"
 label_settings = SubResource("LabelSettings_ppt17")
+metadata/_edit_use_anchors_ = true
 
 [node name="Purplenum" type="Label" parent="Inventory_book/Control" unique_id=1678307579]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05
+anchor_top = -2.05281
+anchor_right = -0.05
+anchor_bottom = -2.05281
 offset_left = -258.0
 offset_top = 210.11218
 offset_right = -106.0
 offset_bottom = 298.11218
 text = "Num"
 label_settings = SubResource("LabelSettings_ppt17")
+metadata/_edit_use_anchors_ = true
+
+[node name="Plasticnum" type="Label" parent="Inventory_book/Control" unique_id=128994812]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = -1.4348313
+anchor_right = 0.15
+anchor_bottom = -1.4348313
+offset_left = 127.99994
+offset_top = 191.1012
+offset_right = 279.99994
+offset_bottom = 279.1012
+text = "Num"
+label_settings = SubResource("LabelSettings_ppt17")
+metadata/_edit_use_anchors_ = true
 
 [node name="Red" type="Sprite2D" parent="Inventory_book" unique_id=818106680]
-position = Vector2(-517, -307.86517)
+position = Vector2(-519, -389.97757)
 texture = ExtResource("3_ih8x7")
 
 [node name="Pink" type="Sprite2D" parent="Inventory_book" unique_id=218618682]
-position = Vector2(-208.00002, -328.08987)
+position = Vector2(-210.00002, -410.20227)
 texture = ExtResource("4_cl6h3")
 
 [node name="Cyan" type="Sprite2D" parent="Inventory_book" unique_id=480649564]
-position = Vector2(-492.99994, 33.707764)
+position = Vector2(-494.99994, -48.404633)
 scale = Vector2(0.9999999, 1.1235954)
 texture = ExtResource("5_d3h3i")
 
 [node name="Purple" type="Sprite2D" parent="Inventory_book" unique_id=1490925461]
-position = Vector2(-180, 41.57306)
+position = Vector2(-182, -40.539337)
 texture = ExtResource("6_qptds")
 
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_book" unique_id=301724935]
-position = Vector2(518.99994, -338.20224)
+position = Vector2(524.99994, -395.5955)
 texture = ExtResource("8_qptds")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Inventory_book" unique_id=558195519]
-position = Vector2(216.99994, -286.51685)
+position = Vector2(222.99994, -343.9101)
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("9_ppt17")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Inventory_book" unique_id=1826471329]
+position = Vector2(245.99997, -53.932583)
+texture = ExtResource("10_ppt17")
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
 offset_left = 1474.0

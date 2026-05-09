@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b3twjkjk3dbyg" path="res://assets/art/environment/tiles/fishing_bg_water_v001.png" id="4_tqgfn"]
 [ext_resource type="Texture2D" uid="uid://bc4l0y7pil8yi" path="res://assets/art/environment/tiles/cloud_001.png" id="5_elsm4"]
 [ext_resource type="PackedScene" uid="uid://cn1fdtwtej5sw" path="res://scenes/fishing/mathquestions.tscn" id="6_u7v17"]
+[ext_resource type="AudioStream" uid="uid://yu42wknar4k5" path="res://assets/music/Boss.wav" id="7_lapbj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lapbj"]
 atlas = ExtResource("3_u7v17")
@@ -174,3 +175,7 @@ offset_bottom = 23.0
 text = "You're fishing aint cool enough 
 to win your rock star kitty over!
 Try again next time!"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=978198326]
+stream = ExtResource("7_lapbj")
+autoplay = true

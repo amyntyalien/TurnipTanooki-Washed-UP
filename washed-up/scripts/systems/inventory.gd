@@ -1,5 +1,13 @@
 extends Node
 
+
+var feesh = {
+	"red":0,
+	"pink":0,
+	"cyan":0,
+	"purple":0
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -11,12 +19,6 @@ func _process(_delta) -> void:
 
 var fish_colours = ["red", "pink", "cyan", "purple"]
 
-var feesh = {
-	"red":0,
-	"pink":0,
-	"cyan":0,
-	"purple":0
-}
 
 var trash = {
 	"wood":0

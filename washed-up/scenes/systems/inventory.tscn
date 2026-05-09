@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cg8nnsjepfkxe" path="res://scripts/systems/inventory.gd" id="1_4m4tt"]
 [ext_resource type="Texture2D" uid="uid://cb2xd07x2co1w" path="res://assets/art/Items/book_tab_left.png" id="1_p0jaf"]
+[ext_resource type="Script" uid="uid://ditmcxixou3vx" path="res://scenes/systems/inventory_book.gd" id="3_cl6h3"]
 [ext_resource type="Texture2D" uid="uid://dypton53yav77" path="res://assets/art/Items/fish/redfish.png" id="3_ih8x7"]
 [ext_resource type="Texture2D" uid="uid://eqrq37gdsi6q" path="res://assets/art/Items/fish/pinkfish.png" id="4_cl6h3"]
 [ext_resource type="Texture2D" uid="uid://cydjoompcg1d5" path="res://assets/art/Items/fish/cyanfish.png" id="5_d3h3i"]
@@ -17,19 +18,20 @@ load_path = "res://.godot/imported/Menu Selection Buttons BACK.png-c60b23c7ef98c
 [node name="Inventory" type="Node2D" unique_id=1893544705]
 script = ExtResource("1_4m4tt")
 
-[node name="Inventory" type="Sprite2D" parent="." unique_id=2132208641]
+[node name="Inventory_book" type="Sprite2D" parent="." unique_id=2132208641]
 position = Vector2(989, 549)
 scale = Vector2(1, 0.89)
 texture = ExtResource("1_p0jaf")
+script = ExtResource("3_cl6h3")
 
-[node name="Control" type="Control" parent="Inventory" unique_id=1747738523]
+[node name="Control" type="Control" parent="Inventory_book" unique_id=1747738523]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Craft Button" type="Button" parent="Inventory/Control" unique_id=1025619916]
+[node name="Craft Button" type="Button" parent="Inventory_book/Control" unique_id=1025619916]
 layout_mode = 0
 offset_left = -551.77936
 offset_top = -563.9212
@@ -39,24 +41,8 @@ text = "Craft"
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Red" type="Sprite2D" parent="Inventory" unique_id=818106680]
-position = Vector2(-517, -307.86517)
-texture = ExtResource("3_ih8x7")
-
-[node name="Pink" type="Sprite2D" parent="Inventory" unique_id=218618682]
-position = Vector2(-208.00002, -328.08987)
-texture = ExtResource("4_cl6h3")
-
-[node name="Cyan" type="Sprite2D" parent="Inventory" unique_id=480649564]
-position = Vector2(-492.99994, 33.707764)
-scale = Vector2(0.9999999, 1.1235954)
-texture = ExtResource("5_d3h3i")
-
-[node name="Purple" type="Sprite2D" parent="Inventory" unique_id=1490925461]
-position = Vector2(-180, 41.57306)
-texture = ExtResource("6_qptds")
-
-[node name="Rednum" type="Label" parent="Inventory" unique_id=447822303]
+[node name="Rednum" type="Label" parent="Inventory_book/Control" unique_id=447822303]
+layout_mode = 0
 offset_left = -564.0
 offset_top = -223.59552
 offset_right = -412.0
@@ -64,29 +50,49 @@ offset_bottom = -135.59552
 text = "Num"
 label_settings = SubResource("LabelSettings_ppt17")
 
-[node name="Pinknum" type="Label" parent="Inventory" unique_id=1156266310]
-offset_left = -256.00006
-offset_top = -205.61801
-offset_right = -104.00006
-offset_bottom = -117.61801
+[node name="Pinknum" type="Label" parent="Inventory_book/Control" unique_id=1156266310]
+layout_mode = 0
+offset_left = -256.00012
+offset_top = -205.6181
+offset_right = -104.00012
+offset_bottom = -117.6181
 text = "Num"
 label_settings = SubResource("LabelSettings_ppt17")
 
-[node name="Cyannum" type="Label" parent="Inventory" unique_id=635234337]
-offset_left = -559.0
-offset_top = 210.11234
-offset_right = -407.0
-offset_bottom = 298.11234
+[node name="Cyannum" type="Label" parent="Inventory_book/Control" unique_id=635234337]
+layout_mode = 0
+offset_left = -558.99994
+offset_top = 210.11218
+offset_right = -406.99994
+offset_bottom = 298.11218
 text = "Num"
 label_settings = SubResource("LabelSettings_ppt17")
 
-[node name="Purplenum" type="Label" parent="Inventory" unique_id=1678307579]
-offset_left = -258.00003
-offset_top = 210.11234
-offset_right = -106.00003
-offset_bottom = 298.11234
+[node name="Purplenum" type="Label" parent="Inventory_book/Control" unique_id=1678307579]
+layout_mode = 0
+offset_left = -258.0
+offset_top = 210.11218
+offset_right = -106.0
+offset_bottom = 298.11218
 text = "Num"
 label_settings = SubResource("LabelSettings_ppt17")
+
+[node name="Red" type="Sprite2D" parent="Inventory_book" unique_id=818106680]
+position = Vector2(-517, -307.86517)
+texture = ExtResource("3_ih8x7")
+
+[node name="Pink" type="Sprite2D" parent="Inventory_book" unique_id=218618682]
+position = Vector2(-208.00002, -328.08987)
+texture = ExtResource("4_cl6h3")
+
+[node name="Cyan" type="Sprite2D" parent="Inventory_book" unique_id=480649564]
+position = Vector2(-492.99994, 33.707764)
+scale = Vector2(0.9999999, 1.1235954)
+texture = ExtResource("5_d3h3i")
+
+[node name="Purple" type="Sprite2D" parent="Inventory_book" unique_id=1490925461]
+position = Vector2(-180, 41.57306)
+texture = ExtResource("6_qptds")
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
 offset_left = 1474.0
@@ -106,5 +112,5 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Inventory/Control/Craft Button" to="." method="_on_craft_button_pressed"]
+[connection signal="pressed" from="Inventory_book/Control/Craft Button" to="." method="_on_craft_button_pressed"]
 [connection signal="pressed" from="back/backtogame" to="." method="_on_backtogame_pressed"]

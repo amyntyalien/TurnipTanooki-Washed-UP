@@ -3,7 +3,29 @@
 [ext_resource type="Script" uid="uid://jn2ra81un2d7" path="res://scenes/fishing/fishgame.gd" id="1_w5nbe"]
 [ext_resource type="PackedScene" uid="uid://cn1fdtwtej5sw" path="res://scenes/fishing/mathquestions.tscn" id="2_xyrmk"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_xyrmk"]
+font_size = 128
+
+[sub_resource type="LabelSettings" id="LabelSettings_nut0q"]
+font_size = 128
+
 [node name="Fishgame" type="Node2D" unique_id=50498463]
 script = ExtResource("1_w5nbe")
 
 [node name="Mathquestions" parent="." unique_id=1898192396 instance=ExtResource("2_xyrmk")]
+
+[node name="Question" type="Label" parent="." unique_id=396541927]
+offset_left = 199.0
+offset_top = 18.0
+offset_right = 763.0
+offset_bottom = 193.0
+text = "Question"
+label_settings = SubResource("LabelSettings_xyrmk")
+
+[node name="Answer" type="Label" parent="." unique_id=1452182889]
+offset_left = 220.0
+offset_top = 243.0
+offset_right = 278.0
+offset_bottom = 266.0
+text = "Answer"
+label_settings = SubResource("LabelSettings_nut0q")

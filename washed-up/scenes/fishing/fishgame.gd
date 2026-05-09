@@ -2,6 +2,7 @@ extends Node2D
 
 var combo = 0
 var timer = 0
+var start = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,13 +12,46 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	timer+=1
+	if start:
+		timer+=1
 	if timer == 10:
 		combo = 0
-	timer = 0
+		timer = 0
+	$Answer.text = ans
 	pass
 
 func _level1():
 	var x = $Mathquestions
-	print(x.generate_question_level_1())
+	var q_and_a = x.generate_question_level_1()
+	$Question.text = q_and_a["question"]
+	start = true
 	pass
+
+var ans = ""
+
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_1:
+			ans += "1"
+		if event.keycode == KEY_2:
+			ans += "2"
+		if event.keycode == KEY_3:
+			ans += "3"
+		if event.keycode == KEY_4:
+			ans += "4"
+		if event.keycode == KEY_5:
+			ans += "5"
+		if event.keycode == KEY_6:
+			ans += "6"
+		if event.keycode == KEY_7:
+			ans += "7"
+		if event.keycode == KEY_8:
+			ans += "8"
+		if event.keycode == KEY_9:
+			ans += "9"
+		if event.keycode == KEY_0:
+			ans += "0"
+		if event.keycode == KEY_BACKSPACE || ans.length() > 5:
+			ans.remove_char(ans.length()-2)
+		
+	

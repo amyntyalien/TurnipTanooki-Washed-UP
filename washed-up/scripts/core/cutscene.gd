@@ -6,7 +6,7 @@ extends Node2D
 func _ready():
 	label.visible = false
 	
-	await get_tree().create_timer(5.0).timeout # waiting 5 seconds
+	await get_tree().create_timer(3.0).timeout # waiting 3 seconds
 	
 	label.visible = true # label now visible
 	label.text = "Press F to skip the cutscene."

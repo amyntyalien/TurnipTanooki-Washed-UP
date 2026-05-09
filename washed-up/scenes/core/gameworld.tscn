@@ -17,4 +17,4 @@ position = Vector2(410, 153)
 [node name="Junk" parent="." unique_id=107557628 instance=ExtResource("4_m4q5l")]
 position = Vector2(210.99998, 163)
 
-[node name="Timer" type="Timer" parent="." unique_id=1394598799]
+[node name="JunkTimer" type="Timer" parent="." unique_id=1394598799]

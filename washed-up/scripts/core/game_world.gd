@@ -45,3 +45,9 @@ func _process(_delta):
 	# open inventory
 	if Input.is_action_just_pressed("inventory"):
 		get_tree().change_scene_to_file("res://scenes/systems/inventory.tscn")
+
+
+
+func _on_raft_transition_body_entered(body: Node2D) -> void:
+	if $Player/CharacterBody2D/AnimatedSprite2D.animation != "fall":
+		get_tree().change_scene_to_file("res://scenes/boss_fights/boss.tscn")

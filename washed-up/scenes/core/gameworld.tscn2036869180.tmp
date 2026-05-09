@@ -18,7 +18,7 @@ radius = 64.0447
 font_size = 34
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_il72b"]
-radius = 43.046486
+radius = 29.15476
 
 [sub_resource type="Curve2D" id="Curve2D_4krka"]
 _data = {

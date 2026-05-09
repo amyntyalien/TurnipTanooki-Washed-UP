@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d0h630r4bhodb" path="res://scripts/ui/pause_menu.gd" id="1_uxw54"]
 [ext_resource type="Texture2D" uid="uid://5jc2bxwbwpsk" path="res://assets/art/Items/buttons/Menu Selection Buttons SAVE.png" id="2_uxw54"]
 [ext_resource type="Texture2D" uid="uid://dqmryxt8e6j46" path="res://assets/art/characters/player/turnip_sprite_basic.png" id="4_u60py"]
+[ext_resource type="Texture2D" uid="uid://ex80ylw55vpk" path="res://assets/art/Items/buttons/Menu Selection Buttons TITLE.png" id="5_bn0f5"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86gv1"]
 load_path = "res://.godot/imported/Menu Selection Buttons CONTINUE.png-aa35bd051af471651219605f751c9dca.ctex"
@@ -19,10 +20,10 @@ position = Vector2(960, 540)
 texture = ExtResource("1_bn0f5")
 
 [node name="continuepause - TextureRect" type="TextureRect" parent="." unique_id=1061613505]
-offset_left = 77.0
-offset_top = 803.0
-offset_right = 1002.0
-offset_bottom = 968.0
+offset_left = 60.0
+offset_top = 704.0
+offset_right = 985.0
+offset_bottom = 869.0
 texture = SubResource("CompressedTexture2D_86gv1")
 
 [node name="continuepause" type="TextureButton" parent="continuepause - TextureRect" unique_id=12439322]
@@ -71,6 +72,22 @@ position = Vector2(1417, 439)
 scale = Vector2(1.9121097, 1.6796875)
 texture = ExtResource("4_u60py")
 
+[node name="title" type="TextureRect" parent="." unique_id=1245794473]
+offset_left = 913.0
+offset_top = 838.0
+offset_right = 1838.0
+offset_bottom = 1003.0
+texture = ExtResource("5_bn0f5")
+
+[node name="title" type="TextureButton" parent="title" unique_id=1031921384]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [connection signal="pressed" from="continuepause - TextureRect/continuepause" to="." method="_on_continuepause_pressed"]
 [connection signal="pressed" from="optionspause - TextureRect2/optionspause" to="." method="_on_optionspause_pressed"]
 [connection signal="pressed" from="save - TextureRect/savepause" to="." method="_on_savepause_pressed"]
+[connection signal="pressed" from="title/title" to="." method="_on_title_pressed"]

@@ -21,3 +21,7 @@ func _on_optionspause_pressed():
 
 func _on_continuepause_pressed():
 	get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")
+
+
+func _on_title_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/core/titlescreen.tscn")

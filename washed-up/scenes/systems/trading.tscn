@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://bjqxjowt0cm1l"]
+
+[ext_resource type="Texture2D" uid="uid://bektnl43qxd0t" path="res://assets/art/Items/book_tab_right.png" id="1_d2fh4"]
+[ext_resource type="Script" uid="uid://cny4opyfug0tq" path="res://scenes/systems/crafting.gd" id="2_4jaab"]
+[ext_resource type="Texture2D" uid="uid://dwmaupi7qfobq" path="res://assets/art/Items/Untitled27_20260509182138.png" id="3_7nmkm"]
+[ext_resource type="Texture2D" uid="uid://bwxtpi8k6t4d8" path="res://assets/art/Items/Untitled27_20260509182146.png" id="4_qv1ts"]
+[ext_resource type="Texture2D" uid="uid://dg2cnymwoh167" path="res://assets/art/Items/Untitled27_20260509182316.png" id="5_vwo35"]
+[ext_resource type="Texture2D" uid="uid://dddxa6xixif5h" path="res://assets/art/Items/Untitled27_20260509182447.png" id="6_d8wiy"]
+[ext_resource type="Texture2D" uid="uid://ctd0aw50r3fkc" path="res://assets/art/Items/Untitled27_20260509182128.png" id="7_4e6sw"]
+[ext_resource type="Texture2D" uid="uid://ccntre6l3lejg" path="res://assets/art/Items/junk/wood.png" id="8_joyd2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_skmbh"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13tjr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7nmkm")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qv1ts")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_vwo35")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_d8wiy")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[node name="Inventory" type="Node2D" unique_id=1304251563]
+
+[node name="Crafting" type="Sprite2D" parent="." unique_id=477295159]
+position = Vector2(989, 549)
+scale = Vector2(1, 0.89)
+texture = ExtResource("1_d2fh4")
+script = ExtResource("2_4jaab")
+
+[node name="Control" type="Control" parent="Crafting" unique_id=1606618748]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Inv Button" type="Button" parent="Crafting/Control" unique_id=704992489]
+layout_mode = 0
+offset_left = -645.45355
+offset_top = -565.36346
+offset_right = -576.16034
+offset_bottom = -523.5381
+action_mode = 0
+text = "Inv"
+metadata/_edit_use_anchors_ = true
+
+[node name="Craft_Button" type="Button" parent="Crafting/Control" unique_id=98705005]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 39.697674
+anchor_top = 33.520977
+anchor_right = 42.522667
+anchor_bottom = 34.981647
+offset_left = -1290.907
+offset_top = -1130.7268
+offset_right = -1221.6138
+offset_bottom = -1088.9014
+action_mode = 0
+text = "Craft"
+metadata/_edit_use_anchors_ = true
+
+[node name="Rod1" type="Button" parent="Crafting/Control" unique_id=1578588436]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -127.70689
+anchor_top = -31.052414
+anchor_right = -122.83921
+anchor_bottom = -25.49805
+offset_left = 4454.2754
+offset_top = 772.4336
+offset_right = 4523.5684
+offset_bottom = 814.25903
+action_mode = 0
+icon = ExtResource("7_4e6sw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Rod2" type="Button" parent="Crafting/Control" unique_id=1672029214]
+layout_mode = 0
+offset_left = -354.0
+offset_top = -469.6629
+offset_right = -90.0
+offset_bottom = -205.6629
+icon = ExtResource("8_joyd2")
+
+[node name="Rod3" type="Button" parent="Crafting/Control" unique_id=1641430685]
+layout_mode = 0
+offset_left = -653.0
+offset_top = -171.91013
+offset_right = -389.0
+offset_bottom = 92.089874
+
+[node name="Rod4" type="Button" parent="Crafting/Control" unique_id=1229055459]
+layout_mode = 0
+offset_left = -355.0
+offset_top = -165.91013
+offset_right = -91.0
+offset_bottom = 98.089874
+icon = ExtResource("6_d8wiy")
+
+[node name="Input1" type="Sprite2D" parent="Crafting/Control" unique_id=1765974701]
+position = Vector2(236.99994, -4.494385)
+scale = Vector2(0.99999994, 1.1235955)
+texture = ExtResource("7_4e6sw")
+
+[node name="Input2" type="Sprite2D" parent="Crafting/Control" unique_id=98463234]
+position = Vector2(525.99994, -48.31463)
+scale = Vector2(0.7070312, 0.78563905)
+texture = ExtResource("8_joyd2")
+
+[node name="Cost1" type="Label" parent="Crafting/Control" unique_id=1631843659]
+layout_mode = 0
+offset_left = 180.99994
+offset_top = 25.842651
+offset_right = 278.99994
+offset_bottom = 113.84265
+text = "3/3"
+label_settings = SubResource("LabelSettings_skmbh")
+
+[node name="Cost2" type="Label" parent="Crafting/Control" unique_id=1349802727]
+layout_mode = 0
+offset_left = 458.99994
+offset_top = 25.842728
+offset_right = 556.99994
+offset_bottom = 113.84273
+text = "3/3"
+label_settings = SubResource("LabelSettings_skmbh")
+
+[node name="Rods" type="AnimatedSprite2D" parent="Crafting/Control" unique_id=408743433]
+position = Vector2(369.99997, -312.35953)
+sprite_frames = SubResource("SpriteFrames_13tjr")
+animation = &"1"
+
+[node name="Warning" type="Label" parent="Crafting/Control" unique_id=1901099754]
+layout_mode = 0
+offset_left = 91.999954
+offset_top = -495.5056
+offset_right = 351.99994
+offset_bottom = -407.5056
+text = "Warning"
+label_settings = SubResource("LabelSettings_skmbh")
+horizontal_alignment = 1

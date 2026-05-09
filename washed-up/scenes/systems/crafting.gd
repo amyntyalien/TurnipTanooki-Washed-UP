@@ -72,6 +72,8 @@ func _rod4():
 	$Control/Cost2.text = str(Inventory.trash["wood"])+"/100"
 	level = 4
 
+	
+
 func _craftable(dict):
 	$Control/Warning.text = ""
 	for i in dict:

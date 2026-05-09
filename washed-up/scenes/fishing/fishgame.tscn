@@ -7,9 +7,20 @@
 [ext_resource type="Texture2D" uid="uid://b3twjkjk3dbyg" path="res://assets/art/environment/tiles/fishing_bg_water_v001.png" id="4_c2g5v"]
 [ext_resource type="Texture2D" uid="uid://cw4es5x8qg242" path="res://assets/art/characters/player/turnip_fishing_casting_8fps_v002.png" id="4_vgdys"]
 [ext_resource type="Script" uid="uid://d1ou5ei5hqqte" path="res://scenes/fishing/path_follow_2d.gd" id="5_nqdh8"]
+[ext_resource type="Texture2D" uid="uid://bc4l0y7pil8yi" path="res://assets/art/environment/tiles/cloud_001.png" id="8_mahs1"]
 [ext_resource type="Texture2D" uid="uid://dypton53yav77" path="res://assets/art/Items/fish/redfish.png" id="9_vilim"]
 [ext_resource type="Texture2D" uid="uid://eqrq37gdsi6q" path="res://assets/art/Items/fish/pinkfish.png" id="10_1lkd0"]
 [ext_resource type="Texture2D" uid="uid://co7x1i67naku" path="res://assets/art/Items/fish/purplefish.png" id="12_rt4sh"]
+
+[sub_resource type="Curve2D" id="Curve2D_vy06d"]
+_data = {
+"points": PackedVector2Array(-126.20982, 3.7974994, 126.20982, -3.7974994, 2416.9485, 246.25, -63.82451, -5.468766, 63.82451, 5.468766, -514.3997, -125.91665)
+}
+point_count = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_xyrmk"]
+font_size = 128
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nqdh8"]
 atlas = ExtResource("4_vgdys")
@@ -188,23 +199,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="LabelSettings" id="LabelSettings_xyrmk"]
-font_size = 128
-
 [sub_resource type="LabelSettings" id="LabelSettings_nut0q"]
 font_size = 128
 
 [sub_resource type="LabelSettings" id="LabelSettings_csvai"]
 font_size = 128
-
-[sub_resource type="LabelSettings" id="LabelSettings_vgdys"]
-font_size = 32
-
-[sub_resource type="Curve2D" id="Curve2D_vy06d"]
-_data = {
-"points": PackedVector2Array(-41.772495, 3.7974994, 41.772495, -3.7974994, 2313, 227, 0, 0, 0, 0, -205, -4)
-}
-point_count = 2
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jjlx3"]
 animations = [{
@@ -252,6 +251,39 @@ script = ExtResource("1_w5nbe")
 position = Vector2(961, 539)
 texture = ExtResource("2_2wp7l")
 
+[node name="Path2D" type="Path2D" parent="Background" unique_id=1162080189]
+position = Vector2(102.63108, 154.4935)
+scale = Vector2(0.8177124, 0.6233766)
+curve = SubResource("Curve2D_vy06d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Background/Path2D" unique_id=566374321]
+position = Vector2(2416.9485, 246.25)
+rotates = false
+script = ExtResource("5_nqdh8")
+
+[node name="Cloud" type="Sprite2D" parent="Background/Path2D/PathFollow2D" unique_id=246979850]
+position = Vector2(136.35562, 60.15623)
+scale = Vector2(1.7101854, 2.3749185)
+texture = ExtResource("8_mahs1")
+
+[node name="Question" type="Label" parent="Background/Path2D/PathFollow2D/Cloud" unique_id=396541927]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.3681
+offset_top = -176.97098
+offset_right = 233.6319
+offset_bottom = -1.9709702
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+text = "Question"
+label_settings = SubResource("LabelSettings_xyrmk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Character" type="AnimatedSprite2D" parent="Background" unique_id=863676157]
 position = Vector2(621, 528)
 scale = Vector2(1.5, 1.5)
@@ -260,24 +292,16 @@ autoplay = "default"
 frame_progress = 0.32239965
 
 [node name="Water" type="AnimatedSprite2D" parent="Background" unique_id=1797544135]
-position = Vector2(958, 573)
+position = Vector2(962, 543)
 sprite_frames = SubResource("SpriteFrames_jdcul")
 
 [node name="Mathquestions" parent="." unique_id=1898192396 instance=ExtResource("2_xyrmk")]
 
-[node name="Question" type="Label" parent="." unique_id=396541927]
-offset_left = 191.0
-offset_top = 75.0
-offset_right = 755.0
-offset_bottom = 250.0
-text = "Question"
-label_settings = SubResource("LabelSettings_xyrmk")
-
 [node name="Answer" type="Label" parent="." unique_id=1452182889]
-offset_left = 220.0
-offset_top = 243.0
-offset_right = 278.0
-offset_bottom = 266.0
+offset_left = 839.0
+offset_top = 615.0
+offset_right = 1301.0
+offset_bottom = 790.0
 text = "Answer"
 label_settings = SubResource("LabelSettings_nut0q")
 
@@ -298,28 +322,7 @@ show_percentage = false
 [node name="Getfish" type="Node2D" parent="." unique_id=973924892]
 script = ExtResource("3_nut0q")
 
-[node name="Inventory" type="Label" parent="." unique_id=145291386]
-offset_left = 1064.0
-offset_top = 315.0
-offset_right = 1635.0
-offset_bottom = 382.0
-text = "Inventory"
-label_settings = SubResource("LabelSettings_vgdys")
-
-[node name="Path2D" type="Path2D" parent="." unique_id=1162080189]
-position = Vector2(102.63108, 154.4935)
-scale = Vector2(0.8177124, 0.6233766)
-curve = SubResource("Curve2D_vy06d")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=566374321]
-position = Vector2(2313, 227)
-rotation = -0.09065998
-script = ExtResource("5_nqdh8")
-
-[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=246979850]
-
 [node name="Item" type="AnimatedSprite2D" parent="." unique_id=160157557]
-position = Vector2(1733, 732)
+position = Vector2(1627, 732)
 sprite_frames = SubResource("SpriteFrames_jjlx3")
-animation = &"pink_fish"
 autoplay = "default"

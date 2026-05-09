@@ -27,14 +27,6 @@ func _on_junk_timer_timeout():
 		randi_range(100, 500)
 	)
 
-	# create seagull
-	var seagull = seagull_scene.instantiate()
-	add_child(seagull)
-	seagull.position = Vector2(-100, 100) # starting position
-
-	# assign target
-	seagull.set_target(junk_instance)
-
 # runs every frame
 func _process(_delta):
 	# open pause menu

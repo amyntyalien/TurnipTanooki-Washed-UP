@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bo86py7txn6fy"]
+
+[ext_resource type="Texture2D" uid="uid://dqlh0jsn44xii" path="res://assets/art/screens/pausemenuCONCEPT.png" id="1_bn0f5"]
+[ext_resource type="Script" uid="uid://d0h630r4bhodb" path="res://scripts/ui/pause_menu.gd" id="1_uxw54"]
+[ext_resource type="Texture2D" uid="uid://5jc2bxwbwpsk" path="res://assets/art/Items/buttons/Menu Selection Buttons SAVE.png" id="2_uxw54"]
+[ext_resource type="Texture2D" uid="uid://dqmryxt8e6j46" path="res://assets/art/characters/player/turnip_sprite_basic.png" id="4_u60py"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86gv1"]
+load_path = "res://.godot/imported/Menu Selection Buttons CONTINUE.png-aa35bd051af471651219605f751c9dca.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bn0f5"]
+load_path = "res://.godot/imported/Menu Selection Buttons OPTIONS.png-d7d068f42951ebd5516eb0ca3389b873.ctex"
+
+[node name="Pause" type="Node2D" unique_id=1082272616]
+script = ExtResource("1_uxw54")
+
+[node name="PausemenuConcept" type="Sprite2D" parent="." unique_id=1215827427]
+position = Vector2(960, 540)
+texture = ExtResource("1_bn0f5")
+
+[node name="continuepause - TextureRect" type="TextureRect" parent="." unique_id=1061613505]
+offset_left = 77.0
+offset_top = 803.0
+offset_right = 1002.0
+offset_bottom = 968.0
+texture = SubResource("CompressedTexture2D_86gv1")
+
+[node name="continuepause" type="TextureButton" parent="continuepause - TextureRect" unique_id=12439322]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="optionspause - TextureRect2" type="TextureRect" parent="." unique_id=538705176]
+offset_left = 915.0
+offset_top = 597.0
+offset_right = 1840.0
+offset_bottom = 762.0
+texture = SubResource("CompressedTexture2D_bn0f5")
+
+[node name="optionspause" type="TextureButton" parent="optionspause - TextureRect2" unique_id=1871281350]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="save - TextureRect" type="TextureRect" parent="." unique_id=1934842674]
+offset_left = 66.0
+offset_top = 397.0
+offset_right = 991.0
+offset_bottom = 562.0
+texture = ExtResource("2_uxw54")
+
+[node name="savepause" type="TextureButton" parent="save - TextureRect" unique_id=1935090426]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.001
+anchor_top = 0.006
+anchor_right = 1.0
+anchor_bottom = 1.006
+offset_left = 0.9250001
+offset_top = -0.99
+offset_bottom = -0.98999023
+
+[node name="TurnipSpriteBasic" type="Sprite2D" parent="." unique_id=448947586]
+position = Vector2(1417, 439)
+scale = Vector2(1.9121097, 1.6796875)
+texture = ExtResource("4_u60py")
+
+[connection signal="pressed" from="continuepause - TextureRect/continuepause" to="." method="_on_continuepause_pressed"]
+[connection signal="pressed" from="optionspause - TextureRect2/optionspause" to="." method="_on_optionspause_pressed"]
+[connection signal="pressed" from="save - TextureRect/savepause" to="." method="_on_savepause_pressed"]

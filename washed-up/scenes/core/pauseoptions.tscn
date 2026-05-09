@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://0ameymua01sw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_csys6"]
+load_path = "res://.godot/imported/pausemenuCONCEPT.png-5abd2606d32f7f7479feb3806beff523.ctex"
+
+[node name="Pauseoptions" type="Node2D" unique_id=1169577646]
+
+[node name="PausemenuConcept" type="Sprite2D" parent="." unique_id=2000824460]
+position = Vector2(962, 543)
+texture = SubResource("CompressedTexture2D_csys6")

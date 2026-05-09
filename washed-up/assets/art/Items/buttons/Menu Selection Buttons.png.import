@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl3xmcitrvfvx"
-path="res://.godot/imported/Menu Selection Buttons OPTIONS.png-d7d068f42951ebd5516eb0ca3389b873.ctex"
+uid="uid://bqwwugiaklqdp"
+path="res://.godot/imported/Menu Selection Buttons.png-2c1cb5ca2d3232b6bd0db17434d46620.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Items/Menu Selection Buttons OPTIONS.png"
-dest_files=["res://.godot/imported/Menu Selection Buttons OPTIONS.png-d7d068f42951ebd5516eb0ca3389b873.ctex"]
+source_file="res://assets/art/Items/buttons/Menu Selection Buttons.png"
+dest_files=["res://.godot/imported/Menu Selection Buttons.png-2c1cb5ca2d3232b6bd0db17434d46620.ctex"]
 
 [params]
 

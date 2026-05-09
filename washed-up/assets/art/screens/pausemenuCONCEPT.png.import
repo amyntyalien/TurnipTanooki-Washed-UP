@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfah7snsxq5qk"
-path="res://.godot/imported/Turnip Tanooki Washed UP! Title.png-eef3dec3e298257897bc78b6efb03f6a.ctex"
+uid="uid://dqlh0jsn44xii"
+path="res://.godot/imported/pausemenuCONCEPT.png-5abd2606d32f7f7479feb3806beff523.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Items/Turnip Tanooki Washed UP! Title.png"
-dest_files=["res://.godot/imported/Turnip Tanooki Washed UP! Title.png-eef3dec3e298257897bc78b6efb03f6a.ctex"]
+source_file="res://assets/art/screens/pausemenuCONCEPT.png"
+dest_files=["res://.godot/imported/pausemenuCONCEPT.png-5abd2606d32f7f7479feb3806beff523.ctex"]
 
 [params]
 

@@ -23,7 +23,7 @@ var level = 0
 func _rod1():
 	var dict = {"wood":3, "string":3}
 	_craftable(dict)
-	if level >= 1:
+	if Inventory.rod >= 1:
 		$Control/Warning.text = "Already levelled"
 		$Control/Craft_Button.disabled = true
 		pass
@@ -31,11 +31,12 @@ func _rod1():
 	$Control/Rods.play("1")
 	$Control/Cost1.text = str(Inventory.trash["string"])+"/3"
 	$Control/Cost2.text = str(Inventory.trash["wood"])+"/3"
+	level = 1
 
 func _rod2():
 	var dict = {"wood":10, "string":10}
 	_craftable(dict)
-	if level >= 2:
+	if Inventory.rod >= 2:
 		$Control/Warning.text = "Already levelled"
 		$Control/Craft_Button.disabled = true
 		pass
@@ -43,11 +44,12 @@ func _rod2():
 	$Control/Rods.play("2")
 	$Control/Cost1.text = str(Inventory.trash["string"])+"/10"
 	$Control/Cost2.text = str(Inventory.trash["wood"])+"/10"
+	level = 2
 
 func _rod3():
 	var dict = {"wood":30, "string":30}
 	_craftable(dict)
-	if level >= 3:
+	if Inventory.rod >= 3:
 		$Control/Warning.text = "Already levelled"
 		$Control/Craft_Button.disabled = true
 		pass
@@ -55,11 +57,12 @@ func _rod3():
 	$Control/Rods.play("3")
 	$Control/Cost1.text = str(Inventory.trash["string"])+"/30"
 	$Control/Cost2.text = str(Inventory.trash["wood"])+"/30"
+	level = 3
 
 func _rod4():
 	var dict = {"wood":100, "string":100}
 	_craftable(dict)
-	if level >= 4:
+	if Inventory.rod >= 4:
 		$Control/Warning.text = "Already levelled"
 		$Control/Craft_Button.disabled = true
 		pass
@@ -67,6 +70,7 @@ func _rod4():
 	$Control/Rods.play("4")
 	$Control/Cost1.text = str(Inventory.trash["string"])+"/100"
 	$Control/Cost2.text = str(Inventory.trash["wood"])+"/100"
+	level = 4
 
 func _craftable(dict):
 	$Control/Warning.text = ""
@@ -82,7 +86,13 @@ func _craft():
 		pass
 	for i in current:
 		Inventory.trash[i] -= current[i]
-	level+=1
 	Inventory.rod = level
-	$Control/Warning.text = "Already levelled"
-	$Control/Craft_Button.disabled = true
+	match level:
+		1:
+			_rod1()
+		2:
+			_rod2()
+		3:
+			_rod3()
+		4:
+			_rod4()

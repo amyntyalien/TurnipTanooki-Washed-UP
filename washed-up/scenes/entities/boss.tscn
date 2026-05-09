@@ -32,18 +32,18 @@ animations = [{
 [node name="Boss" type="Node2D" unique_id=338141473]
 
 [node name="FishingBgV001" type="Sprite2D" parent="." unique_id=61657616]
-position = Vector2(957, 542)
+position = Vector2(960, 540)
 texture = ExtResource("1_ac02r")
 
 [node name="FishingBgWaterV001" type="Sprite2D" parent="." unique_id=1562392924]
-position = Vector2(955, 545)
+position = Vector2(960, 540)
 texture = SubResource("CompressedTexture2D_hxkur")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1287344906]
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_t365j")
 autoplay = "default"
-frame_progress = 0.43980074
+frame_progress = 0.44717756
 
 [node name="Cloud001" type="Sprite2D" parent="." unique_id=1384693532]
 position = Vector2(1626, 150)

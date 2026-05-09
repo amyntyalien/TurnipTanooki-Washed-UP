@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://2vppcria7tke"]
 
-[ext_resource type="Texture2D" uid="uid://dqmryxt8e6j46" path="res://assets/art/characters/player/turnip_sprite_basic.png" id="1_8afob"]
 [ext_resource type="Script" uid="uid://bujaditgsfru5" path="res://scripts/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://c4wfvnirur3fl" path="res://assets/art/characters/player/turnip_walk_sprites_8fps.png" id="3_gmlin"]
+[ext_resource type="Texture2D" uid="uid://c8frbl8rnlc2n" path="res://assets/art/characters/player/turnip_idle_sprites_2fps.png" id="3_lvxji"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28m0y"]
+atlas = ExtResource("3_lvxji")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uniwh"]
+atlas = ExtResource("3_lvxji")
+region = Rect2(256, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lvxji"]
 atlas = ExtResource("3_gmlin")
@@ -104,6 +112,17 @@ region = Rect2(1280, 0, 256, 256)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_28m0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uniwh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_lvxji")
 }, {
 "duration": 1.0,
@@ -196,28 +215,24 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afob"]
-size = Vector2(73, 63)
+size = Vector2(76, 63)
 
 [node name="player" type="Node2D" unique_id=396867642]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2063792826]
 script = ExtResource("1_dovo2")
 
-[node name="TurnipSpriteBasic" type="Sprite2D" parent="CharacterBody2D" unique_id=1251651678]
-visible = false
-position = Vector2(43.250004, 41)
-scale = Vector2(0.33398438, 0.31640625)
-texture = ExtResource("1_8afob")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=318608948]
 position = Vector2(38, 40.5)
 scale = Vector2(0.3046875, 0.30859375)
 sprite_frames = SubResource("SpriteFrames_28m0y")
-animation = &"walk up"
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.67080677
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1740212883]
 zoom = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1146049333]
-position = Vector2(36.5, 49.5)
+position = Vector2(38, 49.5)
 shape = SubResource("RectangleShape2D_8afob")

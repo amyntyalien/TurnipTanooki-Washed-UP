@@ -2,17 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bpc1bnhc5kmlg" path="res://scenes/boss_fights/boss.gd" id="1_q1kfb"]
 [ext_resource type="Texture2D" uid="uid://bgdjtue0o1veo" path="res://assets/art/environment/tiles/fishing_bg_v001.png" id="2_u7v17"]
-[ext_resource type="Texture2D" uid="uid://m6a2atxr5lnn" path="res://assets/art/characters/player/boss_sprite_v001.png" id="3_lapbj"]
 [ext_resource type="Texture2D" uid="uid://b3twjkjk3dbyg" path="res://assets/art/environment/tiles/fishing_bg_water_v001.png" id="4_tqgfn"]
 [ext_resource type="Texture2D" uid="uid://bc4l0y7pil8yi" path="res://assets/art/environment/tiles/cloud_001.png" id="5_elsm4"]
 [ext_resource type="PackedScene" uid="uid://cn1fdtwtej5sw" path="res://scenes/fishing/mathquestions.tscn" id="6_u7v17"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h5fgr"]
-atlas = ExtResource("3_lapbj")
 region = Rect2(0, 0, 1920, 1080)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mxmc4"]
-atlas = ExtResource("3_lapbj")
 region = Rect2(0, 1080, 1920, 1080)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t365j"]

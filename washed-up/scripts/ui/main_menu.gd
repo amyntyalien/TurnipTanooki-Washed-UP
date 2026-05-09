@@ -1,7 +1,7 @@
 extends Control
 
 func _on_new_game_pressed(): # New Game Texture Rect pressed
-	get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")
+	get_tree().change_scene_to_file("res://scenes/core/cutscene.tscn")
 
 func _on_continue_pressed():
 	print("No game to continue from!") # Placeholder for when save files get added

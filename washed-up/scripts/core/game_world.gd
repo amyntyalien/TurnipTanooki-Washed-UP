@@ -1,10 +1,20 @@
 extends Node
 
+# Reference to the junk scene
+var junk_scene = preload("res://scenes/entities/junk.tscn")
+@onready var timer = $JunkTimer # Assumes a Timer node exists as a child
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	# Set up the timer to loop every 60 seconds
+	timer.wait_time = 60.0
+	timer.one_shot = false # Makes it looooop
+	timer.timeout.connect(_on_junk_timer_timeout)
+	timer.start()
 
+func _on_junk_timer_timeout() -> void:
+	# Instance and add the scene
+	var instance = junk_scene.instantiate()
+	add_child(instance)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

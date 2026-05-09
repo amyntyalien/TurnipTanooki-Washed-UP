@@ -18,6 +18,8 @@ func _process(delta: float) -> void:
 	if start:
 		timer+=1
 		$Timer.value = timer / 5
+	if timer == 120:
+		$Background/Character.play("idle")
 	if timer == 500:
 		combo = 0
 		timer = 0
@@ -34,12 +36,13 @@ func _process(delta: float) -> void:
 		$Combo.text = "Combo X "+ str(combo)
 		get_fish()
 		$Background/Path2D/PathFollow2D.progress_ratio = 0
+		$Background/Character.play("fish")
 		
 		_level1()
 		correct = false
 		ans = ""
 		_check_game_over()
-	pass
+		
 
 var q_and_a
 

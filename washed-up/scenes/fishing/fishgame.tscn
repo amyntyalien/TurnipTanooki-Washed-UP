@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b3twjkjk3dbyg" path="res://assets/art/environment/tiles/fishing_bg_water_v001.png" id="4_c2g5v"]
 [ext_resource type="Texture2D" uid="uid://cw4es5x8qg242" path="res://assets/art/characters/player/turnip_fishing_casting_8fps_v002.png" id="4_vgdys"]
 [ext_resource type="Script" uid="uid://d1ou5ei5hqqte" path="res://scenes/fishing/path_follow_2d.gd" id="5_nqdh8"]
+[ext_resource type="Texture2D" uid="uid://bajvg6on4e1k7" path="res://assets/art/characters/player/turnip_fishing_idle_4fps_v001.png" id="6_1lkd0"]
 [ext_resource type="Texture2D" uid="uid://bc4l0y7pil8yi" path="res://assets/art/environment/tiles/cloud_001.png" id="8_mahs1"]
 [ext_resource type="Texture2D" uid="uid://douxdl3qhomkp" path="res://assets/art/blank_image.png" id="9_1lkd0"]
 [ext_resource type="Texture2D" uid="uid://dypton53yav77" path="res://assets/art/Items/fish/redfish.png" id="9_vilim"]
@@ -103,6 +104,30 @@ region = Rect2(0, 9216, 832, 512)
 atlas = ExtResource("4_vgdys")
 region = Rect2(0, 9728, 832, 512)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdcul"]
+atlas = ExtResource("6_1lkd0")
+region = Rect2(0, 0, 832, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk6b6"]
+atlas = ExtResource("6_1lkd0")
+region = Rect2(0, 512, 832, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4sr4"]
+atlas = ExtResource("6_1lkd0")
+region = Rect2(0, 1024, 832, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56cel"]
+atlas = ExtResource("6_1lkd0")
+region = Rect2(0, 1536, 832, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbr5h"]
+atlas = ExtResource("6_1lkd0")
+region = Rect2(0, 2048, 832, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iof0r"]
+atlas = ExtResource("6_1lkd0")
+region = Rect2(0, 2560, 832, 512)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_lo1l6"]
 animations = [{
 "frames": [{
@@ -166,9 +191,32 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_equh1")
 }],
-"loop": true,
-"name": &"default",
+"loop": false,
+"name": &"fish",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdcul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dk6b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4sr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56cel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbr5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iof0r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lo1l6"]
@@ -292,8 +340,8 @@ vertical_alignment = 1
 position = Vector2(621, 528)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_lo1l6")
-autoplay = "default"
-frame_progress = 0.32239965
+animation = &"fish"
+autoplay = "idle"
 
 [node name="Water" type="AnimatedSprite2D" parent="Background" unique_id=1797544135]
 position = Vector2(962, 543)

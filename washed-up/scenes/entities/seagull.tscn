@@ -31,17 +31,16 @@ radius = 38.052597
 [node name="Seagull" type="Node2D" unique_id=1945660520]
 
 [node name="seagull" type="Area2D" parent="." unique_id=35569577]
-collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_hebkx")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="seagull" unique_id=117565714]
+[node name="seagull" type="AnimatedSprite2D" parent="seagull" unique_id=117565714]
 position = Vector2(52.5, 53)
 scale = Vector2(0.41015628, 0.4140625)
 sprite_frames = SubResource("SpriteFrames_800nu")
 autoplay = "default"
 frame_progress = 0.12835243
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="seagull" unique_id=1735506920]
+[node name="seagull2" type="CollisionShape2D" parent="seagull" unique_id=1735506920]
 position = Vector2(49, 56)
 shape = SubResource("CircleShape2D_titro")

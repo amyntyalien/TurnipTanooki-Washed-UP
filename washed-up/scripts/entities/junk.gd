@@ -1,40 +1,70 @@
+#junk.gd:
 extends Node2D
 
-var trashes = []
+signal collected
+
+var trashes = [] # stores trash
+
+# name for each thing in junk
+@onready var click_areas = [
+	$wood,
+	$bottle,
+	$plastic,
+	$pizza
+]
+
+# runs when scene starts
 func _ready():
-	# gets Wood, Plastic, etc.
-	var all_visuals = get_children()
+	# connect signals
+	for area in click_areas:
+		area.input_event.connect(_on_input_event)
+		area.area_entered.connect(_on_area_entered)
+
+	
+	var all_visuals = click_areas.duplicate() # duplicate list
+
+	# stop if empty
 	if all_visuals.is_empty():
-		push_error("No junk visuals found in junk.tscn!")
+		push_error("No junk visuals found!")
 		return
-	
-	var num_to_show = randi_range(1, min(3, all_visuals.size())) # How many (min 1)
-	
+
+	# hide all trash
+	for visual in all_visuals:
+		visual.visible = false
+
+	# randomize order
+	all_visuals.shuffle()
+
+	# choose amount
+	var num_to_show = randi_range(1, min(3, all_visuals.size()))
+
+	# show random trash
 	for i in range(num_to_show):
-		trashes.append(all_visuals.pick_random())
-		
-		set_process_input(true)
-		
-# when junk is clicked on with the left mouse key, it goes to Inventory.add_trash().
-#
-func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed():
-			_on_junk_clicked()
-			
+		var chosen = all_visuals[i]
+		trashes.append(chosen)
+		chosen.visible = true
+
+# runs when clicked
+func _on_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton: # check mouse click
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed: # check left click
+			_on_junk_clicked() # collect junk
+
+# runs when junk clicked
 func _on_junk_clicked():
 	print("Junk clicked!")
-	queue_free()
-#
 
-func _process(_delta):
-	print(JSON.stringify(Inventory.trash))
-	
-func _input(event):
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_C:
-			print("AAAA")
-			for i in range(randi_range(1, 10)):
-				Inventory.add_trash(["wood", "bottle", "plastic", "pizza"].pick_random(), randi_range(1,3))
-			set_process_input(false)
-#
+	# add random trash
+	Inventory.add_trash(
+		["wood", "bottle", "plastic", "pizza"].pick_random(),
+		randi_range(1, 3)
+	)
+	queue_free() # remove junk
+
+# runs when touching another area
+func _on_area_entered(area):
+	# check for seagull
+	if area.name == "seagull":
+		print("Seagull collected junk")
+		emit_signal("collected")
+		queue_free()

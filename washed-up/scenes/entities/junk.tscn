@@ -30,7 +30,6 @@ script = ExtResource("1_sa6mt")
 [node name="wood" type="Area2D" parent="." unique_id=2058539083]
 disable_mode = 2
 collision_layer = 2
-collision_mask = 2
 script = ExtResource("1_4bvor")
 
 [node name="Sprite2D" type="Sprite2D" parent="wood" unique_id=759696767]
@@ -43,20 +42,18 @@ shape = SubResource("RectangleShape2D_exvou")
 [node name="bottle" type="Area2D" parent="." unique_id=1752568679]
 disable_mode = 2
 collision_layer = 2
-collision_mask = 2
 script = ExtResource("4_gwr74")
 
 [node name="Sprite2D" type="Sprite2D" parent="bottle" unique_id=1621702578]
 texture = ExtResource("2_bdbv5")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="bottle" unique_id=1900375988]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottle" unique_id=1900375988]
 position = Vector2(4, 8)
 shape = SubResource("CapsuleShape2D_bdbv5")
 
 [node name="plastic" type="Area2D" parent="." unique_id=1996895864]
 disable_mode = 2
 collision_layer = 2
-collision_mask = 2
 script = ExtResource("6_y4qg4")
 
 [node name="Sprite2D" type="Sprite2D" parent="plastic" unique_id=302618428]
@@ -69,7 +66,6 @@ shape = SubResource("CircleShape2D_bdbv5")
 [node name="pizza" type="Area2D" parent="." unique_id=1866217585]
 disable_mode = 2
 collision_layer = 2
-collision_mask = 2
 script = ExtResource("8_xfphd")
 
 [node name="Sprite2D" type="Sprite2D" parent="pizza" unique_id=309640390]

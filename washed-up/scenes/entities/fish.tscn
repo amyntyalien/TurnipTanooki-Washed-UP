@@ -22,7 +22,6 @@ size = Vector2(33, 28)
 [node name="pink" type="Area2D" parent="." unique_id=1128562905]
 visible = false
 collision_layer = 2
-collision_mask = 2
 
 [node name="Pinkfish" type="Sprite2D" parent="pink" unique_id=830458602]
 position = Vector2(22, 18.999998)
@@ -37,7 +36,6 @@ shape = SubResource("RectangleShape2D_tqb5q")
 [node name="cyan" type="Area2D" parent="." unique_id=1130204184]
 visible = false
 collision_layer = 2
-collision_mask = 2
 
 [node name="Cyanfish" type="Sprite2D" parent="cyan" unique_id=1422955778]
 position = Vector2(22.5, 18.5)
@@ -50,7 +48,6 @@ shape = SubResource("RectangleShape2D_qtufe")
 
 [node name="red" type="Area2D" parent="." unique_id=879353858]
 collision_layer = 2
-collision_mask = 2
 
 [node name="Redfish" type="Sprite2D" parent="red" unique_id=192667133]
 position = Vector2(17.125002, 22.531252)
@@ -64,7 +61,6 @@ shape = SubResource("CircleShape2D_tqb5q")
 [node name="purple" type="Area2D" parent="." unique_id=989404788]
 visible = false
 collision_layer = 2
-collision_mask = 2
 
 [node name="Purplefish" type="Sprite2D" parent="purple" unique_id=261135449]
 position = Vector2(23, 18)

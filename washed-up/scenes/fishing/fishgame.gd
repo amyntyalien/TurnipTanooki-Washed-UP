@@ -80,5 +80,13 @@ func _input(event):
 
 
 func get_fish():
-	Inventory.add_fish("pink", combo)
+	var x = randi_range(1,100)
+	if x < 50:
+		Inventory.add_fish("red", combo)
+	elif x < 85:
+		Inventory.add_fish("pink", combo)
+	elif x < 99:
+		Inventory.add_fish("cyan", combo)
+	else:
+		Inventory.add_fish("purple", combo)
 	

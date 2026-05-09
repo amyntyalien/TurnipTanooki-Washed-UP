@@ -69,3 +69,11 @@ func _trade():
 			print(Inventory.multiplier)
 		Inventory.trash[current[i]] += 1
 		
+
+
+func _on_inv_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/systems/inventory.tscn")
+
+
+func _on_craft_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/systems/crafting.tscn")

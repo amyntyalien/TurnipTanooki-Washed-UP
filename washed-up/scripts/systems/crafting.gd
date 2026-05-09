@@ -15,3 +15,7 @@ func _on_backtogame_pressed():
 
 func _on_inv_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/systems/inventory.tscn")
+
+
+func _on_trade_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/systems/trading.tscn")

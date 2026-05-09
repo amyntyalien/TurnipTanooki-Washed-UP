@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://1s4lb2yh0hiq"]
 
 [ext_resource type="Script" uid="uid://cg8nnsjepfkxe" path="res://scripts/systems/inventory.gd" id="1_4m4tt"]
-[ext_resource type="Texture2D" uid="uid://cb2xd07x2co1w" path="res://assets/art/Items/book_tab_left.png" id="1_p0jaf"]
+[ext_resource type="Texture2D" uid="uid://d1vp4udnewxbw" path="res://assets/art/Items/book_tab3.png" id="2_ppt17"]
 [ext_resource type="Script" uid="uid://ditmcxixou3vx" path="res://scenes/systems/inventory_book.gd" id="3_cl6h3"]
 [ext_resource type="Texture2D" uid="uid://dypton53yav77" path="res://assets/art/Items/fish/redfish.png" id="3_ih8x7"]
 [ext_resource type="Texture2D" uid="uid://eqrq37gdsi6q" path="res://assets/art/Items/fish/pinkfish.png" id="4_cl6h3"]
@@ -24,7 +24,7 @@ script = ExtResource("1_4m4tt")
 [node name="Inventory_book" type="Sprite2D" parent="." unique_id=2132208641]
 position = Vector2(989, 549)
 scale = Vector2(1, 0.89)
-texture = ExtResource("1_p0jaf")
+texture = ExtResource("2_ppt17")
 script = ExtResource("3_cl6h3")
 
 [node name="Control" type="Control" parent="Inventory_book" unique_id=1747738523]
@@ -43,6 +43,14 @@ offset_bottom = -519.21136
 text = "Craft"
 flat = true
 metadata/_edit_use_anchors_ = true
+
+[node name="Trade Button" type="Button" parent="Inventory_book/Control" unique_id=119489970]
+layout_mode = 0
+offset_left = -430.99997
+offset_top = -560.67413
+offset_right = -377.99997
+offset_bottom = -529.67413
+text = "Trade"
 
 [node name="Stringnum" type="Label" parent="Inventory_book/Control" unique_id=402392974]
 layout_mode = 1
@@ -198,4 +206,5 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Inventory_book/Control/Craft Button" to="." method="_on_craft_button_pressed"]
+[connection signal="pressed" from="Inventory_book/Control/Trade Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="back/backtogame" to="." method="_on_backtogame_pressed"]

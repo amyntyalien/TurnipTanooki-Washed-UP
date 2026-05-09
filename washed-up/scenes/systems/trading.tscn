@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bjqxjowt0cm1l"]
+[gd_scene format=3 uid="uid://cnxtwxnddlp7b"]
 
-[ext_resource type="Texture2D" uid="uid://bektnl43qxd0t" path="res://assets/art/Items/book_tab_right.png" id="1_d2fh4"]
+[ext_resource type="Texture2D" uid="uid://xssf5so3ouf2" path="res://assets/art/Items/book_tab1.png" id="1_7nmkm"]
 [ext_resource type="Script" uid="uid://dalj0x0whxgb3" path="res://scenes/systems/trading.gd" id="2_7nmkm"]
 [ext_resource type="Texture2D" uid="uid://b30ki13ljir2" path="res://assets/art/Items/junk/plastic.png" id="5_4jaab"]
 [ext_resource type="Texture2D" uid="uid://dtdrlycsm4i0h" path="res://assets/art/characters/seagull/Bird_0001.png" id="6_7nmkm"]
@@ -90,7 +90,7 @@ animations = [{
 [node name="Trading" type="Sprite2D" parent="." unique_id=477295159]
 position = Vector2(989, 549)
 scale = Vector2(1, 0.89)
-texture = ExtResource("1_d2fh4")
+texture = ExtResource("1_7nmkm")
 script = ExtResource("2_7nmkm")
 
 [node name="Control" type="Control" parent="Trading" unique_id=1606618748]
@@ -108,6 +108,16 @@ offset_right = -576.16034
 offset_bottom = -523.5381
 action_mode = 0
 text = "Inv"
+metadata/_edit_use_anchors_ = true
+
+[node name="Craft Button" type="Button" parent="Trading/Control" unique_id=1948011783]
+layout_mode = 0
+offset_left = -551.7793
+offset_top = -563.9212
+offset_right = -477.3532
+offset_bottom = -519.21136
+text = "Craft"
+flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Trade" type="Button" parent="Trading/Control" unique_id=98705005]
@@ -192,3 +202,6 @@ horizontal_alignment = 1
 position = Vector2(391.99997, -40.449436)
 sprite_frames = SubResource("SpriteFrames_4e6sw")
 animation = &"1"
+
+[connection signal="pressed" from="Trading/Control/Inv Button" to="Trading" method="_on_inv_button_pressed"]
+[connection signal="pressed" from="Trading/Control/Craft Button" to="Trading" method="_on_craft_button_pressed"]

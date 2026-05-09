@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dqshqg4rvdjv8"]
 
 [ext_resource type="Script" uid="uid://s8u6arfsufuu" path="res://scripts/systems/crafting.gd" id="1_awcff"]
+[ext_resource type="Texture2D" uid="uid://d0s1ltak0irle" path="res://assets/art/Items/book_tab2.png" id="2_4sqea"]
 [ext_resource type="Script" uid="uid://cny4opyfug0tq" path="res://scenes/systems/crafting.gd" id="3_3glj5"]
-[ext_resource type="Texture2D" uid="uid://bektnl43qxd0t" path="res://assets/art/Items/book_tab_right.png" id="3_wmtw3"]
 [ext_resource type="Texture2D" uid="uid://dwmaupi7qfobq" path="res://assets/art/Items/Untitled27_20260509182138.png" id="4_xvm05"]
 [ext_resource type="Texture2D" uid="uid://bwxtpi8k6t4d8" path="res://assets/art/Items/Untitled27_20260509182146.png" id="5_5ce7d"]
 [ext_resource type="Texture2D" uid="uid://ctd0aw50r3fkc" path="res://assets/art/Items/Untitled27_20260509182128.png" id="6_37r4x"]
@@ -87,7 +87,7 @@ script = ExtResource("1_awcff")
 [node name="Crafting" type="Sprite2D" parent="." unique_id=1075563902]
 position = Vector2(989, 549)
 scale = Vector2(1, 0.89)
-texture = ExtResource("3_wmtw3")
+texture = ExtResource("2_4sqea")
 script = ExtResource("3_3glj5")
 
 [node name="Control" type="Control" parent="Crafting" unique_id=1729227778]
@@ -107,15 +107,13 @@ action_mode = 0
 text = "Inv"
 metadata/_edit_use_anchors_ = true
 
-[node name="Inv Button" type="Button" parent="Crafting/Control/Inv Button" unique_id=2133287044]
+[node name="TradeButton" type="Button" parent="Crafting/Control" unique_id=1512529784]
 layout_mode = 0
-offset_left = -645.45355
-offset_top = -565.36346
-offset_right = -576.16034
-offset_bottom = -523.5381
-action_mode = 0
-text = "Inv"
-metadata/_edit_use_anchors_ = true
+offset_left = -431.0
+offset_top = -560.6742
+offset_right = -378.0
+offset_bottom = -529.6742
+text = "Trade"
 
 [node name="Craft_Button" type="Button" parent="Crafting/Control" unique_id=94984853]
 layout_mode = 1
@@ -243,4 +241,5 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Crafting/Control/Inv Button" to="." method="_on_inv_button_pressed"]
+[connection signal="pressed" from="Crafting/Control/TradeButton" to="." method="_on_trade_button_pressed"]
 [connection signal="pressed" from="back/backtogame" to="." method="_on_backtogame_pressed"]

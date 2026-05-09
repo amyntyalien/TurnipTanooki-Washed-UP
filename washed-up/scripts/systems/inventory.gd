@@ -21,8 +21,6 @@ var trash = {
 
 var rod = 0
 
-var raft = 0;
-
 func add_fish(item, amount):
 	if item in fish_colours:
 		if feesh.has(item):

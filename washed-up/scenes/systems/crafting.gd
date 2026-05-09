@@ -57,7 +57,6 @@ func _rod4():
 	level = 4
 
 func _craftable(dict):
-	print(JSON.stringify(Inventory.trash))
 	for i in dict:
 		if !(Inventory.trash.has(i) and Inventory.trash[i] >= dict[i]):
 			$Control/Craft_Button.disabled = true
@@ -67,5 +66,5 @@ func _craftable(dict):
 func _craft():
 	for i in current:
 		Inventory.trash[i] -= current[i]
-	
-	Inventory.item = level
+	Inventory.rod = level
+	_craftable(current)

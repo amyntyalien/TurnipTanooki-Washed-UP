@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cfbomx0u7cy0r"]
+
+[ext_resource type="Texture2D" uid="uid://bgdjtue0o1veo" path="res://assets/art/environment/tiles/fishing_bg_v001.png" id="1_ac02r"]
+[ext_resource type="Texture2D" uid="uid://m6a2atxr5lnn" path="res://assets/art/characters/player/boss_sprite_v001.png" id="2_g24gc"]
+[ext_resource type="Texture2D" uid="uid://bc4l0y7pil8yi" path="res://assets/art/environment/tiles/cloud_001.png" id="3_4agdh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hxkur"]
+load_path = "res://.godot/imported/fishing_bg_water_v001.png-10cd38decec95d35e44846d387531c8c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5fgr"]
+atlas = ExtResource("2_g24gc")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxmc4"]
+atlas = ExtResource("2_g24gc")
+region = Rect2(0, 1080, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t365j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5fgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxmc4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Boss" type="Node2D" unique_id=338141473]
+
+[node name="FishingBgV001" type="Sprite2D" parent="." unique_id=61657616]
+position = Vector2(957, 542)
+texture = ExtResource("1_ac02r")
+
+[node name="FishingBgWaterV001" type="Sprite2D" parent="." unique_id=1562392924]
+position = Vector2(955, 545)
+texture = SubResource("CompressedTexture2D_hxkur")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1287344906]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_t365j")
+autoplay = "default"
+frame_progress = 0.43980074
+
+[node name="Cloud001" type="Sprite2D" parent="." unique_id=1384693532]
+position = Vector2(1626, 150)
+texture = ExtResource("3_4agdh")
+
+[node name="Cloud002" type="Sprite2D" parent="." unique_id=1059170145]
+position = Vector2(238, 393)
+texture = ExtResource("3_4agdh")

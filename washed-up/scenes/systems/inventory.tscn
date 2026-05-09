@@ -1,14 +1,18 @@
-[gd_scene format=3 uid="uid://c8afwmwt61ttr"]
+[gd_scene format=3 uid="uid://bhag1gpve645j"]
 
+[ext_resource type="Script" uid="uid://cg8nnsjepfkxe" path="res://scripts/systems/inventory.gd" id="1_4m4tt"]
 [ext_resource type="Texture2D" uid="uid://cb2xd07x2co1w" path="res://assets/art/Items/book_tab_left.png" id="1_p0jaf"]
-[ext_resource type="Script" uid="uid://db4cd4ei82iyo" path="res://scenes/systems/craft_button.gd" id="2_fqss7"]
+[ext_resource type="Script" path="res://scenes/systems/craft_button.gd" id="2_fqss7"]
 [ext_resource type="Texture2D" uid="uid://bektnl43qxd0t" path="res://assets/art/Items/book_tab_right.png" id="2_mqhhn"]
 [ext_resource type="Script" uid="uid://c1b3ja0fy5plb" path="res://scenes/systems/inv_button.gd" id="4_4m4tt"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4m4tt"]
+load_path = "res://.godot/imported/Menu Selection Buttons BACK.png-c60b23c7ef98c4c912d867b88fece62b.ctex"
+
 [node name="Inventory" type="Node2D" unique_id=1893544705]
+script = ExtResource("1_4m4tt")
 
 [node name="Inventory" type="Sprite2D" parent="." unique_id=2132208641]
-visible = false
 position = Vector2(844.99994, 477.00006)
 scale = Vector2(0.7792969, 0.6933594)
 texture = ExtResource("1_p0jaf")
@@ -51,5 +55,22 @@ action_mode = 0
 text = "Inv"
 script = ExtResource("4_4m4tt")
 
+[node name="back" type="TextureRect" parent="." unique_id=876869642]
+offset_left = 1163.0
+offset_top = 771.0
+offset_right = 1396.0
+offset_bottom = 825.0
+texture = SubResource("CompressedTexture2D_4m4tt")
+expand_mode = 1
+
+[node name="backtogame" type="TextureButton" parent="back" unique_id=519880256]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [connection signal="pressed" from="Inventory/Control/Craft Button" to="Inventory/Control/Craft Button" method="_on_craft_button_pressed"]
 [connection signal="pressed" from="Crafting/Control/Inv Button" to="Crafting/Control/Inv Button" method="_on_inv_button_pressed"]
+[connection signal="pressed" from="back/backtogame" to="." method="_on_backtogame_pressed"]

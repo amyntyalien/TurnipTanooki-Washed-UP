@@ -1,34 +1,34 @@
-[gd_scene format=3 uid="uid://bhag1gpve645j"]
+[gd_scene format=3 uid="uid://cmc7qnhu6amov"]
 
-[ext_resource type="Script" uid="uid://cg8nnsjepfkxe" path="res://scripts/systems/inventory.gd" id="1_4m4tt"]
-[ext_resource type="Texture2D" uid="uid://cb2xd07x2co1w" path="res://assets/art/Items/book_tab_left.png" id="1_p0jaf"]
+[ext_resource type="Script" uid="uid://s8u6arfsufuu" path="res://scripts/systems/crafting.gd" id="1_awcff"]
+[ext_resource type="Texture2D" uid="uid://bektnl43qxd0t" path="res://assets/art/Items/book_tab_right.png" id="3_wmtw3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4m4tt"]
 load_path = "res://.godot/imported/Menu Selection Buttons BACK.png-c60b23c7ef98c4c912d867b88fece62b.ctex"
 
 [node name="Inventory" type="Node2D" unique_id=1893544705]
-script = ExtResource("1_4m4tt")
+script = ExtResource("1_awcff")
 
-[node name="Inventory" type="Sprite2D" parent="." unique_id=2132208641]
+[node name="Crafting" type="Sprite2D" parent="." unique_id=1075563902]
 position = Vector2(989, 549)
 scale = Vector2(1, 0.89)
-texture = ExtResource("1_p0jaf")
+texture = ExtResource("3_wmtw3")
 
-[node name="Control" type="Control" parent="Inventory" unique_id=1747738523]
+[node name="Control" type="Control" parent="Crafting" unique_id=1729227778]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Craft Button" type="Button" parent="Inventory/Control" unique_id=1025619916]
+[node name="Inv Button" type="Button" parent="Crafting/Control" unique_id=1649896964]
 layout_mode = 0
-offset_left = -551.77936
-offset_top = -563.9212
-offset_right = -477.35327
-offset_bottom = -519.21136
-text = "Craft"
-flat = true
+offset_left = -645.45355
+offset_top = -565.36346
+offset_right = -576.16034
+offset_bottom = -523.5381
+action_mode = 0
+text = "Inv"
 metadata/_edit_use_anchors_ = true
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
@@ -49,5 +49,5 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Inventory/Control/Craft Button" to="." method="_on_craft_button_pressed"]
+[connection signal="pressed" from="Crafting/Control/Inv Button" to="." method="_on_inv_button_pressed"]
 [connection signal="pressed" from="back/backtogame" to="." method="_on_backtogame_pressed"]

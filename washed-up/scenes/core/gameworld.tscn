@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://2vppcria7tke" path="res://scenes/player/player.tscn" id="2_0uvnq"]
 [ext_resource type="PackedScene" uid="uid://dog4hlimox1de" path="res://scenes/entities/junk.tscn" id="4_m4q5l"]
 [ext_resource type="PackedScene" uid="uid://b5ixei1vput1m" path="res://scenes/entities/seagull.tscn" id="5_kb8sw"]
+[ext_resource type="AudioStream" uid="uid://cxoahklrxhiwy" path="res://assets/music/Guitar.wav" id="6_ry26v"]
 
 [node name="Gameworld" type="Node2D" unique_id=681680736]
 script = ExtResource("1_0uvnq")
@@ -22,3 +23,8 @@ position = Vector2(210.99998, 163)
 
 [node name="Seagull" parent="." unique_id=1945660520 instance=ExtResource("5_kb8sw")]
 position = Vector2(211, -7)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1605393191]
+stream = ExtResource("6_ry26v")
+volume_db = -2.476
+autoplay = true

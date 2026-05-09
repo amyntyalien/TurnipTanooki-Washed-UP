@@ -37,6 +37,8 @@ func _process(delta: float) -> void:
 		$Popup.show()
 	elif (question_count >= 15):
 		print("success")
+		get_tree().change_scene_to_file("res://scenes/core/titlescreen.tscn")
+
 	
 	
 

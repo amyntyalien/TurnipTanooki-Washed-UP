@@ -32,5 +32,4 @@ func _input_event(viewport, event, shape_idx):
 			
 func _on_junk_clicked():
 	print("Junk clicked!")
-	Inventory.add_trash()
 	queue_free()

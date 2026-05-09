@@ -40,7 +40,7 @@ position = Vector2(52.5, 53)
 scale = Vector2(0.41015628, 0.4140625)
 sprite_frames = SubResource("SpriteFrames_800nu")
 autoplay = "default"
-frame_progress = 0.37650236
+frame_progress = 0.12835243
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="seagull" unique_id=1735506920]
 position = Vector2(49, 56)

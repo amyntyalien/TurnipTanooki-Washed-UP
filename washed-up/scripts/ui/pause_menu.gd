@@ -1,5 +1,6 @@
 extends Node
-
+var SaveManager = "res://autoload/SaveManager.gd"
+var player = "res://scenes/player/player.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,8 +12,12 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_savepause_pressed() -> void:
-	pass # Replace with function body.
+func _on_savepause_pressed():
+	if player:
+		SaveManager.save_game(player.global_position)
+		print("Game Saved!")
+	else:
+		print("Player not found.")
 
 
 func _on_optionspause_pressed():

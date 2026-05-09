@@ -2,11 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://dryddrvx3pgqk" path="res://assets/art/screens/turniptitlescreenCONCEPT.jpg" id="1_dq1fl"]
 [ext_resource type="Script" uid="uid://dsi5ag4guagss" path="res://scripts/ui/main_menu.gd" id="1_ewanl"]
-[ext_resource type="Texture2D" uid="uid://dfah7snsxq5qk" path="res://assets/art/Items/Turnip Tanooki Washed UP! Title.png" id="2_v8l2n"]
-[ext_resource type="Texture2D" uid="uid://bjpnkexnkob32" path="res://assets/art/Items/Menu Selection Buttons CONTINUE.png" id="3_ewanl"]
-[ext_resource type="Texture2D" uid="uid://cqspptkbbjyk2" path="res://assets/art/Items/Menu Selection Buttons NEW GAME.png" id="4_desid"]
-[ext_resource type="Texture2D" uid="uid://bl3xmcitrvfvx" path="res://assets/art/Items/Menu Selection Buttons OPTIONS.png" id="5_3l7qq"]
-[ext_resource type="Texture2D" uid="uid://bq5avg4iwoibe" path="res://assets/art/Items/Menu Selection Buttons QUIT.png" id="6_prcl2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4e10h"]
+load_path = "res://.godot/imported/Turnip Tanooki Washed UP! Title.png-eef3dec3e298257897bc78b6efb03f6a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q35n2"]
+load_path = "res://.godot/imported/Menu Selection Buttons CONTINUE.png-aa35bd051af471651219605f751c9dca.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lwxq5"]
+load_path = "res://.godot/imported/Menu Selection Buttons NEW GAME.png-f3c206000aa50bdda7f8f1d61779f3f3.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e04tr"]
+load_path = "res://.godot/imported/Menu Selection Buttons OPTIONS.png-d7d068f42951ebd5516eb0ca3389b873.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v8l2n"]
+load_path = "res://.godot/imported/Menu Selection Buttons QUIT.png-a78af874829c13d1dd502783692f9f28.ctex"
 
 [node name="Titlescreen" type="Node2D" unique_id=289519404]
 
@@ -29,14 +39,14 @@ offset_left = -1.0
 offset_top = 3.0
 offset_right = 924.0
 offset_bottom = 245.0
-texture = ExtResource("2_v8l2n")
+texture = SubResource("CompressedTexture2D_4e10h")
 
 [node name="Continue - TextureRect2" type="TextureRect" parent="Control (MainMenu)" unique_id=637682944]
 layout_mode = 0
 offset_top = 316.0
 offset_right = 663.0
 offset_bottom = 434.0
-texture = ExtResource("3_ewanl")
+texture = SubResource("CompressedTexture2D_q35n2")
 expand_mode = 1
 
 [node name="continue" type="TextureButton" parent="Control (MainMenu)/Continue - TextureRect2" unique_id=717980090]
@@ -51,7 +61,7 @@ layout_mode = 0
 offset_top = 476.0
 offset_right = 663.0
 offset_bottom = 594.0
-texture = ExtResource("4_desid")
+texture = SubResource("CompressedTexture2D_lwxq5")
 expand_mode = 1
 
 [node name="new game" type="TextureButton" parent="Control (MainMenu)/New Game - TextureRect4" unique_id=267492247]
@@ -67,7 +77,7 @@ layout_mode = 0
 offset_top = 641.0
 offset_right = 663.0
 offset_bottom = 759.0
-texture = ExtResource("5_3l7qq")
+texture = SubResource("CompressedTexture2D_e04tr")
 expand_mode = 1
 
 [node name="options" type="TextureButton" parent="Control (MainMenu)/Options - TextureRect5" unique_id=62256917]
@@ -83,7 +93,7 @@ layout_mode = 0
 offset_top = 798.0
 offset_right = 663.0
 offset_bottom = 916.0
-texture = ExtResource("6_prcl2")
+texture = SubResource("CompressedTexture2D_v8l2n")
 expand_mode = 1
 
 [node name="quit" type="TextureButton" parent="Control (MainMenu)/Quit - TextureRect6" unique_id=1010818484]

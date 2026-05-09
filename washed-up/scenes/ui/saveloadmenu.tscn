@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://1wdth6s3572p"]
+
+[ext_resource type="Script" uid="uid://ch5d1bvt3ikjb" path="res://autoload/SaveManager.gd" id="1_ojmgw"]
+[ext_resource type="Texture2D" uid="uid://dr4k1w7wa781n" path="res://assets/art/Items/buttons/Menu Selection Buttons BACK.png" id="2_ojmgw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d512b"]
+load_path = "res://.godot/imported/pausemenuCONCEPT.png-5abd2606d32f7f7479feb3806beff523.ctex"
+
+[node name="Saveloadmenu" type="Node2D" unique_id=2114382578]
+script = ExtResource("1_ojmgw")
+
+[node name="PausemenuConcept" type="Sprite2D" parent="." unique_id=1620432020]
+position = Vector2(960, 540)
+texture = SubResource("CompressedTexture2D_d512b")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1638309170]
+offset_left = 467.0
+offset_top = 519.0
+offset_right = 1392.0
+offset_bottom = 684.0
+texture = ExtResource("2_ojmgw")

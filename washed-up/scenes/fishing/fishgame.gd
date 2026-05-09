@@ -7,7 +7,6 @@ var correct = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_fish()
 	_level1()
 	pass # Replace with function body.
 
@@ -27,6 +26,9 @@ func _process(delta: float) -> void:
 		combo += 1
 		timer = 0
 		$Combo.text = "Combo X "+ str(combo)
+		get_fish()
+		$Inventory.text = JSON.stringify(Inventory.feesh)
+		
 		_level1()
 		correct = false
 		ans = ""
@@ -78,5 +80,5 @@ func _input(event):
 
 
 func get_fish():
-	Inventory.add_fish("pink", 1)
+	Inventory.add_fish("pink", combo)
 	

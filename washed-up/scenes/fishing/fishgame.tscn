@@ -13,6 +13,9 @@ font_size = 128
 [sub_resource type="LabelSettings" id="LabelSettings_csvai"]
 font_size = 128
 
+[sub_resource type="LabelSettings" id="LabelSettings_vgdys"]
+font_size = 32
+
 [node name="Fishgame" type="Node2D" unique_id=50498463]
 script = ExtResource("1_w5nbe")
 
@@ -50,3 +53,11 @@ show_percentage = false
 
 [node name="Getfish" type="Node2D" parent="." unique_id=973924892]
 script = ExtResource("3_nut0q")
+
+[node name="Inventory" type="Label" parent="." unique_id=145291386]
+offset_left = 1064.0
+offset_top = 315.0
+offset_right = 1635.0
+offset_bottom = 382.0
+text = "Inventory"
+label_settings = SubResource("LabelSettings_vgdys")

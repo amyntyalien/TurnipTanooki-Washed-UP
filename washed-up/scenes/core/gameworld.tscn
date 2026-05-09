@@ -6,12 +6,40 @@
 [ext_resource type="PackedScene" uid="uid://dog4hlimox1de" path="res://scenes/entities/junk.tscn" id="4_m4q5l"]
 [ext_resource type="PackedScene" uid="uid://b5ixei1vput1m" path="res://scenes/entities/seagull.tscn" id="5_kb8sw"]
 [ext_resource type="AudioStream" uid="uid://cxoahklrxhiwy" path="res://assets/music/Guitar.wav" id="6_ry26v"]
+[ext_resource type="Texture2D" uid="uid://d3qq4746pflhc" path="res://assets/art/Items/junk/Untitled27_20260509180711.png" id="7_706o7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4krka"]
+radius = 64.0447
+
+[sub_resource type="LabelSettings" id="LabelSettings_e18k6"]
+font_size = 34
 
 [node name="Gameworld" type="Node2D" unique_id=681680736]
 script = ExtResource("1_0uvnq")
 
 [node name="Island" parent="." unique_id=396867642 instance=ExtResource("1_3wwbw")]
 position = Vector2(452, 143)
+
+[node name="fishingTransition" type="Area2D" parent="." unique_id=741105711]
+position = Vector2(599, 114.000015)
+scale = Vector2(0.421875, 0.41796875)
+
+[node name="fishing" type="Sprite2D" parent="fishingTransition" unique_id=1577189642]
+scale = Vector2(1, 0.99999994)
+texture = ExtResource("7_706o7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fishingTransition" unique_id=1985549277]
+position = Vector2(9.481482, 4.7850103)
+scale = Vector2(1, 0.9999999)
+shape = SubResource("CircleShape2D_4krka")
+
+[node name="Label" type="Label" parent="fishingTransition" unique_id=1070932302]
+offset_left = -120.888885
+offset_top = -131.58882
+offset_right = 174.11111
+offset_bottom = -83.73837
+text = "Fish for fish here!!"
+label_settings = SubResource("LabelSettings_e18k6")
 
 [node name="Player" parent="." unique_id=156217139 instance=ExtResource("2_0uvnq")]
 position = Vector2(410, 153)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bh0idopefrv0m"]
 
-[ext_resource type="Script" uid="uid://d2lgjsymo0nlt" path="res://scripts/core/cutscene.gd" id="1_nrd6a"]
+[ext_resource type="Script" uid="uid://cfxg6kqw4yppy" path="res://scenes/boss_fights/postcredit.gd" id="1_2t36f"]
 [ext_resource type="Texture2D" uid="uid://bbk3bcx08ud7o" path="res://assets/art/screens/Boss_transitions_cutscene_v001_0001.png" id="2_mq240"]
 [ext_resource type="Texture2D" uid="uid://dk2pnypdkuv8n" path="res://assets/art/screens/ending_cutscene__002_v001.png" id="3_2t36f"]
 
@@ -76,7 +76,7 @@ animations = [{
 }]
 
 [node name="Cutscene" type="Node2D" unique_id=1373542161]
-script = ExtResource("1_nrd6a")
+script = ExtResource("1_2t36f")
 
 [node name="Label" type="Label" parent="." unique_id=1562525164]
 offset_left = 472.0

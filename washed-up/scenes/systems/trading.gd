@@ -84,6 +84,8 @@ func _trade():
 		4:
 			_bird()
 
+func _on_backtogame_pressed():
+	get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")
 
 func _on_inv_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/systems/inventory.tscn")
@@ -91,6 +93,3 @@ func _on_inv_button_pressed() -> void:
 
 func _on_craft_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/systems/crafting.tscn")
-
-func _on_backtogame_pressed():
-	get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")

@@ -72,7 +72,7 @@ func _on_raft_transition_body_entered(body: Node2D) -> void:
 		$boatTransition/Sprite2D.visible = true
 	
 	if $Player/CharacterBody2D/AnimatedSprite2D.animation != "fall":
-		get_tree().change_scene_to_file("res://scenes/boss_fights/boss.tscn")
+		get_tree().change_scene_to_file("res://scenes/boss_fights/bosscutscene.tscn")
 
 
 func _on_boat_transition_body_entered(body: Node2D) -> void:

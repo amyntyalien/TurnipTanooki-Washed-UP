@@ -16,6 +16,27 @@
 font_size = 64
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_fi3du"]
+font_color = Color(0.24259758, 0.22687307, 0.061076157, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v4mxn"]
+font_color = Color(0.24259758, 0.22687307, 0.061076157, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ucc2r"]
+font_color = Color(0.24259758, 0.22687307, 0.061076157, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_705w6"]
+font_color = Color(0.24259758, 0.22687307, 0.061076157, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qtogk"]
+font_color = Color(0.24259758, 0.22687307, 0.061076157, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bo1dc"]
+font_color = Color(0.24259758, 0.22687307, 0.061076157, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r2lot"]
+font_color = Color(0.24259758, 0.22687307, 0.061076157, 1)
+
 [node name="Inventory" type="Node2D" unique_id=1893544705]
 script = ExtResource("1_4m4tt")
 
@@ -159,31 +180,104 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(-519, -389.97757)
 texture = ExtResource("3_ih8x7")
 
+[node name="reddesc" type="Label" parent="Inventory_book/Red" unique_id=2027245171]
+offset_left = -118.0
+offset_top = 151.77528
+offset_right = 170.0
+offset_bottom = 252.77527
+text = "Commonly left in the ocean
+due to the fat and inedible meat they
+contain. Can be traded for string."
+label_settings = SubResource("LabelSettings_fi3du")
+horizontal_alignment = 1
+
 [node name="Pink" type="Sprite2D" parent="Inventory_book" unique_id=218618682]
 position = Vector2(-210.00002, -410.20227)
 texture = ExtResource("4_cl6h3")
+
+[node name="pinkdesc" type="Label" parent="Inventory_book/Pink" unique_id=1357003772]
+offset_left = -151.99998
+offset_top = 175.37082
+offset_right = 173.00002
+offset_bottom = 250.37082
+text = "Fish caught as house pets due
+to their shiny pink sheen.
+Can be traded for wood."
+label_settings = SubResource("LabelSettings_v4mxn")
+horizontal_alignment = 1
 
 [node name="Cyan" type="Sprite2D" parent="Inventory_book" unique_id=480649564]
 position = Vector2(-494.99994, -48.404633)
 scale = Vector2(0.9999999, 1.1235954)
 texture = ExtResource("5_d3h3i")
 
+[node name="cyandesc" type="Label" parent="Inventory_book/Cyan" unique_id=1079292279]
+offset_left = -110.00007
+offset_top = 221.08017
+offset_right = 134.99994
+offset_bottom = 256.08017
+text = "Greatly farmed due to
+their juicy meat and
+flourescent fins. Can
+be traded for plastic."
+label_settings = SubResource("LabelSettings_ucc2r")
+horizontal_alignment = 1
+
 [node name="Purple" type="Sprite2D" parent="Inventory_book" unique_id=1490925461]
 position = Vector2(-182, -40.539337)
 texture = ExtResource("6_qptds")
 
+[node name="purpledesc" type="Label" parent="Inventory_book/Purple" unique_id=910770900]
+offset_left = -109.99999
+offset_top = 238.29214
+offset_right = 109.00001
+offset_bottom = 261.29214
+text = "Rare mermaid fish, a
+delicacy to seagulls and
+cats alike."
+label_settings = SubResource("LabelSettings_705w6")
+horizontal_alignment = 1
+
 [node name="Sprite2D" type="Sprite2D" parent="Inventory_book" unique_id=301724935]
 position = Vector2(524.99994, -395.5955)
 texture = ExtResource("8_qptds")
+
+[node name="wooddesc" type="Label" parent="Inventory_book/Sprite2D" unique_id=455808039]
+offset_left = -128.99998
+offset_top = 205.70784
+offset_right = 139.00002
+offset_bottom = 228.70784
+text = "Popular resource used in all crafts."
+label_settings = SubResource("LabelSettings_qtogk")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Inventory_book" unique_id=558195519]
 position = Vector2(222.99994, -343.9101)
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("9_ppt17")
 
+[node name="Label" type="Label" parent="Inventory_book/Sprite2D2" unique_id=1375764321]
+offset_left = -85.00001
+offset_top = 147.28091
+offset_right = 107.99999
+offset_bottom = 196.28091
+text = "String from a net. Can be
+used in many crafts."
+label_settings = SubResource("LabelSettings_bo1dc")
+horizontal_alignment = 1
+
 [node name="Sprite2D3" type="Sprite2D" parent="Inventory_book" unique_id=1826471329]
 position = Vector2(245.99997, -53.932583)
 texture = ExtResource("10_ppt17")
+
+[node name="Label" type="Label" parent="Inventory_book/Sprite2D3" unique_id=1515467476]
+offset_left = -151.99998
+offset_top = 257.30338
+offset_right = 93.000015
+offset_bottom = 306.30338
+text = "Surprisingly strong plastic bags.
+Can be used for a raft."
+label_settings = SubResource("LabelSettings_r2lot")
+horizontal_alignment = 1
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
 offset_left = 1447.0

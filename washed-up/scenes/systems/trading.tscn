@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cnxtwxnddlp7b"]
+[gd_scene format=3 uid="uid://bjqxjowt0cm1l"]
 
 [ext_resource type="Texture2D" uid="uid://xssf5so3ouf2" path="res://assets/art/Items/book_tab1.png" id="1_7nmkm"]
 [ext_resource type="Script" uid="uid://dalj0x0whxgb3" path="res://scenes/systems/trading.gd" id="2_7nmkm"]
@@ -173,6 +173,12 @@ offset_top = -167.41574
 offset_right = -91.0
 offset_bottom = 96.58426
 icon = ExtResource("6_7nmkm")
+
+[node name="Label" type="Label" parent="Trading/Control/Bird" unique_id=2020384177]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Helps you collect more trash!"
 
 [node name="Cost" type="Label" parent="Trading/Control" unique_id=1349802727]
 layout_mode = 0

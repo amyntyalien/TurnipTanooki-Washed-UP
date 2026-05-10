@@ -193,7 +193,7 @@ offset_left = -361.0
 offset_top = 150.56177
 offset_right = -97.0
 offset_bottom = 414.5618
-icon = ExtResource("8_fgy45")
+icon = ExtResource("13_h28na")
 
 [node name="Lockpink" type="Sprite2D" parent="Crafting/Control" unique_id=798710444]
 visible = false

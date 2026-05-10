@@ -216,10 +216,9 @@ offset_left = -110.00007
 offset_top = 221.08017
 offset_right = 134.99994
 offset_bottom = 256.08017
-text = "Greatly farmed due to
-their juicy meat and
-flourescent fins. Can
-be traded for plastic."
+text = "Greatly farmed due to their
+juicy meat and flourescent fins.
+Can be traded for plastic."
 label_settings = SubResource("LabelSettings_ucc2r")
 horizontal_alignment = 1
 

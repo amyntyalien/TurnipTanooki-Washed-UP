@@ -35,7 +35,7 @@ func _raft():
 	current = dict
 	$Control/Rods.play("Raft")
 	$Control/Input1.play("2")
-	$Control/Cost1.text = str(Inventory.trash["string"])+"/500"
+	$Control/Cost1.text = str(Inventory.trash["wood"])+"/500"
 	$Control/Cost2.text = str(Inventory.trash["plastic"])+"/500"
 
 func _rod1():

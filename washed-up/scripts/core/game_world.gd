@@ -23,6 +23,9 @@ func _ready():
 	if raft_node:
 		raft_node.visible = Inventory.raft == 1
 		$raftTransition/Sprite2D.visible = true
+	
+	if !Inventory.cat:
+		$CatPath.visible = false
 
 # runs when timer ends
 func _on_junk_timer_timeout():

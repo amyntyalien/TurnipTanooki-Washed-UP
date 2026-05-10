@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bydndmn6empl8" path="res://scenes/entities/cat.tscn" id="8_4krka"]
 [ext_resource type="Script" uid="uid://c75c0v7ym50hg" path="res://scenes/core/path_follow_2d.gd" id="8_e18k6"]
 [ext_resource type="Texture2D" uid="uid://dmdfmbsw0yiip" path="res://assets/art/Items/raft_v001.png" id="10_8qwbt"]
+[ext_resource type="Texture2D" uid="uid://ba74xlqo7u024" path="res://assets/art/characters/cat/cat_sprites_2fps_v001.png" id="11_il72b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4krka"]
 radius = 64.0447
@@ -25,6 +26,34 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 652, 20, 0, 0, 0, 0, 247, 94, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -53, 162, 0, 0, 0, 0, 57, 142, 0, 0, 0, 0, 70, 281, 0, 0, 0, 0, -32, 360, 0, 0, 0, 0, 61, 401, 0, 0, 0, 0, 148, 451, 0, 0, 0, 0, 241, 367, 0, 0, 0, 0, 275, 257, 0, 0, 0, 0, 359, 264, 0, 0, 0, 0, 427, 329, 0, 0, 0, 0, 474, 398, 0, 0, 0, 0, 588, 381, 0, 0, 0, 0, 661, 325, 0, 0, 0, 0, 689, 255, 0, 0, 0, 0, 756, 221, 0, 0, 0, 0, 869, 238, 0, 0, 0, 0, 916, 302, 0, 0, 0, 0, 878, 363, 0, 0, 0, 0, 805, 364, 0, 0, 0, 0, 737, 326, 0, 0, 0, 0, 720, 275, 0, 0, 0, 0, 727, 204, 0, 0, 0, 0, 729, 164, 0, 0, 0, 0, 724, 108, 0, 0, 0, 0, 698, 69, 0, 0, 0, 0, 652, 21)
 }
 point_count = 29
+
+[sub_resource type="Curve2D" id="Curve2D_4l74q"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 363, 165, 0, 0, 0, 0, 343, 248, 0, 0, 0, 0, 409, 306, 0, 0, 0, 0, 521, 301, 0, 0, 0, 0, 573, 241, 0, 0, 0, 0, 661, 308, 0, 0, 0, 0, 629, 230, 0, 0, 0, 0, 540, 184, 0, 0, 0, 0, 541, 101, 0, 0, 0, 0, 522, 145, 0, 0, 0, 0, 583, 176, 0, 0, 0, 0, 479, 88, 0, 0, 0, 0, 362, 164)
+}
+point_count = 13
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsonf"]
+atlas = ExtResource("11_il72b")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcy7f"]
+atlas = ExtResource("11_il72b")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgmna"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsonf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcy7f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Gameworld" type="Node2D" unique_id=681680736]
 script = ExtResource("1_0uvnq")
@@ -78,7 +107,7 @@ volume_db = -2.476
 autoplay = true
 
 [node name="Cat" parent="." unique_id=1000931412 instance=ExtResource("8_4krka")]
-position = Vector2(1723, -616)
+position = Vector2(1722.9999, -616.00024)
 
 [node name="Path2D" type="Path2D" parent="." unique_id=887401411]
 curve = SubResource("Curve2D_4krka")
@@ -90,5 +119,19 @@ script = ExtResource("8_e18k6")
 
 [node name="Seagull" parent="Path2D/PathFollow2D" unique_id=1945660520 instance=ExtResource("5_kb8sw")]
 rotation = -2.073451
+
+[node name="CatPath" type="Path2D" parent="." unique_id=41110337]
+curve = SubResource("Curve2D_4l74q")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="CatPath" unique_id=143978589]
+position = Vector2(363, 165)
+rotation = -0.044613235
+rotates = false
+script = ExtResource("8_e18k6")
+
+[node name="cat idle" type="AnimatedSprite2D" parent="CatPath/PathFollow2D" unique_id=2123208773]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_tgmna")
+autoplay = "default"
 
 [connection signal="body_entered" from="raftTransition" to="." method="_on_raft_transition_body_entered"]

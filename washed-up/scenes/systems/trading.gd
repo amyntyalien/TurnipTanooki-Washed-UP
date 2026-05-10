@@ -84,7 +84,7 @@ func _trade():
 		4:
 			_bird()
 
-func _on_backtogame_pressed():
+func _on_backtogamee_pressed():
 	get_tree().change_scene_to_file("res://scenes/core/gameworld.tscn")
 
 func _on_inv_button_pressed() -> void:

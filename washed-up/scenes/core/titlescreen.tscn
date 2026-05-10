@@ -2,11 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dsi5ag4guagss" path="res://scripts/ui/main_menu.gd" id="1_ewanl"]
 [ext_resource type="Texture2D" uid="uid://dwnhraxbvinvi" path="res://assets/art/screens/title_art_v001.png" id="2_lwxq5"]
-[ext_resource type="Texture2D" uid="uid://dfah7snsxq5qk" path="res://assets/art/Items/text/Turnip Tanooki Washed UP! Title.png" id="3_desid"]
+[ext_resource type="Texture2D" uid="uid://bpx8qa0xibrtr" path="res://assets/art/screens/Washed_Up_title_v001.png" id="3_ewanl"]
 [ext_resource type="AudioStream" uid="uid://b2lfjj83c1phv" path="res://assets/music/Acapella.wav" id="3_q35n2"]
-[ext_resource type="Texture2D" uid="uid://bjpnkexnkob32" path="res://assets/art/Items/buttons/Menu Selection Buttons CONTINUE.png" id="4_3l7qq"]
-[ext_resource type="Texture2D" uid="uid://cqspptkbbjyk2" path="res://assets/art/Items/buttons/Menu Selection Buttons NEW GAME.png" id="5_prcl2"]
-[ext_resource type="Texture2D" uid="uid://bl3xmcitrvfvx" path="res://assets/art/Items/buttons/Menu Selection Buttons OPTIONS.png" id="6_ikgc7"]
+[ext_resource type="Texture2D" uid="uid://bkm011pmojsjg" path="res://assets/art/screens/load_button_v001.png" id="4_desid"]
+[ext_resource type="Texture2D" uid="uid://bhobd7ahgt4ey" path="res://assets/art/screens/new_game_button_v001.png" id="5_3l7qq"]
 [ext_resource type="Texture2D" uid="uid://bq5avg4iwoibe" path="res://assets/art/Items/buttons/Menu Selection Buttons QUIT.png" id="7_vtn5x"]
 
 [node name="Titlescreen" type="Node2D" unique_id=289519404]
@@ -27,23 +26,24 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.48100004
-anchor_bottom = 0.22700001
+anchor_bottom = 0.441
 offset_left = -1.0
 offset_top = 3.0
 offset_right = 0.47991943
-offset_bottom = -0.16001892
-texture = ExtResource("3_desid")
+offset_bottom = -231.28003
+texture = ExtResource("3_ewanl")
 
 [node name="Continue - TextureRect2" type="TextureRect" parent="Control (MainMenu)" unique_id=637682944]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.293
-anchor_right = 0.34500003
-anchor_bottom = 0.402
-offset_top = -0.44000244
-offset_right = 0.5999756
-offset_bottom = -0.16000366
-texture = ExtResource("4_3l7qq")
+anchor_top = 0.36200002
+anchor_right = 0.28100002
+anchor_bottom = 0.592
+offset_left = -3.0
+offset_top = 0.039978027
+offset_right = 0.47998047
+offset_bottom = -0.35998535
+texture = ExtResource("4_desid")
 expand_mode = 1
 
 [node name="continue" type="TextureButton" parent="Control (MainMenu)/Continue - TextureRect2" unique_id=717980090]
@@ -56,12 +56,15 @@ grow_horizontal = 2
 [node name="New Game - TextureRect4" type="TextureRect" parent="Control (MainMenu)" unique_id=661479198]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.441
-anchor_right = 0.34500003
-anchor_bottom = 0.55
-offset_top = -0.2800293
-offset_right = 0.5999756
-texture = ExtResource("5_prcl2")
+anchor_left = 0.119
+anchor_top = 0.55600005
+anchor_right = 0.404
+anchor_bottom = 0.823
+offset_left = 5.519989
+offset_top = 0.5199585
+offset_right = 0.3199463
+offset_bottom = 0.15997314
+texture = ExtResource("5_3l7qq")
 expand_mode = 1
 
 [node name="new game" type="TextureButton" parent="Control (MainMenu)/New Game - TextureRect4" unique_id=267492247]
@@ -78,10 +81,10 @@ anchors_preset = -1
 anchor_top = 0.59400004
 anchor_right = 0.34500003
 anchor_bottom = 0.703
-offset_top = -0.52001953
-offset_right = 0.5999756
-offset_bottom = -0.23999023
-texture = ExtResource("6_ikgc7")
+offset_left = 1640.0
+offset_top = 506.47998
+offset_right = 1640.6
+offset_bottom = 506.76
 expand_mode = 1
 
 [node name="options" type="TextureButton" parent="Control (MainMenu)/Options - TextureRect5" unique_id=62256917]
@@ -98,9 +101,10 @@ anchors_preset = -1
 anchor_top = 0.739
 anchor_right = 0.34500003
 anchor_bottom = 0.84800005
-offset_top = -0.11999512
-offset_right = 0.5999756
-offset_bottom = 0.15997314
+offset_left = 5.0
+offset_top = 85.880005
+offset_right = -105.400024
+offset_bottom = 132.15997
 texture = ExtResource("7_vtn5x")
 expand_mode = 1
 

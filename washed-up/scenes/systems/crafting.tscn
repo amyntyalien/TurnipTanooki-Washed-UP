@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bltmbx7s4kv6i" path="res://assets/art/Items/Untitled27_20260509183700.png" id="8_fgy45"]
 [ext_resource type="Texture2D" uid="uid://q7lf4t3hrgun" path="res://assets/art/Items/Untitled27_20260510104357.png" id="9_4npbv"]
 [ext_resource type="Texture2D" uid="uid://b30ki13ljir2" path="res://assets/art/Items/junk/plastic.png" id="11_4sqea"]
+[ext_resource type="Texture2D" uid="uid://c0leek6t7doe2" path="res://assets/art/Items/Untitled27_20260510105507.png" id="13_h28na"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37r4x"]
 animations = [{
@@ -76,6 +77,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"Raft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_h28na")
+}],
+"loop": true,
+"name": &"Raft2",
 "speed": 5.0
 }]
 
@@ -200,13 +209,13 @@ texture = ExtResource("9_4npbv")
 
 [node name="Lockpurple" type="Sprite2D" parent="Crafting/Control" unique_id=899148823]
 visible = false
-position = Vector2(-226, 284.26965)
+position = Vector2(-228, -37.078632)
 scale = Vector2(0.99999976, 0.99999976)
 texture = ExtResource("9_4npbv")
 
 [node name="Lockraft2" type="Sprite2D" parent="Crafting/Control" unique_id=1997590061]
 visible = false
-position = Vector2(-228, -38.20227)
+position = Vector2(-230, 282.02243)
 scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("9_4npbv")
 
@@ -243,7 +252,7 @@ label_settings = SubResource("LabelSettings_4sqea")
 position = Vector2(399.8156, -315.06726)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_4sqea")
-animation = &"Raft"
+animation = &"Raft2"
 
 [node name="Warning" type="Label" parent="Crafting/Control" unique_id=1550552976]
 layout_mode = 0

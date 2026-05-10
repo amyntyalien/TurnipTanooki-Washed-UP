@@ -9,6 +9,7 @@ func _ready() -> void:
 	$Control/Rod3.pressed.connect(_rod3)
 	$Control/Rod4.pressed.connect(_rod4)
 	$Control/Raft.pressed.connect(_raft) # connect this to gameworld.gd?
+	$Control/Raft2.pressed.connect(_raft2)
 	$Control/Craft_Button.pressed.connect(_craft)
 	$Control/Warning.text = ""
 	_lock()
@@ -25,10 +26,44 @@ var level = 0
 var is_raft = false
 
 func _lock():
+	if not Inventory.cat:
+		$Control/Lockraft2.visible = true
+		$Control/Raft2.disabled = true
+	else:
+		$Control/Lockraft2.visible = false
+		$Control/Raft2.disabled = false
 	match Inventory.rod:
 		0:
 			$Control/Lockpink.visible = true
 			$Control/Rod2.disabled = true
+			$Control/Lockcyan.visible = true
+			$Control/Rod3.disabled = true
+			$Control/Lockpurple.visible = true
+			$Control/Rod4.disabled = true
+			
+		1:
+			$Control/Lockpink.visible = false
+			$Control/Rod2.disabled = false
+			$Control/Lockcyan.visible = true
+			$Control/Rod3.disabled = true
+			$Control/Lockpurple.visible = true
+			$Control/Rod4.disabled = true
+			
+		2:
+			$Control/Lockpink.visible = false
+			$Control/Rod2.disabled = false
+			$Control/Lockcyan.visible = false
+			$Control/Rod3.disabled = false
+			$Control/Lockpurple.visible = true
+			$Control/Rod4.disabled = true
+			
+		3:
+			$Control/Lockpink.visible = false
+			$Control/Rod2.disabled = false
+			$Control/Lockcyan.visible = false
+			$Control/Rod3.disabled = false
+			$Control/Lockpurple.visible = false
+			$Control/Rod4.disabled = false
 
 func _raft():
 	var dict = {"plastic":500, "wood":500}
@@ -44,6 +79,21 @@ func _raft():
 	$Control/Input1.play("2")
 	$Control/Cost1.text = str(Inventory.trash["wood"])+"/500"
 	$Control/Cost2.text = str(Inventory.trash["plastic"])+"/500"
+	
+func _raft2():
+	var dict = {"plastic":5000, "wood":5000}
+	is_raft = true
+	_craftable(dict)
+	level = -1
+	if Inventory.raft == 2:
+		$Control/Warning.text = "Already owned"
+		$Control/Craft_Button.disabled = true
+		pass
+	current = dict
+	$Control/Rods.play("Raft2")
+	$Control/Input1.play("2")
+	$Control/Cost1.text = str(Inventory.trash["wood"])+"/5000"
+	$Control/Cost2.text = str(Inventory.trash["plastic"])+"/5000"
 
 func _rod1():
 	var dict = {"wood":3, "string":3}
@@ -120,10 +170,15 @@ func _craft():
 	for i in current:
 		Inventory.trash[i] -= current[i]
 	if is_raft:
-		Inventory.raft=1
+		if level == 0:
+			Inventory.raft=1
+		elif level == -1:
+			Inventory.raft = 2
 	else:
 		Inventory.rod = level
 	match level:
+		-1:
+			_raft2()
 		0:
 			_raft()
 		1:
@@ -134,3 +189,4 @@ func _craft():
 			_rod3()
 		4:
 			_rod4()
+	_lock()

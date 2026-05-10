@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://bh0idopefrv0m"]
+
+[ext_resource type="Script" uid="uid://d2lgjsymo0nlt" path="res://scripts/core/cutscene.gd" id="1_nrd6a"]
+[ext_resource type="Texture2D" uid="uid://bbk3bcx08ud7o" path="res://assets/art/screens/Boss_transitions_cutscene_v001_0001.png" id="2_mq240"]
+[ext_resource type="Texture2D" uid="uid://dk2pnypdkuv8n" path="res://assets/art/screens/ending_cutscene__002_v001.png" id="3_2t36f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_de4jl"]
+font_size = 72
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iwu8"]
+atlas = ExtResource("3_2t36f")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bky8j"]
+atlas = ExtResource("3_2t36f")
+region = Rect2(0, 1080, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0tka"]
+atlas = ExtResource("3_2t36f")
+region = Rect2(0, 2160, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlk21"]
+atlas = ExtResource("3_2t36f")
+region = Rect2(0, 3240, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dkau"]
+atlas = ExtResource("3_2t36f")
+region = Rect2(0, 4320, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibim5"]
+atlas = ExtResource("3_2t36f")
+region = Rect2(0, 5400, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtsb2"]
+atlas = ExtResource("3_2t36f")
+region = Rect2(0, 6480, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrd6a"]
+atlas = ExtResource("3_2t36f")
+region = Rect2(0, 7560, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jcbky"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mq240")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iwu8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bky8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0tka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlk21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dkau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibim5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtsb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrd6a")
+}],
+"loop": false,
+"name": &"1",
+"speed": 5.0
+}]
+
+[node name="Cutscene" type="Node2D" unique_id=1373542161]
+script = ExtResource("1_nrd6a")
+
+[node name="Label" type="Label" parent="." unique_id=1562525164]
+offset_left = 472.0
+offset_top = 466.0
+offset_right = 1086.0
+offset_bottom = 545.0
+label_settings = SubResource("LabelSettings_de4jl")
+
+[node name="cutscene" type="AnimatedSprite2D" parent="." unique_id=647820090]
+position = Vector2(963, 542)
+sprite_frames = SubResource("SpriteFrames_jcbky")
+animation = &"1"
+autoplay = "1"
+frame = 8
+frame_progress = 1.0

@@ -23,7 +23,8 @@ func _ready():
 	if raft_node:
 		raft_node.visible = Inventory.raft == 1
 		$raftTransition/Sprite2D.visible = true
-	
+	if Inventory.raft == 0:
+		$raftTransition.visible = false
 	
 	if !Inventory.cat:
 		$CatPath.visible = false

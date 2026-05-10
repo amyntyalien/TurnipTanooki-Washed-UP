@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://q7lf4t3hrgun" path="res://assets/art/Items/Untitled27_20260510104357.png" id="9_4npbv"]
 [ext_resource type="Texture2D" uid="uid://b30ki13ljir2" path="res://assets/art/Items/junk/plastic.png" id="11_4sqea"]
 [ext_resource type="Texture2D" uid="uid://c0leek6t7doe2" path="res://assets/art/Items/Untitled27_20260510105507.png" id="13_h28na"]
+[ext_resource type="Texture2D" uid="uid://cfq6m2i0lx67v" path="res://assets/art/screens/back_button_v002.png" id="14_v5c1k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37r4x"]
 animations = [{
@@ -88,10 +89,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4m4tt"]
-load_path = "res://.godot/imported/Menu Selection Buttons BACK.png-c60b23c7ef98c4c912d867b88fece62b.ctex"
-
-[node name="Inventory" type="Node2D" unique_id=1893544705]
+[node name="Inventory2" type="Node2D" unique_id=1893544705]
 script = ExtResource("1_awcff")
 
 [node name="Crafting" type="Sprite2D" parent="." unique_id=1075563902]
@@ -265,11 +263,11 @@ label_settings = SubResource("LabelSettings_4sqea")
 horizontal_alignment = 1
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
-offset_left = 1474.0
-offset_top = 942.0
-offset_right = 1707.0
-offset_bottom = 996.0
-texture = SubResource("CompressedTexture2D_4m4tt")
+offset_left = 1451.0
+offset_top = 897.0
+offset_right = 1734.0
+offset_bottom = 1027.0
+texture = ExtResource("14_v5c1k")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 

@@ -279,10 +279,10 @@ label_settings = SubResource("LabelSettings_r2lot")
 horizontal_alignment = 1
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
-offset_left = 1447.0
-offset_top = 891.0
-offset_right = 1730.0
-offset_bottom = 1021.0
+offset_left = 1452.0
+offset_top = 897.0
+offset_right = 1735.0
+offset_bottom = 1027.0
 texture = ExtResource("11_fi3du")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true

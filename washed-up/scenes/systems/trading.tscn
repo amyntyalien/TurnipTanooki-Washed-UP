@@ -85,6 +85,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7nmkm"]
+load_path = "res://.godot/imported/back_button_v002.png-61ba14085443c2924ac9bb7cbb4bddeb.ctex"
+
 [node name="Inventory" type="Node2D" unique_id=1304251563]
 
 [node name="Trading" type="Sprite2D" parent="." unique_id=477295159]
@@ -208,6 +211,26 @@ horizontal_alignment = 1
 position = Vector2(391.99997, -40.449436)
 sprite_frames = SubResource("SpriteFrames_4e6sw")
 animation = &"1"
+
+[node name="back" type="TextureRect" parent="Trading" unique_id=228842123]
+anchors_preset = -1
+anchor_top = -0.0058520637
+offset_left = 462.00006
+offset_top = 403.3708
+offset_right = 745.00006
+offset_bottom = 533.3708
+texture = SubResource("CompressedTexture2D_7nmkm")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="backtogame" type="TextureButton" parent="Trading/back" unique_id=119195743]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Trading/Control/Inv Button" to="Trading" method="_on_inv_button_pressed"]
 [connection signal="pressed" from="Trading/Control/Craft Button" to="Trading" method="_on_craft_button_pressed"]

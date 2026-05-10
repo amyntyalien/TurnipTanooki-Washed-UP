@@ -11,6 +11,7 @@ func _ready() -> void:
 	$Control/Raft.pressed.connect(_raft) # connect this to gameworld.gd?
 	$Control/Craft_Button.pressed.connect(_craft)
 	$Control/Warning.text = ""
+	_lock()
 	_rod1()
 	pass # Replace with function body.
 
@@ -22,6 +23,12 @@ func _process(delta: float) -> void:
 var current = {}
 var level = 0
 var is_raft = false
+
+func _lock():
+	match Inventory.rod:
+		0:
+			$Control/Lockpink.visible = true
+			$Control/Rod2.disabled = true
 
 func _raft():
 	var dict = {"plastic":500, "wood":500}

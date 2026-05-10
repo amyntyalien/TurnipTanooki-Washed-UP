@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dddxa6xixif5h" path="res://assets/art/Items/Untitled27_20260509182447.png" id="7_4sqea"]
 [ext_resource type="Texture2D" uid="uid://ccntre6l3lejg" path="res://assets/art/Items/junk/wood.png" id="7_fgy45"]
 [ext_resource type="Texture2D" uid="uid://bltmbx7s4kv6i" path="res://assets/art/Items/Untitled27_20260509183700.png" id="8_fgy45"]
+[ext_resource type="Texture2D" uid="uid://q7lf4t3hrgun" path="res://assets/art/Items/Untitled27_20260510104357.png" id="9_4npbv"]
 [ext_resource type="Texture2D" uid="uid://b30ki13ljir2" path="res://assets/art/Items/junk/plastic.png" id="11_4sqea"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_37r4x"]
@@ -163,10 +164,10 @@ icon = ExtResource("6_fgy45")
 
 [node name="Rod4" type="Button" parent="Crafting/Control" unique_id=648507987]
 layout_mode = 0
-offset_left = -355.0
-offset_top = -165.91013
-offset_right = -91.0
-offset_bottom = 98.089874
+offset_left = -359.0
+offset_top = -171.91013
+offset_right = -95.0
+offset_bottom = 92.089874
 icon = ExtResource("7_4sqea")
 
 [node name="Raft" type="Button" parent="Crafting/Control" unique_id=1528003349]
@@ -176,6 +177,38 @@ offset_top = 147.19098
 offset_right = -390.0
 offset_bottom = 411.191
 icon = ExtResource("8_fgy45")
+
+[node name="Raft2" type="Button" parent="Crafting/Control" unique_id=1836585180]
+layout_mode = 0
+offset_left = -361.0
+offset_top = 150.56177
+offset_right = -97.0
+offset_bottom = 414.5618
+icon = ExtResource("8_fgy45")
+
+[node name="Lockpink" type="Sprite2D" parent="Crafting/Control" unique_id=798710444]
+visible = false
+position = Vector2(-219, -337.07867)
+scale = Vector2(0.99999976, 0.99999976)
+texture = ExtResource("9_4npbv")
+
+[node name="Lockcyan" type="Sprite2D" parent="Crafting/Control" unique_id=2041058894]
+visible = false
+position = Vector2(-520.9999, -33.707886)
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("9_4npbv")
+
+[node name="Lockpurple" type="Sprite2D" parent="Crafting/Control" unique_id=899148823]
+visible = false
+position = Vector2(-226, 284.26965)
+scale = Vector2(0.99999976, 0.99999976)
+texture = ExtResource("9_4npbv")
+
+[node name="Lockraft2" type="Sprite2D" parent="Crafting/Control" unique_id=1997590061]
+visible = false
+position = Vector2(-228, -38.20227)
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("9_4npbv")
 
 [node name="Input1" type="AnimatedSprite2D" parent="Crafting/Control" unique_id=1487084526]
 position = Vector2(243.99994, -84.26968)

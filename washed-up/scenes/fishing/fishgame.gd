@@ -103,6 +103,7 @@ func _input(event):
 				else:
 					unanswered_count += 1
 					combo = 0
+					$Combo.text = "Combo X "+ str(combo)
 			
 			ans = ""
 		

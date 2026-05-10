@@ -73,7 +73,7 @@ func _trade():
 			Inventory.multiplier += 1
 			print(Inventory.multiplier)
 		else:
-			Inventory.trash[current[i]] += 1
+			Inventory.add_trash(current[i], 1)
 	match num:
 		1:
 			_string()

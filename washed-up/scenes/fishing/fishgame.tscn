@@ -394,6 +394,7 @@ offset_right = 1402.0
 offset_bottom = 967.0
 text = "Answer"
 label_settings = SubResource("LabelSettings_nut0q")
+horizontal_alignment = 1
 
 [node name="Combo" type="Label" parent="." unique_id=1707221129]
 offset_left = 1056.0

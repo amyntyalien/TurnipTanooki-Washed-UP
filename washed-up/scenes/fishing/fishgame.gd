@@ -61,7 +61,7 @@ func _level():
 		3:
 			q_and_a = x.generate_question_level_4()
 		4:
-			q_and_a = x.generate_question_level_4()
+			q_and_a = x.generate_question_level_5()
 		
 	Question.text = q_and_a["question"]
 	start = true

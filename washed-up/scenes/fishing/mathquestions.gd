@@ -132,3 +132,15 @@ func generate_question_level_4():
 		start += move
 	q += ("?")
 	return {"question": q, "answer": start}
+	
+func generate_question_level_5():
+	var x = randi_range(1, 4)
+	match x:
+		1:
+			return generate_question_level_1()
+		2:
+			return generate_question_level_2()
+		3:
+			return generate_question_level_3()
+		4:
+			return generate_question_level_4()

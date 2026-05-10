@@ -35,6 +35,9 @@ func _process(delta: float) -> void:
 		timer = 0
 		unanswered_count = 0
 		$Combo.text = "Combo X "+ str(combo)
+		if(combo%5 == 0 && combo>=5):
+			$SoundEffect.play()
+		
 		get_fish()
 		$Background/Path2D/PathFollow2D.progress_ratio = 0
 		$Background/Character.play("fish")

@@ -234,3 +234,4 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Trading/Control/Inv Button" to="Trading" method="_on_inv_button_pressed"]
 [connection signal="pressed" from="Trading/Control/Craft Button" to="Trading" method="_on_craft_button_pressed"]
+[connection signal="pressed" from="Trading/back/backtogamee" to="Trading" method="_on_backtogamee_pressed"]

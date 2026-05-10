@@ -1,5 +1,41 @@
 [gd_scene format=3 uid="uid://bur5g3uoqqx02"]
 
-[node name="EndCutscene" type="Node2D" unique_id=1452392405]
+[ext_resource type="Script" uid="uid://dcvd5etf627h3" path="res://scenes/core/end_cutscene.gd" id="1_yca36"]
+[ext_resource type="Texture2D" uid="uid://dnucuw1paa6ia" path="res://assets/art/screens/Ending_ending_cutscene_001_v001.png" id="2_a4s08"]
+[ext_resource type="Texture2D" uid="uid://qor36g2e3i6x" path="res://assets/art/screens/Ending_ending_cutscene_002_v001.png" id="3_fo0oc"]
+[ext_resource type="Texture2D" uid="uid://kifhf48lkktg" path="res://assets/art/screens/Ending_ending_cutscene_v001.png" id="4_dplff"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=612829216]
+[sub_resource type="SpriteFrames" id="SpriteFrames_yjkfc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_a4s08")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fo0oc")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_dplff")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
+
+[node name="EndCutscene" type="Node2D" unique_id=1452392405]
+script = ExtResource("1_yca36")
+
+[node name="cutscene" type="AnimatedSprite2D" parent="." unique_id=612829216]
+position = Vector2(960, 543)
+sprite_frames = SubResource("SpriteFrames_yjkfc")
+animation = &"1"

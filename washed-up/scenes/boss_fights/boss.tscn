@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bc4l0y7pil8yi" path="res://assets/art/environment/tiles/cloud_001.png" id="5_elsm4"]
 [ext_resource type="PackedScene" uid="uid://cn1fdtwtej5sw" path="res://scenes/fishing/mathquestions.tscn" id="6_u7v17"]
 [ext_resource type="AudioStream" uid="uid://yu42wknar4k5" path="res://assets/music/Boss.wav" id="7_lapbj"]
+[ext_resource type="Texture2D" uid="uid://c45jbii0mdoj3" path="res://assets/art/screens/blank_board.png" id="7_tqgfn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lapbj"]
 atlas = ExtResource("3_u7v17")
@@ -63,9 +64,9 @@ animations = [{
 font_size = 128
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_lapbj"]
+[sub_resource type="LabelSettings" id="LabelSettings_elsm4"]
 font_size = 128
-font_color = Color(0.0627451, 0.627451, 1, 1)
+font_color = Color(0.9988536, 0.9053536, 0.73503923, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_tqgfn"]
 font_size = 128
@@ -123,13 +124,18 @@ label_settings = SubResource("LabelSettings_u7v17")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Answer" type="Label" parent="." unique_id=1033821421]
-offset_left = 727.0
-offset_top = 819.0
-offset_right = 1189.0
-offset_bottom = 994.0
+[node name="MenuSelectionButtons" type="Sprite2D" parent="." unique_id=906588884]
+position = Vector2(981.00006, 922)
+scale = Vector2(0.9279947, 0.8610994)
+texture = ExtResource("7_tqgfn")
+
+[node name="Answer" type="Label" parent="." unique_id=73290374]
+offset_left = 738.0
+offset_top = 842.0
+offset_right = 1200.0
+offset_bottom = 1017.0
 text = "Answer"
-label_settings = SubResource("LabelSettings_lapbj")
+label_settings = SubResource("LabelSettings_elsm4")
 horizontal_alignment = 1
 
 [node name="Combo" type="Label" parent="." unique_id=1459204134]

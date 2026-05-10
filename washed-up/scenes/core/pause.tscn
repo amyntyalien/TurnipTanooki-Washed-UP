@@ -4,10 +4,8 @@
 [ext_resource type="Script" uid="uid://d0h630r4bhodb" path="res://scripts/ui/pause_menu.gd" id="1_uxw54"]
 [ext_resource type="Texture2D" uid="uid://5jc2bxwbwpsk" path="res://assets/art/Items/buttons/Menu Selection Buttons SAVE.png" id="2_uxw54"]
 [ext_resource type="Texture2D" uid="uid://dqmryxt8e6j46" path="res://assets/art/characters/player/turnip_sprite_basic.png" id="4_u60py"]
-[ext_resource type="Texture2D" uid="uid://ex80ylw55vpk" path="res://assets/art/Items/buttons/Menu Selection Buttons TITLE.png" id="5_bn0f5"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bn0f5"]
-load_path = "res://.godot/imported/Menu Selection Buttons CONTINUE.png-dabf02ae9179d0efbe56d9371671298f.ctex"
+[ext_resource type="Texture2D" uid="uid://p2ct0wy4xai8" path="res://assets/art/screens/continue_button_v001.png" id="4_uxw54"]
+[ext_resource type="Texture2D" uid="uid://cvswo53i2op6j" path="res://assets/art/screens/save_and_go_to_title_button_v001.png" id="6_lq6u3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uxw54"]
 load_path = "res://.godot/imported/Menu Selection Buttons OPTIONS.png-4748ceeb922d71a6c6ee8a1451eec4b0.ctex"
@@ -19,12 +17,18 @@ script = ExtResource("1_uxw54")
 position = Vector2(960, 540)
 texture = ExtResource("1_bn0f5")
 
+[node name="TurnipSpriteBasic" type="Sprite2D" parent="." unique_id=448947586]
+position = Vector2(888, 808.00006)
+scale = Vector2(1.9121097, 1.6796875)
+texture = ExtResource("4_u60py")
+
 [node name="continuepause - TextureRect" type="TextureRect" parent="." unique_id=1061613505]
-offset_left = 60.0
-offset_top = 704.0
-offset_right = 985.0
-offset_bottom = 869.0
-texture = SubResource("CompressedTexture2D_bn0f5")
+offset_left = 96.0
+offset_top = 407.0
+offset_right = 883.0
+offset_bottom = 758.0
+texture = ExtResource("4_uxw54")
+expand_mode = 1
 
 [node name="continuepause" type="TextureButton" parent="continuepause - TextureRect" unique_id=12439322]
 layout_mode = 1
@@ -35,10 +39,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="optionspause - TextureRect2" type="TextureRect" parent="." unique_id=538705176]
-offset_left = 915.0
-offset_top = 597.0
-offset_right = 1840.0
-offset_bottom = 762.0
+offset_left = 2200.0
+offset_top = 1163.0
+offset_right = 3125.0
+offset_bottom = 1328.0
 texture = SubResource("CompressedTexture2D_uxw54")
 
 [node name="optionspause" type="TextureButton" parent="optionspause - TextureRect2" unique_id=1871281350]
@@ -50,10 +54,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="save - TextureRect" type="TextureRect" parent="." unique_id=1934842674]
-offset_left = 66.0
-offset_top = 397.0
-offset_right = 991.0
-offset_bottom = 562.0
+offset_left = 2194.0
+offset_top = 915.0
+offset_right = 3119.0
+offset_bottom = 1080.0
 texture = ExtResource("2_uxw54")
 
 [node name="savepause" type="TextureButton" parent="save - TextureRect" unique_id=1935090426]
@@ -67,17 +71,12 @@ offset_left = 0.9250001
 offset_top = -0.99
 offset_bottom = -0.98999023
 
-[node name="TurnipSpriteBasic" type="Sprite2D" parent="." unique_id=448947586]
-position = Vector2(1417, 439)
-scale = Vector2(1.9121097, 1.6796875)
-texture = ExtResource("4_u60py")
-
 [node name="title" type="TextureRect" parent="." unique_id=1245794473]
-offset_left = 913.0
-offset_top = 838.0
-offset_right = 1838.0
-offset_bottom = 1003.0
-texture = ExtResource("5_bn0f5")
+offset_left = 887.0
+offset_top = 376.0
+offset_right = 1812.0
+offset_bottom = 849.0
+texture = ExtResource("6_lq6u3")
 
 [node name="title" type="TextureButton" parent="title" unique_id=1031921384]
 layout_mode = 1

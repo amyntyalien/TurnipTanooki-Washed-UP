@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://b2lfjj83c1phv" path="res://assets/music/Acapella.wav" id="3_q35n2"]
 [ext_resource type="Texture2D" uid="uid://bkm011pmojsjg" path="res://assets/art/screens/load_button_v001.png" id="4_desid"]
 [ext_resource type="Texture2D" uid="uid://bhobd7ahgt4ey" path="res://assets/art/screens/new_game_button_v001.png" id="5_3l7qq"]
-[ext_resource type="Texture2D" uid="uid://bq5avg4iwoibe" path="res://assets/art/Items/buttons/Menu Selection Buttons QUIT.png" id="7_vtn5x"]
+[ext_resource type="Texture2D" uid="uid://dnyqi2esgv7xe" path="res://assets/art/screens/quit_button_v001.png" id="6_ewanl"]
 
 [node name="Titlescreen" type="Node2D" unique_id=289519404]
 
@@ -98,14 +98,14 @@ grow_vertical = 2
 [node name="Quit - TextureRect6" type="TextureRect" parent="Control (MainMenu)" unique_id=56943456]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.739
-anchor_right = 0.34500003
-anchor_bottom = 0.84800005
+anchor_top = 0.76400006
+anchor_right = 0.29000002
+anchor_bottom = 1.018
 offset_left = 5.0
-offset_top = 85.880005
-offset_right = -105.400024
-offset_bottom = 132.15997
-texture = ExtResource("7_vtn5x")
+offset_top = -0.12005615
+offset_right = 0.19995117
+offset_bottom = -0.44006348
+texture = ExtResource("6_ewanl")
 expand_mode = 1
 
 [node name="quit" type="TextureButton" parent="Control (MainMenu)/Quit - TextureRect6" unique_id=1010818484]

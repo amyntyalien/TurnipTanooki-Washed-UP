@@ -111,13 +111,13 @@ func _input(event):
 
 func get_fish():
 	var x = randi_range(1,100)
-	if x < 50:
+	if x < 60 - Inventory.rod * 5:
 		Inventory.add_fish("red", combo)
 		$Item.play("red_fish")
-	elif x < 85:
+	elif x < 80 - Inventory.rod * 5:
 		Inventory.add_fish("pink", combo)
 		$Item.play("pink_fish")
-	elif x < 99:
+	elif x < 100 - Inventory.rod * 5:
 		Inventory.add_fish("cyan", combo)
 		$Item.play("cyan_fish")
 	else:

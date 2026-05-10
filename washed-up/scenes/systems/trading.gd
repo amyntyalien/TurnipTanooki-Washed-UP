@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 	pass
 
 var current = {}
+var num = 1
 
 
 func _string():
@@ -27,6 +28,7 @@ func _string():
 	$Control/Goods.play("1")
 	$Control/Selling.play("1")
 	$Control/Cost.text = str(Inventory.feesh["red"])+"/1"
+	num = 1
 
 func _wood():
 	var dict = {"pink":"wood"}
@@ -35,6 +37,7 @@ func _wood():
 	$Control/Goods.play("2")
 	$Control/Selling.play("2")
 	$Control/Cost.text = str(Inventory.feesh["pink"])+"/1"
+	num = 2
 
 func _plastic():
 	var dict = {"cyan":"plastic"}
@@ -43,6 +46,7 @@ func _plastic():
 	$Control/Goods.play("3")
 	$Control/Selling.play("3")
 	$Control/Cost.text = str(Inventory.feesh["cyan"])+"/1"
+	num = 3
 
 func _bird():
 	var dict = {"purple":"bird"}
@@ -51,6 +55,7 @@ func _bird():
 	$Control/Goods.play("4")
 	$Control/Selling.play("4")
 	$Control/Cost.text = str(Inventory.feesh["purple"])+"/1"
+	num = 4
 
 func _tradable(dict):
 	$Control/Warning.text = ""
@@ -67,8 +72,17 @@ func _trade():
 		if current[i] == "bird":
 			Inventory.multiplier += 1
 			print(Inventory.multiplier)
-		Inventory.trash[current[i]] += 1
-		
+		else:
+			Inventory.trash[current[i]] += 1
+	match num:
+		1:
+			_string()
+		2:
+			_wood()
+		3:
+			_plastic()
+		4:
+			_bird()
 
 
 func _on_inv_button_pressed() -> void:

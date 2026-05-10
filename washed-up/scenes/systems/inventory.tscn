@@ -10,13 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://ccntre6l3lejg" path="res://assets/art/Items/junk/wood.png" id="8_qptds"]
 [ext_resource type="Texture2D" uid="uid://ctd0aw50r3fkc" path="res://assets/art/Items/Untitled27_20260509182128.png" id="9_ppt17"]
 [ext_resource type="Texture2D" uid="uid://b30ki13ljir2" path="res://assets/art/Items/junk/plastic.png" id="10_ppt17"]
+[ext_resource type="Texture2D" uid="uid://cfq6m2i0lx67v" path="res://assets/art/screens/back_button_v002.png" id="11_fi3du"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ppt17"]
 font_size = 64
 font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4m4tt"]
-load_path = "res://.godot/imported/Menu Selection Buttons BACK.png-c60b23c7ef98c4c912d867b88fece62b.ctex"
 
 [node name="Inventory" type="Node2D" unique_id=1893544705]
 script = ExtResource("1_4m4tt")
@@ -188,11 +186,11 @@ position = Vector2(245.99997, -53.932583)
 texture = ExtResource("10_ppt17")
 
 [node name="back" type="TextureRect" parent="." unique_id=876869642]
-offset_left = 1474.0
-offset_top = 942.0
-offset_right = 1707.0
-offset_bottom = 996.0
-texture = SubResource("CompressedTexture2D_4m4tt")
+offset_left = 1447.0
+offset_top = 891.0
+offset_right = 1730.0
+offset_bottom = 1021.0
+texture = ExtResource("11_fi3du")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 

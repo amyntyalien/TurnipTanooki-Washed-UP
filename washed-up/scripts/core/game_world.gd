@@ -24,8 +24,12 @@ func _ready():
 		raft_node.visible = Inventory.raft == 1
 		$raftTransition/Sprite2D.visible = true
 	
+	
 	if !Inventory.cat:
 		$CatPath.visible = false
+	
+	if Inventory.raft<2:
+		$boatTransition.visible = false
 
 # runs when timer ends
 func _on_junk_timer_timeout():
@@ -60,11 +64,22 @@ func _process(_delta):
 # change raft visibility here? If Inventory.raft = 0, then there is no raft. If Inventory.raft = 1, there is a raft.
 # or use the is_raft variable?
 func _on_raft_transition_body_entered(body: Node2D) -> void:
-	if Inventory.raft != 1:
-		$raftTransition/Sprite2D.visible = false
+	if Inventory.raft < 1:
+		$boatTransition/Sprite2D.visible = false
 		return
 	else :
-		$raftTransition/Sprite2D.visible = true
+		$boatTransition/Sprite2D.visible = true
 	
 	if $Player/CharacterBody2D/AnimatedSprite2D.animation != "fall":
 		get_tree().change_scene_to_file("res://scenes/boss_fights/boss.tscn")
+
+
+func _on_boat_transition_body_entered(body: Node2D) -> void:
+	if Inventory.raft < 2:
+		$boatTransition/Sprite2D.visible = false
+		return
+	else :
+		$boatTransition/Sprite2D.visible = true
+	
+	if $Player/CharacterBody2D/AnimatedSprite2D.animation != "fall":
+		get_tree().change_scene_to_file("res://scenes/core/EndCutscene.tscn")

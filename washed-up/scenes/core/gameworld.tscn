@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://c75c0v7ym50hg" path="res://scenes/core/path_follow_2d.gd" id="8_e18k6"]
 [ext_resource type="Texture2D" uid="uid://dmdfmbsw0yiip" path="res://assets/art/Items/raft_v001.png" id="10_8qwbt"]
 [ext_resource type="Texture2D" uid="uid://ba74xlqo7u024" path="res://assets/art/characters/cat/cat_sprites_2fps_v001.png" id="11_il72b"]
+[ext_resource type="Texture2D" uid="uid://c0leek6t7doe2" path="res://assets/art/Items/Untitled27_20260510105507.png" id="12_4l74q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4krka"]
 radius = 64.0447
@@ -54,6 +55,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsonf"]
+size = Vector2(108, 59)
 
 [node name="Gameworld" type="Node2D" unique_id=681680736]
 script = ExtResource("1_0uvnq")
@@ -134,4 +138,17 @@ scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_tgmna")
 autoplay = "default"
 
+[node name="boatTransition" type="Area2D" parent="." unique_id=512613504]
+position = Vector2(735, 322)
+
+[node name="Sprite2D" type="Sprite2D" parent="boatTransition" unique_id=279533502]
+position = Vector2(1, 5)
+scale = Vector2(0.55078125, 0.56640625)
+texture = ExtResource("12_4l74q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boatTransition" unique_id=1604167910]
+position = Vector2(5, 14)
+shape = SubResource("RectangleShape2D_gsonf")
+
 [connection signal="body_entered" from="raftTransition" to="." method="_on_raft_transition_body_entered"]
+[connection signal="body_entered" from="boatTransition" to="." method="_on_boat_transition_body_entered"]

@@ -6,12 +6,14 @@
 [ext_resource type="Script" uid="uid://cbhrpvs20v1kc" path="res://scenes/fishing/getfish.gd" id="3_nut0q"]
 [ext_resource type="Texture2D" uid="uid://b3twjkjk3dbyg" path="res://assets/art/environment/tiles/fishing_bg_water_v001.png" id="4_c2g5v"]
 [ext_resource type="Texture2D" uid="uid://cw4es5x8qg242" path="res://assets/art/characters/player/turnip_fishing_casting_8fps_v002.png" id="4_vgdys"]
+[ext_resource type="Texture2D" uid="uid://ba74xlqo7u024" path="res://assets/art/characters/cat/cat_sprites_2fps_v001.png" id="5_4k26t"]
 [ext_resource type="Script" uid="uid://d1ou5ei5hqqte" path="res://scenes/fishing/path_follow_2d.gd" id="5_nqdh8"]
 [ext_resource type="Texture2D" uid="uid://bajvg6on4e1k7" path="res://assets/art/characters/player/turnip_fishing_idle_4fps_v001.png" id="6_1lkd0"]
 [ext_resource type="Texture2D" uid="uid://bc4l0y7pil8yi" path="res://assets/art/environment/tiles/cloud_001.png" id="8_mahs1"]
 [ext_resource type="Texture2D" uid="uid://douxdl3qhomkp" path="res://assets/art/blank_image.png" id="9_1lkd0"]
 [ext_resource type="Texture2D" uid="uid://dypton53yav77" path="res://assets/art/Items/fish/redfish.png" id="9_vilim"]
 [ext_resource type="Texture2D" uid="uid://eqrq37gdsi6q" path="res://assets/art/Items/fish/pinkfish.png" id="10_1lkd0"]
+[ext_resource type="Texture2D" uid="uid://bqwwugiaklqdp" path="res://assets/art/Items/buttons/Menu Selection Buttons.png" id="10_tmlq3"]
 [ext_resource type="Texture2D" uid="uid://co7x1i67naku" path="res://assets/art/Items/fish/purplefish.png" id="12_rt4sh"]
 [ext_resource type="AudioStream" uid="uid://cxoahklrxhiwy" path="res://assets/music/Guitar.wav" id="14_mj3x6"]
 
@@ -24,6 +26,28 @@ point_count = 2
 [sub_resource type="LabelSettings" id="LabelSettings_xyrmk"]
 font_size = 128
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2s7a"]
+atlas = ExtResource("5_4k26t")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yfr2"]
+atlas = ExtResource("5_4k26t")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bwq34"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2s7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yfr2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nqdh8"]
 atlas = ExtResource("4_vgdys")
@@ -251,6 +275,7 @@ animations = [{
 
 [sub_resource type="LabelSettings" id="LabelSettings_nut0q"]
 font_size = 128
+font_color = Color(0, 1, 1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_csvai"]
 font_size = 128
@@ -337,6 +362,12 @@ label_settings = SubResource("LabelSettings_xyrmk")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Cat" type="AnimatedSprite2D" parent="Background" unique_id=113165434]
+position = Vector2(496, 625)
+sprite_frames = SubResource("SpriteFrames_bwq34")
+autoplay = "default"
+frame_progress = 0.69983906
+
 [node name="Character" type="AnimatedSprite2D" parent="Background" unique_id=863676157]
 position = Vector2(621, 528)
 scale = Vector2(1.5, 1.5)
@@ -350,6 +381,14 @@ sprite_frames = SubResource("SpriteFrames_jdcul")
 autoplay = "default"
 
 [node name="Mathquestions" parent="." unique_id=1898192396 instance=ExtResource("2_xyrmk")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1292328553]
+position = Vector2(1033, 613)
+
+[node name="MenuSelectionButtons" type="Sprite2D" parent="." unique_id=1840798407]
+position = Vector2(1260, 720.75)
+scale = Vector2(0.6183783, 1.0636364)
+texture = ExtResource("10_tmlq3")
 
 [node name="Answer" type="Label" parent="." unique_id=1452182889]
 offset_left = 1033.0

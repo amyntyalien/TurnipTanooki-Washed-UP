@@ -12,4 +12,5 @@ Artist links:
 - [Youtube](https://www.youtube.com/@alsolisk7607)
 - [DeviantArt](https://www.deviantart.com/laggitylaptop)
 
-In future, it would be nice to add dialogue boxes, and potentially port this game to some kind of kids game website (like coolo math games?)
+In future, it would be nice to add dialogue boxes, and potentially port this game to some kind of kids game website (like cool math games?)
+- Cool math games require HTML5 so if I do decide to do that: read [this link](https://docs.godotengine.org/en/latest/tutorials/export/exporting_for_web.html)
